@@ -663,13 +663,23 @@ nav a:hover::after {
   margin: 0 auto;
 }
 
+
 .why-card {
-  background: #ffffff;
-  color: #10243a;
-  padding: 28px 20px;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  background: linear-gradient(145deg, #18334d, #0b1d2e);
+  color: #ffffff;
+  padding: 30px 24px;
+  border: 1px solid rgba(215, 181, 109, .45);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+  text-align: center;
+  transition: transform .4s ease, box-shadow .4s ease;
 }
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .22);
+}
+
 
 .why-card h3 {
   color: #b38b24;
