@@ -216,7 +216,7 @@ nav a:hover::after {
   color: #10243a;
   font-size: 30px;
   font-weight: 900;
-  line-height: 1.8;
+  line-height: 2.2;
   margin-bottom: 18px;
   position: relative;
 }
