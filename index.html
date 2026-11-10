@@ -143,17 +143,24 @@ nav a:hover::after {
 
 
 
-   .hero {
-  min-height: 480px;
+  .hero {
+  min-height: 560px;
   background:
-    linear-gradient(rgba(8, 23, 38, .65), rgba(8, 23, 38, .65)),
+    linear-gradient(
+      135deg,
+      rgba(8, 23, 38, .72),
+      rgba(8, 23, 38, .48),
+      rgba(8, 23, 38, .72)
+    ),
     url("./images/isfahan.jpg") center/cover;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
 }
     .hero-content {
       max-width: 750px;
