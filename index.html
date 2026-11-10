@@ -1021,6 +1021,25 @@ nav a:hover::after {
   background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
 }
 
+.contact a {
+  display: inline-block;
+  color: #10243a;
+  background: linear-gradient(135deg, #e8cb87, #c49a45);
+  padding: 12px 28px;
+  margin: 10px 8px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(215, 181, 109, .25);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contact a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 24px rgba(215, 181, 109, .4);
+}
+
   </style>
 </head>
 
@@ -1224,8 +1243,9 @@ nav a:hover::after {
      ✆ ارتباط با ما در واتساپ
 </a>
 
-<p>شماره تماس: 09359154490</p>
-</section>
+<p>شماره تماس:
+  <a href="tel:+989359154490">09359154490</a>
+</p></section>
 <section class="why-romistay">
   <h2>چرا ROMISTAY؟</h2>
   <p class="why-intro">ما باور داریم هر سفر باید به خاطره‌ای ماندگار تبدیل شود.</p>
