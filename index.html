@@ -91,8 +91,29 @@ nav a {
   text-decoration: none;
   transition: color .3s ease, transform .3s ease;
   display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
 }
 
+nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #b8944e, #f7e4b1);
+  transition: width .3s ease;
+}
+
+nav a:hover {
+  color: #e8cb87;
+  transform: translateY(-2px);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 
 nav a:hover {
   color: #f5d58c;
