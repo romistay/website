@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز</title>
-
 <meta name="description" content="با ROMISTAY زیبایی‌های ایران، جاذبه‌های گردشگری و اقامتگاه‌های اصفهان و مشهد را کشف کنید.">
-
 <meta name="theme-color" content="#101e35">
 
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -35,7 +33,6 @@ body {
   --navy: #101e35;
   --gold: #c6a45c;
   --cream: #f8f7f3;
-  --white: #ffffff;
 }
 
 a {
@@ -77,14 +74,13 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 25px;
+  gap: 23px;
   list-style: none;
   font-size: 14px;
 }
 
 nav a:hover {
   color: var(--gold);
-  transition: .3s;
 }
 
 /* HERO */
@@ -94,15 +90,13 @@ nav a:hover {
   display: flex;
   align-items: center;
   color: white;
-
   background:
     linear-gradient(
       90deg,
       rgba(9,20,37,.90),
       rgba(9,20,37,.35)
     ),
-    url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=85')
-    center/cover;
+    url('./images/isfahan.jpg') center/cover;
 }
 
 .hero-content {
@@ -113,7 +107,6 @@ nav a:hover {
 .eyebrow {
   color: var(--gold);
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
 .hero h1 {
@@ -144,7 +137,7 @@ nav a:hover {
   background: #dfc17e;
 }
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 
 section {
   padding: 75px 0;
@@ -205,8 +198,9 @@ section {
   inset: 0;
   background: linear-gradient(
     transparent,
-    rgba(5,15,30,.9)
+    rgba(5,15,30,.88)
   );
+  pointer-events: none;
 }
 
 .destination-info {
@@ -339,14 +333,10 @@ footer p + p {
   }
 
   nav ul {
-    gap: 14px;
+    gap: 13px;
     flex-wrap: wrap;
     justify-content: center;
     font-size: 12px;
-  }
-
-  .logo {
-    font-size: 26px;
   }
 
   .hero {
@@ -380,14 +370,11 @@ footer p + p {
   section {
     padding: 55px 0;
   }
-
 }
 </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <header>
   <div class="container">
@@ -445,46 +432,36 @@ footer p + p {
     <div class="section-title">
       <span>مقصدهای منتخب</span>
       <h2>از کجا شروع کنیم؟</h2>
-      <p>
-        دو شهر زیبا برای آغاز یک تجربه فراموش‌نشدنی
-      </p>
+      <p>دو شهر زیبا برای آغاز یک تجربه فراموش‌نشدنی</p>
     </div>
 
     <div class="destinations">
 
       <div class="destination">
         <img
-          src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=85"
-          alt="معماری و جاذبه‌های گردشگری اصفهان"
+          src="./images/isfahan.jpg"
+          alt="جاذبه‌های گردشگری اصفهان"
           loading="lazy"
         >
 
         <div class="destination-info">
           <h3>اصفهان</h3>
-          <p>
-            شهر گنبدهای فیروزه‌ای، هنر و معماری ایرانی
-          </p>
-          <a href="#contact">
-            کشف زیبایی‌های اصفهان ←
-          </a>
+          <p>شهر گنبدهای فیروزه‌ای، هنر و معماری ایرانی</p>
+          <a href="#contact">کشف زیبایی‌های اصفهان ←</a>
         </div>
       </div>
 
       <div class="destination">
         <img
-          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=85"
-          alt="منظره گردشگری مشهد"
+          src="./images/mashhad.jpg"
+          alt="جاذبه‌های گردشگری مشهد"
           loading="lazy"
         >
 
         <div class="destination-info">
           <h3>مشهد</h3>
-          <p>
-            شهری پر از آرامش، فرهنگ و جاذبه‌های دیدنی
-          </p>
-          <a href="#contact">
-            کشف زیبایی‌های مشهد ←
-          </a>
+          <p>شهری پر از آرامش، فرهنگ و جاذبه‌های دیدنی</p>
+          <a href="#contact">کشف زیبایی‌های مشهد ←</a>
         </div>
       </div>
 
@@ -500,9 +477,7 @@ footer p + p {
     <div class="section-title">
       <span>تجربه ROMISTAY</span>
       <h2>همراه شما در کشف ایران</h2>
-      <p>
-        ایده‌هایی برای سفری بهتر و خاطره‌هایی ماندگار
-      </p>
+      <p>ایده‌هایی برای سفری بهتر و خاطره‌هایی ماندگار</p>
     </div>
 
     <div class="features">
@@ -510,28 +485,19 @@ footer p + p {
       <div class="feature">
         <div class="symbol">🏛️</div>
         <h3>راهنمای سفر</h3>
-        <p>
-          با جاذبه‌ها و دیدنی‌های شهرهای ایران
-          بیشتر آشنا شوید.
-        </p>
+        <p>با جاذبه‌ها و دیدنی‌های شهرهای ایران بیشتر آشنا شوید.</p>
       </div>
 
       <div class="feature">
         <div class="symbol">🏡</div>
         <h3>معرفی اقامتگاه‌ها</h3>
-        <p>
-          با اقامتگاه‌های جذاب و گزینه‌های متنوع
-          برای سفر آشنا شوید.
-        </p>
+        <p>با اقامتگاه‌های جذاب و گزینه‌های متنوع برای سفر آشنا شوید.</p>
       </div>
 
       <div class="feature">
         <div class="symbol">✨</div>
         <h3>ایده‌های گردشگری</h3>
-        <p>
-          برای سفر بعدی خود الهام بگیرید
-          و مقصدهای تازه کشف کنید.
-        </p>
+        <p>برای سفر بعدی خود الهام بگیرید و مقصدهای تازه کشف کنید.</p>
       </div>
 
     </div>
@@ -546,46 +512,36 @@ footer p + p {
     <div class="section-title">
       <span>انتخاب‌های ویژه</span>
       <h2>اقامتگاه‌های منتخب ROMISTAY</h2>
-      <p>
-        برای اقامتی دلنشین در اصفهان و مشهد
-      </p>
+      <p>برای اقامتی دلنشین در اصفهان و مشهد</p>
     </div>
 
     <div class="destinations">
 
       <div class="destination">
         <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
-          alt="اقامتگاه سنتی"
+          src="./images/traditional.jpg"
+          alt="اقامتگاه سنتی ایرانی"
           loading="lazy"
         >
 
         <div class="destination-info">
           <h3>اقامتگاه‌های سنتی اصفهان</h3>
-          <p>
-            تجربه آرامش در فضایی با حال‌وهوای معماری ایرانی
-          </p>
-          <a href="#contact">
-            به‌زودی معرفی می‌شود ←
-          </a>
+          <p>تجربه آرامش در فضایی با حال‌وهوای معماری ایرانی</p>
+          <a href="#contact">به‌زودی معرفی می‌شود ←</a>
         </div>
       </div>
 
       <div class="destination">
         <img
-          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85"
-          alt="هتل و اقامتگاه مشهد"
+          src="./images/hotel.jpg"
+          alt="هتل لوکس"
           loading="lazy"
         >
 
         <div class="destination-info">
           <h3>اقامتگاه‌های مشهد</h3>
-          <p>
-            گزینه‌هایی برای یک سفر راحت و خاطره‌انگیز
-          </p>
-          <a href="#contact">
-            به‌زودی معرفی می‌شود ←
-          </a>
+          <p>گزینه‌هایی برای یک سفر راحت و خاطره‌انگیز</p>
+          <a href="#contact">به‌زودی معرفی می‌شود ←</a>
         </div>
       </div>
 
@@ -605,8 +561,8 @@ footer p + p {
       آغاز یک خاطره زیبا باشد.
       هدف ما معرفی زیبایی‌های ایران،
       جاذبه‌های گردشگری و اقامتگاه‌های جذاب است
-      تا انتخاب مقصد بعدی برای شما
-      آسان‌تر و لذت‌بخش‌تر شود.
+      تا انتخاب مقصد بعدی برای شما آسان‌تر
+      و لذت‌بخش‌تر شود.
     </p>
 
   </div>
@@ -619,9 +575,7 @@ footer p + p {
 
     <div class="contact-box">
 
-      <h2>
-        سفر بعدی شما از اینجا شروع می‌شود
-      </h2>
+      <h2>سفر بعدی شما از اینجا شروع می‌شود</h2>
 
       <p>
         برای آشنایی بیشتر با مقصدها و اقامتگاه‌ها،
@@ -638,20 +592,14 @@ footer p + p {
 
 </main>
 
-<!-- FOOTER -->
-
 <footer>
   <div class="container">
-
     <p>
       <strong>ROMISTAY</strong>
       | ایران را جور دیگری ببین
     </p>
 
-    <p>
-      © تمامی حقوق برای ROMISTAY محفوظ است.
-    </p>
-
+    <p>© تمامی حقوق برای ROMISTAY محفوظ است.</p>
   </div>
 </footer>
 
