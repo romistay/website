@@ -786,10 +786,19 @@ nav a:hover::after {
 }
 
 
+
 #stays .card img {
+  width: 100%;
   height: 260px;
   object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
 }
+
+#stays .card:hover img {
+  transform: scale(1.07);
+}
+
 
 #stays .card-content {
   padding: 25px;
