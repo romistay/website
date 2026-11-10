@@ -353,9 +353,20 @@ nav a:hover::after {
       color: white;
     }
 
-    .services .section-title {
-      color: #e5c782;
-    }
+.services .section-title {
+  color: #f0d69d;
+  font-size: 32px;
+  font-weight: 900;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .25);
+  margin-bottom: 35px;
+}
+
+.services .section-title::after {
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+  width: 180px;
+  height: 4px;
+}
+
 
 
 .service-item {
@@ -375,10 +386,21 @@ nav a:hover::after {
 }
 
 
-    .service-item h3 {
-      color: #e5c782;
-      margin-bottom: 10px;
-    }
+
+.service-item h3 {
+  color: #f0d69d;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(215, 181, 109, .25);
+  transition: color .3s ease;
+}
+
+.service-item:hover h3 {
+  color: #fff0c5;
+}
+
 
     .about {
       text-align: center;
