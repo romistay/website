@@ -41,12 +41,34 @@
       gap: 15px;
     }
 
-    .logo {
-      color: #d7b56d;
-      font-size: 27px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
+  .logo {
+  color: #d7b56d;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  color: #d4af37;
+  font-size: 27px;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  margin-left: 10px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+.logo-name {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
 
     nav {
       display: flex;
@@ -503,8 +525,10 @@ nav a:hover {
 <body>
 
   <header>
-    <div class="logo">ROMISTAY</div>
-    <nav>
+<div class="logo">
+  <span class="logo-symbol">R</span>
+  <span class="logo-name">ROMISTAY</span>
+</div>    <nav>
       <a href="#home">خانه</a>
       <a href="#destinations">مقصدها</a>
       <a href="#services">خدمات</a>
