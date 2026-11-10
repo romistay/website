@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز</title>
-  <meta name="description" content="با ROMISTAY زیبایی ایران را جور دیگری ببینید؛ معرفی مقصدها و اقامتگاه‌های منتخب در اصفهان و مشهد.">
+  <
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
 
@@ -357,12 +357,23 @@ nav a:hover::after {
       color: #e5c782;
     }
 
-    .service-item {
-      text-align: center;
-      padding: 20px;
-      border: 1px solid rgba(215, 181, 109, .35);
-      border-radius: 8px;
-    }
+
+.service-item {
+  text-align: center;
+  padding: 30px 22px;
+  border: 1px solid rgba(215, 181, 109, .45);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #18334d, #0b1d2e);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+  transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  border-color: #e8cb87;
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .22);
+}
+
 
     .service-item h3 {
       color: #e5c782;
