@@ -390,6 +390,46 @@
 .why-card p {
   line-height: 1.9;
 }
+.travel-experiences {
+  background: linear-gradient(180deg, #f8f7f3, #eee9df);
+  padding: 80px 7%;
+}
+
+.travel-experiences .section-title {
+  color: #10243a;
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.travel-experiences .section-title::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  background: #d7b56d;
+  margin: 12px auto 0;
+  border-radius: 5px;
+}
+
+.travel-experiences .card {
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(16, 36, 58, .12);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.travel-experiences .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(16, 36, 58, .18);
+}
+
+.travel-experiences .card img {
+  height: 230px;
+}
+
+.travel-experiences .card h3 {
+  color: #a78340;
+}
   </style>
 </head>
 
@@ -448,7 +488,38 @@
         </article>
       </div>
     </section>
+<section class="travel-experiences">
+  <h2 class="section-title">تجربه‌های سفر با ROMISTAY</h2>
+  <p class="section-description">
+    سفر فقط رسیدن به مقصد نیست؛ تجربه لحظه‌هایی است که برای همیشه در خاطره می‌مانند.
+  </p>
 
+  <div class="cards">
+    <article class="card">
+      <img src="./images/isfahan.jpg" alt="تجربه سفر در اصفهان">
+      <div class="card-content">
+        <h3>قدم زدن در تاریخ اصفهان</h3>
+        <p>از میدان نقش‌جهان تا پل‌های تاریخی؛ زیبایی اصفهان را با نگاهی تازه کشف کنید.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/mashhad.jpg" alt="تجربه سفر به مشهد">
+      <div class="card-content">
+        <h3>آرامش در مشهد</h3>
+        <p>سفری سرشار از آرامش، لحظه‌های معنوی و دیدنی‌های خاطره‌انگیز.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/traditional.jpg" alt="اقامت در خانه سنتی">
+      <div class="card-content">
+        <h3>زندگی در دل اصالت ایرانی</h3>
+        <p>معماری سنتی، فضای دلنشین و تجربه مهمان‌نوازی اصیل ایرانی.</p>
+      </div>
+    </article>
+  </div>
+</section>
     <section class="services" id="services">
       <h2 class="section-title">چرا ROMISTAY؟</h2>
 
