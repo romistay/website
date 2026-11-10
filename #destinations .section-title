@@ -541,13 +541,7 @@ nav a:hover::after {
 }
 
 .travel-experiences .section-title::after {
-  content: "";
-  display: block;
-  width: 75px;
-  height: 3px;
-  background: #d7b56d;
-  margin: 12px auto 0;
-  border-radius: 5px;
+  display: none;
 }
 
 .travel-experiences .card {
