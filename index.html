@@ -507,28 +507,39 @@ nav a:hover::after {
 .card-content {
   min-height: 150px;
 }
-    @media (max-width: 600px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
 
-      nav {
-        justify-content: center;
-        gap: 14px;
-      }
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
 
-      .hero h1 {
-        font-size: 28px;
-      }
+  .hero {
+    min-height: 430px;
+    padding: 45px 18px;
+    background-position: center;
+  }
 
-      .hero p {
-        font-size: 16px;
-      }
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
 
-      section {
-        padding: 45px 5%;
-      }
+  .hero p {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 28px;
+  }
+
+  section {
+    padding: 45px 5%;
+  }
+}
     }
     .brand-banner {
   width: 100%;
