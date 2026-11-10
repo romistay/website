@@ -54,15 +54,23 @@
       flex-wrap: wrap;
     }
 
-    nav a {
-      font-size: 14px;
-      transition: color .3s;
-    }
+  
+nav a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: color .3s ease, transform .3s ease;
+  display: inline-block;
+}
 
-    nav a:hover {
-      color: #d7b56d;
-    }
+nav a:hover {
+  color: #d7b56d;
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(215, 181, 109, 0.45);
+}
 
+
+   
     .hero {
       min-height: 480px;
       background:
@@ -93,6 +101,7 @@
 
    
 
+
 .main-button {
   display: inline-block;
   background: linear-gradient(135deg, #e8cb87, #c49a45);
@@ -111,13 +120,6 @@
   background: linear-gradient(135deg, #f5dfa8, #d7b56d);
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 10px 25px rgba(215, 181, 109, 0.55);
-}
-
-
-.main-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(215, 181, 109, 0.5);
-}
 }
 
     section {
@@ -196,9 +198,6 @@
 
 
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
 
     
 .card img {
@@ -486,7 +485,9 @@
 
 .travel-experiences .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 14px 30px rgba(16, 36, 58, .18);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, 0.38);
+  border-color: #d7b56d;
+}
 }
 
 .travel-experiences .card img {
