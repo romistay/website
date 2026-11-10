@@ -489,9 +489,12 @@ nav a:hover::after {
 }
 
 .contact p {
-  color: #f2f2f2;
-  margin: 15px 0;
+  color: #f1f3f5;
+  margin: 18px 0;
   font-size: 16px;
+  line-height: 2.2;
+  font-weight: 400;
+  opacity: .95;
 }
 
 .contact p:last-of-type {
@@ -990,6 +993,25 @@ nav a:hover::after {
 }
 
 .about h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
+.contact h2 {
+  color: #f0d69d;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 22px;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .25);
+  line-height: 1.8;
+}
+
+.contact h2::after {
   content: "";
   display: block;
   width: 120px;
