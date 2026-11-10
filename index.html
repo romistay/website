@@ -1120,6 +1120,64 @@ nav a:hover::after {
   transform: scale(1.06);
 }
 
+#destinations .card-content {
+  padding: 28px 22px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #fffaf0);
+}
+
+#destinations .card-content h3 {
+  color: #10243a;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+#destinations .card-content p {
+  color: #68717c;
+  font-size: 15px;
+  line-height: 2.2;
+  margin: 0;
+}
+
+#destinations .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1150px;
+  margin: 35px auto 0;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  #destinations .cards {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    gap: 22px;
+  }
+}
+
+#destinations .section-title {
+  color: #f0d69d;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .3);
+}
+
+#destinations .section-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
   </style>
 </head>
 
