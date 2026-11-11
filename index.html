@@ -1713,12 +1713,14 @@ footer span {
   bottom: 90px;
   left: 25px;
   z-index: 9999;
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
- gap: 10px;
-flex-direction: row;
- padding: 13px 22px;
+  gap: 12px;
+  direction: rtl;
+  white-space: nowrap;
+  padding: 13px 22px;
   border-radius: 50px;
   background: linear-gradient(135deg, #d7b56d, #f5e2ad);
   color: #10243a;
@@ -1727,6 +1729,25 @@ flex-direction: row;
   text-decoration: none;
   box-shadow: 0 8px 25px rgba(8, 26, 43, .25);
   transition: all .3s ease;
+}
+
+.whatsapp-float .whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.whatsapp-float span:last-child {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .whatsapp-float:hover {
