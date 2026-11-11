@@ -943,23 +943,33 @@ footer span {
 
 .logo-symbol {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   border: 2px solid #f0d69d;
-  background: radial-gradient(circle at 30% 25%, #36516d 0%, #10243a 55%, #071522 100%);
-  color: #f7e4b1;
+  background: radial-gradient(
+    circle at 30% 25%,
+    #496987 0%,
+    #10243a 55%,
+    #071522 100%
+  );
+  color: #ffe7ad;
   font-family: Georgia, serif;
-  font-size: 36px;
+  font-size: 39px;
   font-weight: bold;
   box-shadow:
-    0 0 0 3px rgba(215,181,109,.18),
-    0 0 18px rgba(215,181,109,.45),
-    inset 0 0 12px rgba(240,214,157,.18);
-  text-shadow: 0 0 10px rgba(240,214,157,.65);
+    0 0 0 3px rgba(215,181,109,.22),
+    0 0 22px rgba(215,181,109,.55),
+    inset 0 0 14px rgba(240,214,157,.22);
+  text-shadow: 0 0 12px rgba(240,214,157,.75);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.logo-symbol:hover {
+  transform: rotate(8deg) scale(1.06);
 }
 
 
