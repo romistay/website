@@ -1801,23 +1801,33 @@ footer span {
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function () {
   const lightbox = document.getElementById('image-lightbox');
   const lightboxImage = document.getElementById('lightbox-image');
+  const closeButton = document.querySelector('.lightbox-close');
 
-  document.querySelectorAll('#stays .card img').forEach(img => {
+  document.querySelectorAll('#stays .card img').forEach(function (img) {
     img.style.cursor = 'zoom-in';
 
-    img.addEventListener('click', () => {
+    img.addEventListener('click', function () {
       lightboxImage.src = img.src;
       lightboxImage.alt = img.alt;
       lightbox.classList.add('active');
     });
   });
 
-  lightbox.addEventListener('click', () => {
+  closeButton.addEventListener('click', function (event) {
+    event.stopPropagation();
     lightbox.classList.remove('active');
   });
+
+  lightbox.addEventListener('click', function () {
+    lightbox.classList.remove('active');
+  });
+});
 </script>
+
+
 
 </body>
 </html>
