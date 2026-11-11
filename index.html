@@ -1435,9 +1435,13 @@ footer span {
   height: 280px;
   object-fit: cover;
   display: block;
-  transition: transform .6s ease;
+  transition: transform .7s cubic-bezier(.2, .7, .3, 1), filter .7s ease;
 }
 
+#destinations .card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.06);
+}
 #destinations .card:hover img {
   transform: scale(1.06);
 }
@@ -1466,10 +1470,11 @@ footer span {
 #destinations .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 1150px;
-  margin: 35px auto 0;
+  gap: 35px;
+  max-width: 1200px;
+  margin: 45px auto 0;
   align-items: stretch;
+  padding: 10px 5px 25px;
 }
 @media (max-width: 768px) {
   #destinations .cards {
@@ -1477,6 +1482,14 @@ footer span {
     max-width: 450px;
     gap: 22px;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #destinations .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
 
   .why-romistay {
     padding: 60px 5%;
@@ -1639,6 +1652,16 @@ footer span {
   height: 3px;
   border-radius: 5px;
   background: linear-gradient(90deg, #b88a35, #f5dfaa, #b88a35);
+}
+ #destinations {
+  background: linear-gradient(
+    180deg,
+    #f8f5ec 0%,
+    #ffffff 50%,
+    #f3eee2 100%
+  );
+  padding: 75px 7%;
+  position: relative;
 }
   </style>
 </head>
