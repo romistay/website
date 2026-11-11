@@ -429,7 +429,11 @@ galleryImages.forEach(function(image) {
 galleryClose.addEventListener("click", function() {
   galleryLightbox.classList.remove("active");
 });
-
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    galleryLightbox.classList.remove("active");
+  }
+});
 galleryLightbox.addEventListener("click", function(event) {
   if (event.target === galleryLightbox) {
     galleryLightbox.classList.remove("active");
