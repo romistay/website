@@ -1447,24 +1447,46 @@ footer span {
 }
 
 #destinations .card-content {
-  padding: 28px 22px;
+  padding: 30px 24px;
   text-align: center;
-  background: linear-gradient(180deg, #ffffff, #fffaf0);
+  background: linear-gradient(160deg, #ffffff, #fbf7eb);
+  position: relative;
+  border-top: 1px solid rgba(215, 181, 109, .25);
 }
 
 #destinations .card-content h3 {
   color: #10243a;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 900;
   line-height: 1.8;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 9px;
+}
+
+#destinations .card-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 42px;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b88a35, #f5dfaa);
 }
 
 #destinations .card-content p {
-  color: #68717c;
+  color: #626b75;
   font-size: 15px;
-  line-height: 2.2;
+  line-height: 2.3;
+  font-weight: 400;
   margin: 0;
+  letter-spacing: .15px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #destinations .cards {
