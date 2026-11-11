@@ -1494,7 +1494,13 @@ footer span {
 .image-lightbox.active {
   display: flex;
 }
+#image-lightbox {
+  pointer-events: none;
+}
 
+#image-lightbox.active {
+  pointer-events: auto;
+}
 .image-lightbox img {
   max-width: 95%;
   max-height: 90vh;
@@ -1809,12 +1815,16 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('#stays .card img').forEach(function (img) {
     img.style.cursor = 'zoom-in';
 
-    img.addEventListener('click', function () {
-      lightboxImage.src = img.src;
-      lightboxImage.alt = img.alt;
-      lightbox.classList.add('active');
-    });
-  });
+
+img.addEventListener('click', function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  lightboxImage.src = img.src;
+  lightboxImage.alt = img.alt;
+  lightbox.classList.add('active');
+});
+
 
   closeButton.addEventListener('click', function (event) {
     event.stopPropagation();
