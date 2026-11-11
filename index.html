@@ -128,14 +128,15 @@ header {
     }
 
   
+
 nav a {
   font-size: 14px;
-  color: white;
+  color: #f8f4e9;
   text-decoration: none;
-  transition: color .3s ease, transform .3s ease;
   display: inline-block;
   position: relative;
-  padding-bottom: 6px;
+  padding: 8px 2px;
+  transition: color .3s ease, transform .3s ease;
 }
 
 nav a::after {
@@ -145,45 +146,20 @@ nav a::after {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #b8944e, #f7e4b1);
-  transition: width .3s ease;
-}
-
-nav a:hover {
-  color: #e8cb87;
-  transform: translateY(-2px);
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a:hover {
-  color: #f5d58c;
-  transform: translateY(-4px);
-  text-shadow: 0 0 8px rgba(240, 214, 157, .7),
-               0 0 18px rgba(215, 181, 109, .5);
-}
-
-nav a {
-  position: relative;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -7px;
-  width: 0;
-  height: 2px;
+  border-radius: 3px;
   background: linear-gradient(90deg, #d7b56d, #fff0c5);
   transition: width .35s ease;
 }
 
+nav a:hover {
+  color: #f5d58c;
+  transform: translateY(-3px);
+  text-shadow: 0 0 12px rgba(240, 214, 157, .5);
+}
+
 nav a:hover::after {
   width: 100%;
 }
-
 
 
   .hero {
@@ -1599,7 +1575,7 @@ footer span {
 
 <body>
 
-  <header>
+  
 <div class="logo">
   <span class="logo-symbol">R</span>
   <span class="logo-name">ROMISTAY</span>
