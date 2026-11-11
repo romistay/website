@@ -1707,6 +1707,30 @@ footer span {
 #destinations .card:nth-child(3) {
   transition-delay: .4s;
 }
+/* دکمه شناور واتساپ ROMISTAY */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 22px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #d7b56d, #f5e2ad);
+  color: #10243a;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(8, 26, 43, .25);
+  transition: all .3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(8, 26, 43, .3);
+}
   </style>
 </head>
 
@@ -2084,5 +2108,13 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
   cards.forEach((card) => observer.observe(card));
 });
 </script>
+<!-- دکمه شناور واتساپ -->
+<a href="https://wa.me/989359154490"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="ارتباط با ما در واتساپ">
+  <span>واتساپ</span>
+</a>
 </body>
 </html>
