@@ -1119,7 +1119,7 @@ footer span {
   box-shadow:
     0 10px 30px rgba(8, 26, 43, .10),
     0 3px 10px rgba(215, 181, 109, .08);
-  transition: transform .45s ease, box-shadow .45s ease;
+  transition: opacity .8s ease, transform .8s ease, box-shadow .45s ease;
 }
 
 #destinations .card:hover {
@@ -1691,10 +1691,16 @@ footer span {
 }
 #destinations .card {
   opacity: 0;
-  transform: translateY(35px);
+  translate: 0 35px;
   transition:
     opacity .8s ease,
-    transform .8s cubic-bezier(.2, .7, .3, 1);
+    translate .8s cubic-bezier(.2, .7, .3, 1),
+    box-shadow .45s ease;
+}
+
+#destinations .card.is-visible {
+  opacity: 1;
+  translate: 0 0;
 }
 
 #destinations .card.is-visible {
