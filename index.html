@@ -523,10 +523,12 @@ nav a:hover::after {
 
 .contact {
   text-align: center;
-  background: linear-gradient(135deg, #10243a, #1b3854);
+  background: linear-gradient(135deg, #10243a, #1b3854, #0b1d2e);
   color: #ffffff;
-  padding: 80px 20px;
+  padding: 90px 20px;
   border-top: 3px solid #d7b56d;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact .section-title {
@@ -537,11 +539,22 @@ nav a:hover::after {
 
 .contact p {
   color: #f1f3f5;
-  margin: 18px 0;
-  font-size: 16px;
-  line-height: 2.2;
+  margin: 20px 0;
+  font-size: 17px;
+  line-height: 2.3;
   font-weight: 400;
-  opacity: .95;
+  opacity: 1;
+}
+
+.contact p a {
+  color: #f5d995;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.contact p a:hover {
+  color: #fff0c5;
 }
 
 .contact p:last-of-type {
@@ -554,15 +567,22 @@ nav a:hover::after {
 .contact-button {
   display: inline-block;
   margin-top: 25px;
-  padding: 15px 38px;
-  background: linear-gradient(135deg, #f0d69d, #d7b56d);
+  padding: 16px 42px;
+  background: linear-gradient(135deg, #fff0c5, #d7b56d, #f0d69d);
   color: #10243a;
-  border: 2px solid #f0d69d;
+  border: 2px solid #f5d995;
   border-radius: 50px;
   font-size: 17px;
   font-weight: bold;
-  box-shadow: 0 6px 20px rgba(215,181,109,.3);
-  transition: all .3s ease;
+  box-shadow: 0 8px 25px rgba(215,181,109,.35);
+  transition: all .35s ease;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(215,181,109,.5);
+  background: linear-gradient(135deg, #fff8df, #f0d69d);
 }
 
 .contact-button:hover {
@@ -1159,12 +1179,22 @@ nav a:hover::after {
 }
 
 .contact h2 {
-  color: #f0d69d;
-  font-size: 32px;
+  color: #f5d995;
+  font-size: 34px;
   font-weight: 900;
-  margin-bottom: 22px;
-  text-shadow: 0 3px 15px rgba(215, 181, 109, .25);
+  margin-bottom: 25px;
+  text-shadow: 0 4px 18px rgba(215, 181, 109, .35);
   line-height: 1.8;
+}
+
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
 }
 
 .contact h2::after {
@@ -1244,15 +1274,13 @@ nav a:hover::after {
   margin: 35px auto 0;
   align-items: stretch;
 }
-
 @media (max-width: 768px) {
   #destinations .cards {
     grid-template-columns: 1fr;
     max-width: 450px;
     gap: 22px;
   }
-}
-@media (max-width: 768px) {
+
   .why-romistay {
     padding: 60px 5%;
   }
@@ -1260,6 +1288,35 @@ nav a:hover::after {
   .why-romistay h2 {
     font-size: 26px;
   }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 18px;
+  }
+
+  .why-card {
+    padding: 28px 20px;
+  }
+
+  .contact {
+    padding: 60px 18px;
+  }
+
+  .contact h2 {
+    font-size: 27px;
+  }
+
+  .contact-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .contact p {
+    font-size: 15px;
+  }
+}
+
 
   .why-cards {
     grid-template-columns: 1fr;
