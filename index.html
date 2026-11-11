@@ -1801,6 +1801,7 @@ footer span {
     <span class="whatsapp-icon">✆</span>
   </a>
 
+
 <div id="image-lightbox" class="image-lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-image" src="" alt="نمایش بزرگ تصویر">
@@ -1815,16 +1816,15 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('#stays .card img').forEach(function (img) {
     img.style.cursor = 'zoom-in';
 
+    img.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-img.addEventListener('click', function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-
-  lightboxImage.src = img.src;
-  lightboxImage.alt = img.alt;
-  lightbox.classList.add('active');
-});
-
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
 
   closeButton.addEventListener('click', function (event) {
     event.stopPropagation();
@@ -1836,6 +1836,7 @@ img.addEventListener('click', function (event) {
   });
 });
 </script>
+
 
 
 
