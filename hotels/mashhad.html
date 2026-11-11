@@ -298,6 +298,62 @@
   }
 }
 
+/* پنجره بزرگ‌نمایی تصاویر */
+.gallery-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(4, 15, 27, 0.94);
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.gallery-lightbox.active {
+  display: flex;
+}
+
+.gallery-lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 3px solid #e2c47e;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #f0d69d;
+  font-size: 45px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.gallery-close:hover {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .gallery-lightbox {
+    padding: 12px;
+  }
+
+  .gallery-lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .gallery-close {
+    top: 12px;
+    right: 18px;
+  }
+}
+
   </style>
 </head>
 
