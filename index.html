@@ -1049,6 +1049,8 @@ footer span {
   margin-bottom: 40px;
 }
 
+
+/* تنظیم اقامتگاه‌ها در کامپیوتر */
 #stays .cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
@@ -1066,7 +1068,7 @@ footer span {
 }
 
 /* تنظیم فوتر و اقامتگاه‌ها در موبایل */
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
   #stays .cards {
     grid-template-columns: 1fr;
     max-width: 420px;
@@ -1079,20 +1081,23 @@ footer span {
     gap: 25px;
     text-align: center;
   }
+}
 
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    min-width: 0;
-  }
+/* تنظیم جزئیات فوتر */
+.footer-about,
+.footer-links,
+.footer-contact {
+  min-width: 0;
+}
 
-  .footer-content h3 {
-    font-size: 19px;
-  }
+.footer-content h3 {
+  font-size: 19px;
+}
 
-  .footer-bottom {
-    padding-top: 18px;
-  }
+.footer-bottom {
+  padding-top: 18px;
+}
+
 
 
   #stays .card img {
