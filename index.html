@@ -1907,15 +1907,30 @@ if (stays && lightbox && lightboxImage && closeButton) {
 </script>
 
 
-
 <script>
   const backToTop = document.getElementById("back-to-top");
 
   backToTop.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    const startPosition = window.scrollY;
+    const duration = 1800;
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      const ease = 1 - Math.pow(1 - progress, 3);
+
+      window.scrollTo(0, startPosition * (1 - ease));
+
+      if (progress < 1) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    requestAnimationFrame(scrollAnimation);
   });
 </script>
 </body>
