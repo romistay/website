@@ -1689,6 +1689,29 @@ footer span {
   padding: 75px 7%;
   position: relative;
 }
+#destinations .card {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2, .7, .3, 1);
+}
+
+#destinations .card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#destinations .card:nth-child(1) {
+  transition-delay: .1s;
+}
+
+#destinations .card:nth-child(2) {
+  transition-delay: .25s;
+}
+
+#destinations .card:nth-child(3) {
+  transition-delay: .4s;
+}
   </style>
 </head>
 
@@ -2059,7 +2082,24 @@ if (stays && lightbox && lightboxImage && closeButton) {
     });
   }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll("#destinations .card");
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  cards.forEach((card) => observer.observe(card));
+});
+</script>
 </body>
 </html>
  </script>
