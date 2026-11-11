@@ -269,8 +269,23 @@ nav a:hover::after {
   margin-bottom: 18px;
   position: relative;
 }
-
-.section-title::after {
+#stays .section-title {
+  color: #b38b24;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#stays .section-title::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 3px;
+  background: linear-gradient(90deg, #b38b24, #e8cb87);
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+   .section-title::after {
   content: "";
   display: block;
   width: 160px;
