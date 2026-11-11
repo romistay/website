@@ -9,7 +9,60 @@
  
 
   <style>
+/* دکمه شناور واتساپ ROMISTAY */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+.whatsapp-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, .35);
+}
 
+.whatsapp-icon {
+  font-size: 22px;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 18px;
+    left: 15px;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+</style>
+.whatsapp-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, .35);
+}
+
+.whatsapp-icon {
+  font-size: 22px;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 18px;
+    left: 15px;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
 #back-to-top {
   position: fixed;
   bottom: 95px;
