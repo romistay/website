@@ -5,12 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز</title> 
-  <
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
  
- 
+
   <style>
-    * {
+#back-to-top {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #f0d69d;
+  background: #10243a;
+  color: #f0d69d;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+  background: #f0d69d;
+  color: #10243a;
+  transform: translateY(-5px);
+}
+   * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
