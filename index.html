@@ -1448,6 +1448,32 @@ footer span {
   opacity: .95;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 95px;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff0c5, #d7b56d);
+  color: #10243a;
+  border: 2px solid #f5d995;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+  z-index: 999;
+  transition: all .3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(215, 181, 109, .45);
+}
+
   </style>
 </head>
 
@@ -1716,6 +1742,10 @@ footer span {
     <p>با عشق برای عاشقان سفر ❤️</p>
   </div>
 </footer>
+
+<a href="#home" class="back-to-top" aria-label="بازگشت به بالای صفحه">
+  ↑
+</a>
 
  
 
