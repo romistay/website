@@ -2081,7 +2081,7 @@ if (stays && lightbox && lightboxImage && closeButton) {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll("#destinations .card");
-
+console.log("تعداد کارت‌های پیدا شده:", cards.length);
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
