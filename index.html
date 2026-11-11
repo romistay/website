@@ -799,15 +799,17 @@ footer span {
 }
 
 @media (max-width: 768px) {
+  .brand-banner {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+
   .brand-banner img {
     width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .brand-banner {
-    height: 150px;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 }
 .why-romistay {
