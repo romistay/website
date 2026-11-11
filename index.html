@@ -736,6 +736,7 @@ footer span {
     }
 .brand-banner {
   width: 100%;
+  overflow: hidden;
   background: #10243a;
   text-align: center;
 }
@@ -744,8 +745,9 @@ footer span {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
