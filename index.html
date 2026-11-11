@@ -736,17 +736,23 @@ footer span {
     }
 .brand-banner {
   width: 100%;
-  height: 280px;
   background: #10243a;
-  overflow: hidden;
+  text-align: center;
 }
 
 .brand-banner img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
+}
+
+@media (max-width: 768px) {
+  .brand-banner img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 768px) {
