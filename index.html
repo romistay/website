@@ -9,6 +9,7 @@
  
 
   <style>
+
 #back-to-top {
   position: fixed;
   bottom: 25px;
@@ -27,7 +28,23 @@
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   z-index: 999;
-  transition: all 0.3s ease;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 #back-to-top:hover {
@@ -35,6 +52,7 @@
   color: #10243a;
   transform: translateY(-5px);
 }
+
    * {
       box-sizing: border-box;
       margin: 0;
@@ -1907,8 +1925,17 @@ if (stays && lightbox && lightboxImage && closeButton) {
 </script>
 
 
+
 <script>
   const backToTop = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
 
   backToTop.addEventListener("click", function () {
     const startPosition = window.scrollY;
@@ -1920,7 +1947,6 @@ if (stays && lightbox && lightboxImage && closeButton) {
 
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-
       const ease = 1 - Math.pow(1 - progress, 3);
 
       window.scrollTo(0, startPosition * (1 - ease));
@@ -1933,5 +1959,6 @@ if (stays && lightbox && lightboxImage && closeButton) {
     requestAnimationFrame(scrollAnimation);
   });
 </script>
+
 </body>
 </html>
