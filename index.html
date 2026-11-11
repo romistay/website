@@ -319,13 +319,22 @@ nav a:hover::after {
 
     
 .card {
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
-  border-radius: 18px;
+  background: linear-gradient(160deg, #ffffff 0%, #fbf8f0 100%);
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 6px 22px rgba(16, 36, 58, 0.10);
-  transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
-  border: 1px solid rgba(215, 181, 109, 0.30);
+  box-shadow:
+    0 8px 25px rgba(8, 26, 43, .09),
+    0 2px 8px rgba(215, 181, 109, .08);
+  transition: transform .4s ease, box-shadow .4s ease;
+  border: 1px solid rgba(215, 181, 109, .35);
   will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-9px);
+  box-shadow:
+    0 18px 38px rgba(8, 26, 43, .16),
+    0 5px 18px rgba(215, 181, 109, .18);
 }
 
 
@@ -336,9 +345,15 @@ nav a:hover::after {
 }
 #stays .card img {
   width: 100%;
-  height: 240px;
+  height: 260px;
   object-fit: cover;
   display: block;
+  transition: transform .6s ease, filter .6s ease;
+}
+
+#stays .card:hover img {
+  transform: scale(1.07);
+  filter: brightness(1.05);
 }
 
 
@@ -362,9 +377,11 @@ nav a:hover::after {
 }
 
 
-    .card-content {
-      padding: 20px;
-    }
+ .card-content {
+  padding: 25px 23px;
+  background: linear-gradient(180deg, #ffffff, #fbf8f0);
+  text-align: right;
+}
 #stays .card-content {
   padding: 24px 22px;
   text-align: center;
@@ -372,15 +389,31 @@ nav a:hover::after {
 
 #stays .card-content h3 {
   color: #10243a;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 900;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#stays .card-content h3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 45px;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b88a35, #f5dfaa);
 }
 
 #stays .card-content p {
-  color: #6f6a5f;
+  color: #65645f;
   font-size: 15px;
-  line-height: 2;
+  line-height: 2.2;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: .1px;
 }
     .card h3 {
       color: #10243a;
@@ -1079,12 +1112,21 @@ footer span {
 }
 
 #destinations .card {
-  border-radius: 24px;
+  border-radius: 26px;
   overflow: hidden;
-  background: linear-gradient(180deg, #ffffff, #fffaf0);
-  border: 1px solid rgba(215, 181, 109, .5);
-  box-shadow: 0 10px 28px rgba(16, 36, 58, .12);
-  transition: box-shadow .4s ease, transform .4s ease;
+  background: linear-gradient(160deg, #ffffff, #fbf7eb);
+  border: 1px solid rgba(215, 181, 109, .45);
+  box-shadow:
+    0 10px 30px rgba(8, 26, 43, .10),
+    0 3px 10px rgba(215, 181, 109, .08);
+  transition: transform .45s ease, box-shadow .45s ease;
+}
+
+#destinations .card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 42px rgba(8, 26, 43, .17),
+    0 5px 18px rgba(215, 181, 109, .2);
 }
 
 #destinations .card:hover {
@@ -1576,7 +1618,28 @@ footer span {
   font-size: 42px;
   cursor: pointer;
 }
+#destinations h2 {
+  color: #10243a;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 18px;
+  letter-spacing: .3px;
+}
 
+#destinations h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 75px;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b88a35, #f5dfaa, #b88a35);
+}
   </style>
 </head>
 
