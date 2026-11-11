@@ -1479,6 +1479,38 @@ footer span {
   box-shadow: 0 10px 25px rgba(215, 181, 109, .45);
 }
 
+/* نمایش بزرگ تصاویر اقامتگاه‌ها */
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+
+.image-lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+}
+
   </style>
 </head>
 
@@ -1762,6 +1794,30 @@ footer span {
     <span>واتساپ | ارتباط با ما</span>
     <span class="whatsapp-icon">✆</span>
   </a>
+
+<div id="image-lightbox" class="image-lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-image" src="" alt="نمایش بزرگ تصویر">
+</div>
+
+<script>
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+
+  document.querySelectorAll('#stays .card img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+
+    img.addEventListener('click', () => {
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
 
 </body>
 </html>
