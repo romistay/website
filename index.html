@@ -2379,7 +2379,7 @@ footer span {
     <div class="booking-card">
       <div class="booking-progress">
         <span>درخواست اقامت شما</span>
-        <span>مرحله ۱ از ۴</span>
+        <span>مرحله ۱ از ۳</span>
       </div>
 
       <div class="booking-progress-line">
@@ -2438,7 +2438,7 @@ footer span {
         </div>
 
       </div>
-<div class="booking-step-two">
+<div id="booking-filters-step" style="display: none;">
 
   <h3>تاریخ سفر و تعداد مسافران</h3>
 
@@ -2482,8 +2482,12 @@ footer span {
 
 </div>
 
-<!-- فیلترهای تکمیلی درخواست اقامت -->
-<div class="booking-extra-filters">
+
+
+     <div class="booking-actions">
+       <button type="button" id="next-booking-step">ادامه درخواست ←</button>
+      </div>
+<div class="booking-step-two">
 
   <!-- امکانات -->
   <div class="filter-section">
@@ -2569,13 +2573,14 @@ footer span {
 
 </div>
 <!-- پایان فیلترهای تکمیلی -->
+ <div class="booking-actions">
+  <button type="button" id="back-to-main-step">→ بازگشت</button>
+  <button type="button" id="next-to-contact-step">ادامه ←</button>
+</div>
 
-     <div class="booking-actions">
-       <button type="button" id="next-booking-step">ادامه درخواست ←</button>
-      </div>
-<div id="booking-step-two-content" style="display: none;">
-
-  <h3>مشخصات و اطلاعات تماس</h3>
+</div>
+   <div id="booking-step-two-content" style="display: none;"> 
+   <h3>مشخصات و اطلاعات تماس</h3>
 
   <div class="booking-grid">
 
@@ -2810,26 +2815,44 @@ $('#exit-date').persianDatepicker({
       return;
     }
 
-    $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').hide();
+  $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').hide();
 
-    $('#booking-step-two-content').show();
+$('#booking-filters-step').show();
 
-    $('.booking-progress span:last-child').text('مرحله ۲ از ۴');
-
-  });
-
-  // بازگشت به مرحله اول
-  $(document).on('click', '#back-booking-step', function () {
-
-    $('#booking-step-two-content').hide();
-
-    $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').show();
-
-    $('.booking-progress span:last-child').text('مرحله ۱ از ۴');
+$('.booking-progress span:last-child').text('مرحله ۲ از ۳');
 
   });
 
+ // بازگشت از اطلاعات تماس به فیلترها
+$(document).on('click', '#back-booking-step', function () {
 
+  $('#booking-step-two-content').hide();
+
+  $('#booking-filters-step').show();
+
+  $('.booking-progress span:last-child').text('مرحله ۲ از ۳');
+
+});
+// ادامه از فیلترها به اطلاعات تماس
+$(document).on('click', '#next-to-contact-step', function () {
+
+  $('#booking-filters-step').hide();
+
+  $('#booking-step-two-content').show();
+
+  $('.booking-progress span:last-child').text('مرحله ۳ از ۳');
+
+});
+// بازگشت از فیلترها به مرحله اول
+$(document).on('click', '#back-to-main-step', function () {
+
+  $('#booking-filters-step').hide();
+
+  $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').show();
+
+  $('.booking-progress span:last-child').text('مرحله ۱ از ۳');
+
+});
 // ثبت درخواست
 $(document).on('click', '#submit-booking-request', function () {
 
