@@ -2442,36 +2442,12 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 <script>
 
 jQuery(function ($) {
-  var entryDate = null;
-
-  $('#entry-date').persianDatepicker({
+  $('#entry-date, #exit-date').persianDatepicker({
     format: 'YYYY/MM/DD',
     initialValue: false,
-    autoClose: true,
-    onSelect: function (unix) {
-      entryDate = unix;
-
-      $('#exit-date').persianDatepicker('setDate', null);
-      $('#exit-date').persianDatepicker('option', {
-        minDate: unix
-      });
-    }
-  });
-
-  $('#exit-date').persianDatepicker({
-    format: 'YYYY/MM/DD',
-    initialValue: false,
-    autoClose: true,
-    onShow: function () {
-      if (entryDate) {
-        $('#exit-date').persianDatepicker('option', {
-          minDate: entryDate
-        });
-      }
-    }
+    autoClose: true
   });
 });
-
 </script>
 </body>
 </html>
