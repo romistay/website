@@ -2434,19 +2434,18 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/persian-date@1.1.0/dist/persian-date.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
+
 <script>
-$(document).ready(function () {
-  $('.jalali-date').persianDatepicker({
-    format: 'YYYY/MM/DD',
-    initialValue: false,
-    autoClose: true,
-    calendar: {
-      persian: {
-        locale: 'fa',
-        leapYearMode: 'astronomical'
-      }
-    }
-  });
+window.addEventListener('load', function () {
+  if (window.jQuery && $.fn.persianDatepicker) {
+    $('.jalali-date').persianDatepicker({
+      format: 'YYYY/MM/DD',
+      initialValue: false,
+      autoClose: true
+    });
+  } else {
+    console.error('Persian Datepicker library not loaded');
+  }
 });
 </script>
 </body>
