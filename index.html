@@ -2307,13 +2307,13 @@ alert(typeof $.fn.persianDatepicker);
     </div>
 
   </div>
-
-  <div class="booking-actions">
-    <button type="button" id="back-booking-step">→ بازگشت</button>
-    <button type="button" id="submit-booking-request" onclick="alert('کلیک دکمه ثبت درخواست انجام شد')">ثبت و ارسال درخواست</button>
-  </div>
-
+<div class="booking-actions">
+  <button type="button" id="back-booking-step">→ بازگشت</button>
+  <button type="button" id="submit-booking-request">ثبت و ارسال درخواست</button>
 </div>
+
+<div id="booking-message" style="display:none; margin-top:20px; padding:15px 20px; border-radius:12px; font-size:14px; line-height:2;"></div>
+  </div>
       <div class="booking-note">
         ما بهترین گزینه‌های اقامت را متناسب با سلیقه و بودجه شما بررسی می‌کنیم.
       </div>
@@ -2533,9 +2533,21 @@ jQuery(function ($) {
 
   });
 
+
   // ثبت درخواست
   $(document).on('click', '#submit-booking-request', function () {
-alert('آزمایش دکمه ثبت');
+
+    function showBookingMessage(message, success) {
+      $('#booking-message')
+        .text(message)
+        .css({
+          display: 'block',
+          background: success ? '#e8f5ec' : '#fff0f0',
+          color: success ? '#246b3c' : '#b42318',
+          border: success ? '1px solid #b7dfc2' : '1px solid #f2c2c2'
+        });
+    }
+
     var name = $('#guest-name').val().trim();
 
     var phone = $('#guest-phone').val().trim()
@@ -2546,17 +2558,22 @@ alert('آزمایش دکمه ثبت');
         return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
       });
 
+    $('#booking-message').hide().text('');
+
     if (!name) {
-      alert('لطفاً نام و نام خانوادگی را وارد کنید.');
+      showBookingMessage('لطفاً نام و نام خانوادگی را وارد کنید.', false);
       return;
     }
 
     if (!/^09[0-9]{9}$/.test(phone)) {
-      alert('لطفاً شماره موبایل معتبر ۱۱ رقمی وارد کنید.');
+      showBookingMessage('لطفاً شماره موبایل معتبر ۱۱ رقمی وارد کنید.', false);
       return;
     }
 
-    alert('درخواست شما با موفقیت ثبت شد. از انتخاب ROMISTAY سپاسگزاریم.');
+    showBookingMessage(
+      'اطلاعات شما با موفقیت بررسی شد. از انتخاب ROMISTAY سپاسگزاریم.',
+      true
+    );
 
   });
 
