@@ -2201,30 +2201,41 @@ footer span {
 
       <div class="booking-grid">
 
-        <div class="booking-field">
-          <label>شهر مقصد</label>
-          <select id="booking-destination">
-            <option>انتخاب شهر</option>
-            <option>اصفهان</option>
-            <option>مشهد</option>
-            <option>تهران</option>
-            <option>کیش</option>
-            <option>شیراز</option>
-            <option>سایر شهرها</option>
-          </select>
-        </div>
+      
+<div class="booking-field">
+  <label for="booking-destination">شهر مقصد</label>
+  <select id="booking-destination">
+    <option value="">انتخاب شهر</option>
+    <option value="اصفهان">اصفهان</option>
+    <option value="مشهد">مشهد</option>
+    <option value="تهران">تهران</option>
+    <option value="کیش">کیش</option>
+    <option value="شیراز">شیراز</option>
+    <option value="other">سایر شهرها</option>
+  </select>
+</div>
 
-        <div class="booking-field">
-          <label>نوع اقامتگاه</label>
-<select id="booking-type">
-            <option>انتخاب نوع اقامتگاه</option>
-            <option>هتل</option>
-            <option>هتل‌آپارتمان</option>
-            <option>سوئیت</option>
-            <option>اقامتگاه بوم‌گردی</option>
-            <option>فرقی ندارد</option>
-          </select>
-        </div>
+<div class="booking-field" id="other-destination-field" style="display:none;">
+  <label for="other-destination">نام شهر موردنظر</label>
+  <input
+    type="text"
+    id="other-destination"
+    placeholder="نام شهر را وارد کنید"
+  >
+</div>
+
+<div class="booking-field">
+  <label>نوع اقامتگاه</label>
+  <select id="booking-type">
+    <option>انتخاب نوع اقامتگاه</option>
+    <option>هتل</option>
+    <option>هتل‌آپارتمان</option>
+    <option>سوئیت</option>
+    <option>اقامتگاه بوم‌گردی</option>
+    <option>فرقی ندارد</option>
+  </select>
+</div>
+
 
         <div class="booking-field">
           <label>تعداد ستاره</label>
@@ -2613,6 +2624,23 @@ $(document).on('click', '#submit-booking-request', function () {
 }); 
 
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const destination = document.getElementById('booking-destination');
+  const otherField = document.getElementById('other-destination-field');
+  const otherInput = document.getElementById('other-destination');
 
+  if (!destination || !otherField || !otherInput) return;
+
+  destination.addEventListener('change', function () {
+    const isOther = destination.value === 'other';
+    otherField.style.display = isOther ? 'block' : 'none';
+
+    if (!isOther) {
+      otherInput.value = '';
+    }
+  });
+});
+</script>
 </body>
 </html>
