@@ -2918,37 +2918,31 @@ $(document).on('click', '#submit-booking-request', function () {
     return;
   }
 
-  var bookingData = {
-    name: name,
-    phone: phone,
-    destination: destination,
-    accommodationType: accommodationType,
-    stars: $('#booking-stars').val(),
-    entryDate: entryDate,
-    exitDate: exitDate,
-    guests: $('#booking-guests').val(),
-    rooms: $('#booking-rooms').val(),
-    notes: $('#guest-notes').val().trim()
-  };
 
-  var submitButton = $('#submit-booking-request');
-  submitButton.prop('disabled', true);
+var bookingData = {
+  name: name,
+  phone: phone,
+  destination: destination,
+  accommodationType: accommodationType,
+  stars: $('#booking-stars').val(),
+  entryDate: entryDate,
+  exitDate: exitDate,
+  guests: $('#booking-guests').val(),
+  rooms: $('#booking-rooms').val(),
+  notes: $('#guest-notes').val().trim(),
 
-  fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mzaYiQmMW4LCtXJUikitY0kP86JkUmfBfHF9/exec', {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'text/plain;charset=utf-8'
-    },
-    body: JSON.stringify(bookingData)
-  })
-  .then(function () {
-    showBookingMessage(
-      'درخواست شما ارسال شد. از انتخاب ROMISTAY سپاسگزاریم.',
-      true
-    );
-    submitButton.prop('disabled', false);
-  })
+  amenities: $('input[name="amenities"]:checked').map(function () {
+    return this.value;
+  }).get(),
+
+  rules: $('input[name="rules"]:checked').map(function () {
+    return this.value;
+  }).get(),
+
+  priceRange: $('input[name="priceRange"]:checked').val() || '',
+  rentalType: $('input[name="rentalType"]:checked').val() || ''
+};
+
 
 .catch(function () {
     showBookingMessage(
