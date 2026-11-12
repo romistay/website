@@ -2438,15 +2438,38 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
 
 <script>
+
 jQuery(function ($) {
-  $('.jalali-date').each(function () {
-    $(this).persianDatepicker({
-      format: 'YYYY/MM/DD',
-      initialValue: false,
-      autoClose: true
-    });
+  var entryDate = null;
+
+  $('#entry-date').persianDatepicker({
+    format: 'YYYY/MM/DD',
+    initialValue: false,
+    autoClose: true,
+    onSelect: function (unix) {
+      entryDate = unix;
+
+      $('#exit-date').persianDatepicker('setDate', null);
+      $('#exit-date').persianDatepicker('option', {
+        minDate: unix
+      });
+    }
+  });
+
+  $('#exit-date').persianDatepicker({
+    format: 'YYYY/MM/DD',
+    initialValue: false,
+    autoClose: true,
+    onShow: function () {
+      if (entryDate) {
+        $('#exit-date').persianDatepicker('option', {
+          minDate: entryDate
+        });
+      }
+    }
   });
 });
+
 </script>
 </body>
 </html>
