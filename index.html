@@ -2677,5 +2677,42 @@ $(document).on('click', '#submit-booking-request', function () {
 });
 
 </script>
+
+  .catch(function () {
+    showBookingMessage(
+      'ارسال درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.',
+      false
+    );
+    submitButton.prop('disabled', false);
+  });
+
+});
+
+});
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const destination = document.getElementById('booking-destination');
+  const otherField = document.getElementById('other-destination-field');
+  const otherInput = document.getElementById('other-destination');
+
+  if (!destination || !otherField || !otherInput) return;
+
+  destination.addEventListener('change', function () {
+    const isOther = destination.value === 'other';
+    otherField.style.display = isOther ? 'block' : 'none';
+
+    if (!isOther) {
+      otherInput.value = '';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
