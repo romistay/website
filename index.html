@@ -2481,11 +2481,19 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 jQuery(function ($) {
 
 
-  $('#entry-date, #exit-date').persianDatepicker({
-    format: 'YYYY/MM/DD',
-    initialValue: false,
-    autoClose: true
-  });
+
+$('#entry-date').persianDatepicker({
+  format: 'YYYY/MM/DD',
+  initialValue: false,
+  autoClose: true
+});
+
+$('#exit-date').persianDatepicker({
+  format: 'YYYY/MM/DD',
+  initialValue: false,
+  autoClose: true
+});
+
 
   function normalizeDate(value) {
     return value
