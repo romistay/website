@@ -2544,6 +2544,7 @@ jQuery(function ($) {
 
   });
 
+
 // ثبت درخواست
 $(document).on('click', '#submit-booking-request', function () {
 
@@ -2580,69 +2581,82 @@ $(document).on('click', '#submit-booking-request', function () {
     return;
   }
 
- var selectedDestination = $('#booking-destination').val();
-var otherCity = $('#other-destination').val().trim();
+  var selectedDestination = $('#booking-destination').val();
+  var otherCity = $('#other-destination').val().trim();
 
-if (!selectedDestination) {
-  showBookingMessage('لطفاً شهر مقصد را انتخاب کنید.', false);
-  return;
-}
+  if (!selectedDestination) {
+    showBookingMessage('لطفاً شهر مقصد را انتخاب کنید.', false);
+    return;
+  }
 
-if (selectedDestination === 'other' && !otherCity) {
-  showBookingMessage('لطفاً نام شهر موردنظر را وارد کنید.', false);
-  return;
-}
+  if (selectedDestination === 'other' && !otherCity) {
+    showBookingMessage('لطفاً نام شهر موردنظر را وارد کنید.', false);
+    return;
+  }
 
-var destination = selectedDestination === 'other'
-  ? otherCity
-  : selectedDestination;
+  var destination = selectedDestination === 'other'
+    ? otherCity
+    : selectedDestination;
 
-var accommodationType = $('#booking-type').val();
+  var accommodationType = $('#booking-type').val();
 
-if (!accommodationType || accommodationType === 'انتخاب نوع اقامتگاه') {
-  showBookingMessage('لطفاً نوع اقامتگاه را انتخاب کنید.', false);
-  return;
-}
+  if (!accommodationType || accommodationType === 'انتخاب نوع اقامتگاه') {
+    showBookingMessage('لطفاً نوع اقامتگاه را انتخاب کنید.', false);
+    return;
+  }
 
-var entryDate = $('#entry-date').val().trim();
-var exitDate = $('#exit-date').val().trim();
+  var entryDate = $('#entry-date').val().trim();
+  var exitDate = $('#exit-date').val().trim();
 
-if (!entryDate || !exitDate) {
-  showBookingMessage('لطفاً تاریخ ورود و خروج را انتخاب کنید.', false);
-  return;
-}
-var normalizedEntry = normalizeDate(entryDate);
-var normalizedExit = normalizeDate(exitDate);
+  if (!entryDate || !exitDate) {
+    showBookingMessage('لطفاً تاریخ ورود و خروج را انتخاب کنید.', false);
+    return;
+  }
 
-var a = normalizedEntry.split('/').map(Number);
-var b = normalizedExit.split('/').map(Number);
+  var normalizedEntry = normalizeDate(entryDate);
+  var normalizedExit = normalizeDate(exitDate);
 
-if (a.length !== 3 || b.length !== 3 ||
-    a.some(isNaN) || b.some(isNaN)) {
-  showBookingMessage('لطفاً تاریخ‌ها را دوباره انتخاب کنید.', false);
-  return;
-}
+  var a = normalizedEntry.split('/').map(Number);
+  var b = normalizedExit.split('/').map(Number);
 
-var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
-var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
+  if (a.length !== 3 || b.length !== 3 ||
+      a.some(isNaN) || b.some(isNaN)) {
+    showBookingMessage('لطفاً تاریخ‌ها را دوباره انتخاب کنید.', false);
+    return;
+  }
 
-if (exitNumber <= entryNumber) {
-  showBookingMessage('تاریخ خروج باید بعد از تاریخ ورود باشد.', false);
-  return;
-}
-var bookingData = {
-  name: name,
-  phone: phone,
-  destination: destination,
-  accommodationType: accommodationType,
-  stars: $('#booking-stars').val(),
-  entryDate: entryDate,
-  exitDate: exitDate,
-  guests: $('#booking-guests').val(),
-  rooms: $('#booking-rooms').val(),
-  notes: $('#guest-notes').val().trim()
-};
+  var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
+  var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
 
+  if (exitNumber <= entryNumber) {
+    showBookingMessage('تاریخ خروج باید بعد از تاریخ ورود باشد.', false);
+    return;
+  }
+
+  var bookingData = {
+    name: name,
+    phone: phone,
+    destination: destination,
+    accommodationType: accommodationType,
+    stars: $('#booking-stars').val(),
+    entryDate: entryDate,
+    exitDate: exitDate,
+    guests: $('#booking-guests').val(),
+    rooms: $('#booking-rooms').val(),
+    notes: $('#guest-notes').val().trim()
+  };
+
+  var submitButton = $('#submit-booking-request');
+  submitButton.prop('disabled', true);
+
+  fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mzaYiQmMW4LCtXJUikitY0kP86JkUmfBfHF9/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8'
+    },
+    body: JSON.stringify(bookingData)
+  })
   .then(function () {
     showBookingMessage(
       'درخواست شما ارسال شد. از انتخاب ROMISTAY سپاسگزاریم.',
@@ -2658,28 +2672,10 @@ var bookingData = {
     submitButton.prop('disabled', false);
   });
 
-}); 
-
-}); 
-
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const destination = document.getElementById('booking-destination');
-  const otherField = document.getElementById('other-destination-field');
-  const otherInput = document.getElementById('other-destination');
-
-  if (!destination || !otherField || !otherInput) return;
-
-  destination.addEventListener('change', function () {
-    const isOther = destination.value === 'other';
-    otherField.style.display = isOther ? 'block' : 'none';
-
-    if (!isOther) {
-      otherInput.value = '';
-    }
-  });
 });
+
+});
+
 </script>
 </body>
 </html>
