@@ -2017,6 +2017,86 @@ footer span {
     padding: 15px;
   }
 }
+
+/* فیلترهای تکمیلی فرم رزرو */
+.booking-extra-filters {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.filter-section {
+  padding: 24px;
+  background: #fffdf9;
+  border: 1px solid #e5d6b8;
+  border-radius: 18px;
+}
+
+.filter-section h3 {
+  color: #10243a;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.filter-section p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.booking-options,
+.booking-choice-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.booking-options label,
+.booking-choice-cards label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px;
+  border: 1px solid #ded6c5;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #10243a;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.booking-options label:has(input:checked),
+.booking-choice-cards label:has(input:checked) {
+  background: #10243a;
+  color: #f0d69d;
+  border-color: #d6ad60;
+}
+
+.booking-options input,
+.booking-choice-cards input {
+  accent-color: #c9a45c;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .booking-options,
+  .booking-choice-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-section {
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .booking-options,
+  .booking-choice-cards {
+    grid-template-columns: 1fr;
+  }
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
@@ -2401,7 +2481,96 @@ footer span {
   </div>
 
 </div>
-      <div class="booking-actions">
+
+<!-- فیلترهای تکمیلی درخواست اقامت -->
+<div class="booking-extra-filters">
+
+  <!-- امکانات -->
+  <div class="filter-section">
+    <h3>امکانات موردنظر شما</h3>
+    <p>امکانات دلخواه خود را انتخاب کنید (امکان انتخاب چند مورد)</p>
+
+    <div class="booking-options">
+      <label><input type="checkbox" name="amenities" value="باربیکیو"> باربیکیو</label>
+      <label><input type="checkbox" name="amenities" value="اینترنت WiFi"> اینترنت (WiFi)</label>
+      <label><input type="checkbox" name="amenities" value="استخر"> استخر</label>
+      <label><input type="checkbox" name="amenities" value="میز بیلیارد"> میز بیلیارد</label>
+      <label><input type="checkbox" name="amenities" value="میز پینگ پنگ"> میز پینگ پنگ</label>
+      <label><input type="checkbox" name="amenities" value="فوتبال دستی"> فوتبال دستی</label>
+      <label><input type="checkbox" name="amenities" value="جکوزی"> جکوزی</label>
+      <label><input type="checkbox" name="amenities" value="سونا"> سونا</label>
+      <label><input type="checkbox" name="amenities" value="سیستم تهویه هوا"> سیستم تهویه هوا</label>
+      <label><input type="checkbox" name="amenities" value="وعده غذایی"> وعده غذایی</label>
+      <label><input type="checkbox" name="amenities" value="اجاق گاز"> اجاق گاز</label>
+      <label><input type="checkbox" name="amenities" value="سیستم سرمایشی"> سیستم سرمایشی</label>
+      <label><input type="checkbox" name="amenities" value="تلویزیون"> تلویزیون</label>
+      <label><input type="checkbox" name="amenities" value="یخچال"> یخچال</label>
+      <label><input type="checkbox" name="amenities" value="سیستم گرمایشی"> سیستم گرمایشی</label>
+      <label><input type="checkbox" name="amenities" value="سیستم صوتی"> سیستم صوتی</label>
+      <label><input type="checkbox" name="amenities" value="مبلمان"> مبلمان</label>
+      <label><input type="checkbox" name="amenities" value="لوازم سرو غذا"> لوازم سرو غذا</label>
+      <label><input type="checkbox" name="amenities" value="آشپزخانه"> آشپزخانه</label>
+      <label><input type="checkbox" name="amenities" value="پوشش شبکه موبایل"> پوشش شبکه موبایل</label>
+      <label><input type="checkbox" name="amenities" value="حمام"> حمام</label>
+      <label><input type="checkbox" name="amenities" value="بالکن"> بالکن</label>
+      <label><input type="checkbox" name="amenities" value="آلاچیق"> آلاچیق</label>
+      <label><input type="checkbox" name="amenities" value="سرویس بهداشتی فرنگی"> سرویس بهداشتی فرنگی</label>
+      <label><input type="checkbox" name="amenities" value="سرویس بهداشتی ایرانی"> سرویس بهداشتی ایرانی</label>
+      <label><input type="checkbox" name="amenities" value="فضای سبز"> فضای سبز</label>
+      <label><input type="checkbox" name="amenities" value="پارکینگ"> پارکینگ</label>
+      <label><input type="checkbox" name="amenities" value="آسانسور"> آسانسور</label>
+      <label><input type="checkbox" name="amenities" value="آب"> آب</label>
+      <label><input type="checkbox" name="amenities" value="برق"> برق</label>
+      <label><input type="checkbox" name="amenities" value="گاز"> گاز</label>
+    </div>
+  </div>
+
+  <!-- مقررات -->
+  <div class="filter-section">
+    <h3>مقررات و شرایط اقامتگاه موردنظر شما</h3>
+    <p>شرایط موردنظر خود را انتخاب کنید</p>
+
+    <div class="booking-options">
+      <label><input type="checkbox" name="rules" value="امکان برگزاری مراسم و مهمانی"> امکان برگزاری مراسم و مهمانی</label>
+      <label><input type="checkbox" name="rules" value="امکان ورود حیوانات خانگی"> امکان ورود حیوانات خانگی</label>
+      <label><input type="checkbox" name="rules" value="امکان استعمال دخانیات"> امکان استعمال دخانیات</label>
+      <label><input type="checkbox" name="rules" value="پذیرش ۲۴ ساعته مهمان"> امکان پذیرش ۲۴ ساعته مهمان</label>
+      <label><input type="checkbox" name="rules" value="پذیرش گروه‌های مجردی"> امکان پذیرش گروه‌های مجردی (فقط آقایان یا فقط خانم‌ها)</label>
+    </div>
+  </div>
+
+  <!-- بودجه -->
+  <div class="filter-section">
+    <h3>بودجه موردنظر شما برای هر شب اقامت (کل واحد)</h3>
+
+    <div class="booking-choice-cards">
+      <label><input type="radio" name="priceRange" value="کمتر از ۱ میلیون تومان"><span>کمتر از ۱ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="۱ تا ۲ میلیون تومان"><span>۱ تا ۲ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="۲ تا ۳ میلیون تومان"><span>۲ تا ۳ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="۳ تا ۵ میلیون تومان"><span>۳ تا ۵ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="۵ تا ۸ میلیون تومان"><span>۵ تا ۸ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="۸ تا ۱۲ میلیون تومان"><span>۸ تا ۱۲ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="۱۲ تا ۲۰ میلیون تومان"><span>۱۲ تا ۲۰ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="بیشتر از ۲۰ میلیون تومان"><span>بیشتر از ۲۰ میلیون</span></label>
+      <label><input type="radio" name="priceRange" value="بدون محدودیت بودجه"><span>بدون محدودیت بودجه</span></label>
+    </div>
+  </div>
+
+  <!-- نوع اجاره -->
+  <div class="filter-section">
+    <h3>نوع اجاره موردنظر شما</h3>
+
+    <div class="booking-choice-cards">
+      <label><input type="radio" name="rentalType" value="دربست"><span>دربست</span></label>
+      <label><input type="radio" name="rentalType" value="نیمه‌دربست"><span>نیمه‌دربست</span></label>
+      <label><input type="radio" name="rentalType" value="غیردربست"><span>غیردربست</span></label>
+    </div>
+  </div>
+
+</div>
+<!-- پایان فیلترهای تکمیلی -->
+
+     <div class="booking-actions">
        <button type="button" id="next-booking-step">ادامه درخواست ←</button>
       </div>
 <div id="booking-step-two-content" style="display: none;">
