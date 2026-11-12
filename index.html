@@ -1757,6 +1757,167 @@ footer span {
   opacity: 1;
 }
 
+/* ROMISTAY Booking Request */
+
+.booking-request {
+  padding: 85px 7%;
+  background: #f6f4ef;
+  direction: rtl;
+}
+
+.booking-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.booking-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.booking-kicker {
+  color: #b58b43;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.booking-heading h2 {
+  color: #10243a;
+  font-size: 34px;
+  margin: 15px 0;
+}
+
+.booking-heading p {
+  color: #647080;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.booking-card {
+  background: #ffffff;
+  border: 1px solid #e4d5b6;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(16,36,58,.09);
+}
+
+.booking-progress {
+  display: flex;
+  justify-content: space-between;
+  color: #10243a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.booking-progress-line {
+  height: 6px;
+  background: #e9e9e9;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.booking-progress-line span {
+  display: block;
+  width: 25%;
+  height: 100%;
+  background: #d6ad60;
+  border-radius: 20px;
+}
+
+.booking-card h3 {
+  color: #10243a;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-field label {
+  color: #26394e;
+  font-weight: 600;
+}
+
+.booking-field select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d8dce1;
+  border-radius: 12px;
+  background: #fafafa;
+  color: #10243a;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.booking-field select:focus {
+  border-color: #d6ad60;
+}
+
+.booking-actions {
+  text-align: left;
+  margin-top: 35px;
+}
+
+.booking-actions button {
+  background: #10243a;
+  color: #f0d69d;
+  border: 1px solid #d6ad60;
+  border-radius: 12px;
+  padding: 15px 35px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.booking-actions button:hover {
+  background: #d6ad60;
+  color: #10243a;
+}
+
+.booking-note {
+  text-align: center;
+  color: #78818b;
+  font-size: 13px;
+  margin-top: 30px;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .booking-request {
+    padding: 55px 5%;
+  }
+
+  .booking-card {
+    padding: 25px 18px;
+  }
+
+  .booking-heading h2 {
+    font-size: 27px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-actions button {
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 
