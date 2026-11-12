@@ -2464,11 +2464,72 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
   <span>ارتباط با ما</span>
 </a>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/persian-date@1.1.0/dist/persian-date.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
-
 <script>
+jQuery(function ($) {
+
+  $('#entry-date, #exit-date').persianDatepicker({
+    format: 'YYYY/MM/DD',
+    initialValue: false,
+    autoClose: true
+  });
+
+  function normalizeDate(value) {
+    return value
+      .replace(/[۰-۹]/g, function (d) {
+        return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d);
+      })
+      .replace(/[٠-٩]/g, function (d) {
+        return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
+      });
+  }
+
+  $(document).on('click', '#next-booking-step', function () {
+
+    var entry = normalizeDate($('#entry-date').val().trim());
+    var exit = normalizeDate($('#exit-date').val().trim());
+
+    if (!entry || !exit) {
+      alert('لطفاً تاریخ ورود و خروج را انتخاب کنید.');
+      return;
+    }
+
+    var a = entry.split('/').map(Number);
+    var b = exit.split('/').map(Number);
+
+    if (a.length !== 3 || b.length !== 3 ||
+        a.some(isNaN) || b.some(isNaN)) {
+      alert('لطفاً تاریخ‌ها را دوباره انتخاب کنید.');
+      return;
+    }
+
+    var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
+    var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
+
+    if (exitNumber <= entryNumber) {
+      alert('تاریخ خروج باید بعد از تاریخ ورود باشد.');
+      return;
+    }
+
+    $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').hide();
+
+    $('#booking-step-two-content').show();
+
+    $('.booking-progress span:last-child').text('مرحله ۲ از ۴');
+
+  });
+
+  $(document).on('click', '#back-booking-step', function () {
+
+    $('#booking-step-two-content').hide();
+
+    $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').show();
+
+    $('.booking-progress span:last-child').text('مرحله ۱ از ۴');
+
+  });
+
+});
+</script>
 jQuery(function ($) {
 
   $('#entry-date, #exit-date').persianDatepicker({
