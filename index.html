@@ -2580,18 +2580,24 @@ $(document).on('click', '#submit-booking-request', function () {
     return;
   }
 
-  var bookingData = {
-    name: name,
-    phone: phone,
-    destination: $('#booking-destination').val(),
-    accommodationType: $('#booking-type').val(),
-    stars: $('#booking-stars').val(),
-    entryDate: $('#entry-date').val(),
-    exitDate: $('#exit-date').val(),
-    guests: $('#booking-guests').val(),
-    rooms: $('#booking-rooms').val(),
-    notes: $('#guest-notes').val().trim()
-  };
+ 
+var selectedDestination = $('#booking-destination').val();
+
+var bookingData = {
+  name: name,
+  phone: phone,
+  destination: selectedDestination === 'other'
+    ? $('#other-destination').val().trim()
+    : selectedDestination,
+  accommodationType: $('#booking-type').val(),
+  stars: $('#booking-stars').val(),
+  entryDate: $('#entry-date').val(),
+  exitDate: $('#exit-date').val(),
+  guests: $('#booking-guests').val(),
+  rooms: $('#booking-rooms').val(),
+  notes: $('#guest-notes').val().trim()
+};
+
 
   var submitButton = $('#submit-booking-request');
   submitButton.prop('disabled', true);
