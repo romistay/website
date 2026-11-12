@@ -2435,13 +2435,12 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
   <span class="whatsapp-icon">☏</span>
   <span>ارتباط با ما</span>
 </a>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/persian-date@1.1.0/dist/persian-date.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
 
 <script>
-
-
 jQuery(function ($) {
 
   $('#entry-date, #exit-date').persianDatepicker({
@@ -2450,43 +2449,37 @@ jQuery(function ($) {
     autoClose: true
   });
 
-  
-$('#next-booking-step').on('click', function () {
+  $('#next-booking-step').on('click', function () {
 
-  function normalizeDate(value) {
-    return value
-      .replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
-      .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
-  }
+    function normalizeDate(value) {
+      return value
+        .replace(/[۰-۹]/g, function (d) {
+          return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d);
+        })
+        .replace(/[٠-٩]/g, function (d) {
+          return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
+        });
+    }
 
-  var entry = normalizeDate($('#entry-date').val());
-  var exit = normalizeDate($('#exit-date').val());
+    var entry = normalizeDate($('#entry-date').val().trim());
+    var exit = normalizeDate($('#exit-date').val().trim());
 
-  if (!entry || !exit) {
-    alert('لطفاً تاریخ ورود و خروج را انتخاب کنید.');
-    return;
-  }
+    if (!entry || !exit) {
+      alert('لطفاً تاریخ ورود و خروج را انتخاب کنید.');
+      return;
+    }
 
-  var a = entry.split('/').map(Number);
-  var b = exit.split('/').map(Number);
+    var a = entry.split('/').map(Number);
+    var b = exit.split('/').map(Number);
 
-  var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
-  var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
+    if (a.length !== 3 || b.length !== 3 ||
+        a.some(isNaN) || b.some(isNaN)) {
+      alert('لطفاً تاریخ‌ها را دوباره انتخاب کنید.');
+      return;
+    }
 
-  if (exitNumber <= entryNumber) {
-    alert('تاریخ خروج باید بعد از تاریخ ورود باشد.');
-    return;
-  }
-
-  alert('تاریخ‌ها با موفقیت بررسی شدند.');
-});
-
-
-    var entryParts = entry.split('/').map(Number);
-    var exitParts = exit.split('/').map(Number);
-
-    var entryNumber = entryParts[0] * 10000 + entryParts[1] * 100 + entryParts[2];
-    var exitNumber = exitParts[0] * 10000 + exitParts[1] * 100 + exitParts[2];
+    var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
+    var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
 
     if (exitNumber <= entryNumber) {
       alert('تاریخ خروج باید بعد از تاریخ ورود باشد.');
@@ -2497,7 +2490,8 @@ $('#next-booking-step').on('click', function () {
   });
 
 });
-
 </script>
 </body>
+</html>
+
 </html>
