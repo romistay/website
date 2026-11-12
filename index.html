@@ -2438,16 +2438,14 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
 
 <script>
-window.addEventListener('load', function () {
-  if (window.jQuery && $.fn.persianDatepicker) {
-    $('.jalali-date').persianDatepicker({
+jQuery(function ($) {
+  $('.jalali-date').each(function () {
+    $(this).persianDatepicker({
       format: 'YYYY/MM/DD',
       initialValue: false,
       autoClose: true
     });
-  } else {
-    console.error('Persian Datepicker library not loaded');
-  }
+  });
 });
 </script>
 </body>
