@@ -2466,6 +2466,7 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/persian-date@1.1.0/dist/persian-date.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
+
 <script>
 jQuery(function ($) {
 
@@ -2485,8 +2486,9 @@ jQuery(function ($) {
       });
   }
 
+  // رفتن به مرحله دوم
   $(document).on('click', '#next-booking-step', function () {
-alert('دکمه ادامه فعال شد');
+
     var entry = normalizeDate($('#entry-date').val().trim());
     var exit = normalizeDate($('#exit-date').val().trim());
 
@@ -2520,7 +2522,7 @@ alert('دکمه ادامه فعال شد');
 
   });
 
-
+  // بازگشت به مرحله اول
   $(document).on('click', '#back-booking-step', function () {
 
     $('#booking-step-two-content').hide();
@@ -2531,6 +2533,7 @@ alert('دکمه ادامه فعال شد');
 
   });
 
+  // ثبت درخواست
   $(document).on('click', '#submit-booking-request', function () {
 
     var name = $('#guest-name').val().trim();
@@ -2552,6 +2555,7 @@ alert('دکمه ادامه فعال شد');
 
 });
 </script>
+
 </body>
 </html>
 
