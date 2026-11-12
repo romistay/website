@@ -2441,13 +2441,40 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 
 <script>
 
+
 jQuery(function ($) {
+
   $('#entry-date, #exit-date').persianDatepicker({
     format: 'YYYY/MM/DD',
     initialValue: false,
     autoClose: true
   });
+
+  $('#next-booking-step').on('click', function () {
+    var entry = $('#entry-date').val();
+    var exit = $('#exit-date').val();
+
+    if (!entry || !exit) {
+      alert('لطفاً تاریخ ورود و خروج را انتخاب کنید.');
+      return;
+    }
+
+    var entryParts = entry.split('/').map(Number);
+    var exitParts = exit.split('/').map(Number);
+
+    var entryNumber = entryParts[0] * 10000 + entryParts[1] * 100 + entryParts[2];
+    var exitNumber = exitParts[0] * 10000 + exitParts[1] * 100 + exitParts[2];
+
+    if (exitNumber <= entryNumber) {
+      alert('تاریخ خروج باید بعد از تاریخ ورود باشد.');
+      return;
+    }
+
+    alert('تاریخ‌ها با موفقیت بررسی شدند.');
+  });
+
 });
+
 </script>
 </body>
 </html>
