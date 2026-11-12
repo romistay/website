@@ -2786,7 +2786,8 @@ $('#exit-date').persianDatepicker({
         return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
       });
   }
-
+// مخفی کردن مراحل دوم و سوم در شروع فرم
+$('#booking-filters-step, #booking-step-two-content').hide();
   // رفتن به مرحله دوم
   $(document).on('click', '#next-booking-step', function () {
 
