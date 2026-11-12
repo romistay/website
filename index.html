@@ -1999,7 +1999,43 @@ footer span {
   box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
   background: #ffffff;
 } 
-</style>
+/* بهینه‌سازی فرم درخواست اقامت در موبایل */
+@media (max-width: 600px) {
+  .booking-request {
+    padding: 45px 5%;
+  }
+
+  .booking-card {
+    padding: 25px 16px;
+    border-radius: 20px;
+  }
+
+  .booking-heading h2 {
+    font-size: 27px;
+  }
+
+  .booking-heading p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .booking-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .booking-actions button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+ </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
 </head>
