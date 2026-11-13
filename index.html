@@ -2097,6 +2097,116 @@ footer span {
     grid-template-columns: 1fr;
   }
 }
+
+/* طراحی اختصاصی اسلایدر بودجه ROMISTAY */
+
+.budget-slider-container {
+  position: relative;
+  direction: rtl;
+  padding: 28px 24px 24px;
+  margin-top: 22px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #172b3d, #243c50);
+  box-shadow: 0 12px 30px rgba(15, 35, 52, 0.16);
+  overflow: hidden;
+}
+
+.budget-chart {
+  height: 76px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0 3px;
+  margin-bottom: -5px;
+}
+
+.budget-chart span {
+  flex: 1;
+  min-width: 0;
+  display: block;
+  border-radius: 5px 5px 2px 2px;
+  background: linear-gradient(180deg, #d9bd82, #947344);
+  opacity: 0.8;
+  box-shadow: 0 0 9px rgba(214, 180, 119, 0.12);
+}
+
+#booking-budget {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#booking-budget::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 20px;
+  background: linear-gradient(to left, #d6b477, #8e7045);
+}
+
+#booking-budget::-moz-range-track {
+  height: 8px;
+  border-radius: 20px;
+  background: linear-gradient(to left, #d6b477, #8e7045);
+}
+
+#booking-budget::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fffdf5, #e7d2a8 65%, #b58a43);
+  border: 3px solid #fff8e9;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35),
+              0 0 0 5px rgba(214, 180, 119, 0.18);
+}
+
+#booking-budget::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fffdf5, #e7d2a8 65%, #b58a43);
+  border: 3px solid #fff8e9;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35),
+              0 0 0 5px rgba(214, 180, 119, 0.18);
+}
+
+.budget-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #e6d8bd;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.budget-selected {
+  margin-top: 20px;
+  padding: 13px 16px;
+  border: 1px solid rgba(214, 180, 119, 0.35);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #f5ead6;
+  text-align: center;
+  font-size: 13px;
+}
+
+.budget-selected strong {
+  display: block;
+  margin-top: 6px;
+  color: #e6c98c;
+  font-size: 21px;
+  font-weight: 800;
+}
+
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
@@ -2550,27 +2660,52 @@ footer span {
 <div class="filter-section">
   <h3>بودجه موردنظر شما برای هر شب اقامت (هر واحد)</h3>
 
-  <div class="budget-slider-container">
-    <input
-      type="range"
-      id="booking-budget"
-      min="500000"
-      max="100000000"
-      step="500000"
-      value="20000000"
-      dir="rtl"
-    >
+  
+<div class="budget-slider-container">
 
-    <div class="budget-slider-labels">
-      <span>۱۰۰٬۰۰۰٬۰۰۰ تومان</span>
-      <span>۵۰۰٬۰۰۰ تومان</span>
-    </div>
-
-    <div class="budget-selected">
-      حداکثر بودجه:
-      <strong id="budget-value">۲۰٬۰۰۰٬۰۰۰ تومان</strong>
-    </div>
+  <div class="budget-chart">
+    <span style="height: 18%"></span>
+    <span style="height: 28%"></span>
+    <span style="height: 22%"></span>
+    <span style="height: 38%"></span>
+    <span style="height: 30%"></span>
+    <span style="height: 52%"></span>
+    <span style="height: 43%"></span>
+    <span style="height: 68%"></span>
+    <span style="height: 55%"></span>
+    <span style="height: 82%"></span>
+    <span style="height: 62%"></span>
+    <span style="height: 45%"></span>
+    <span style="height: 72%"></span>
+    <span style="height: 50%"></span>
+    <span style="height: 35%"></span>
+    <span style="height: 24%"></span>
+    <span style="height: 42%"></span>
+    <span style="height: 30%"></span>
+    <span style="height: 20%"></span>
+    <span style="height: 12%"></span>
   </div>
+
+  <input
+    type="range"
+    id="booking-budget"
+    min="500000"
+    max="100000000"
+    step="500000"
+    value="20000000"
+    dir="rtl"
+  >
+
+  <div class="budget-slider-labels">
+    <span>۱۰۰٬۰۰۰٬۰۰۰ تومان</span>
+    <span>۵۰۰٬۰۰۰ تومان</span>
+  </div>
+
+  <div class="budget-selected">
+    حداکثر بودجه:
+    <strong id="budget-value">۲۰٬۰۰۰٬۰۰۰ تومان</strong>
+  </div>
+
 </div>
 
 
