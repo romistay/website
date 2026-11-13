@@ -3013,44 +3013,6 @@ html {
   }
 }
 
-/* آیکون‌های فیلدهای فرم رزرو */
-.booking-field label::before {
-  display: inline-block;
-  margin-left: 8px;
-  font-size: 16px;
-}
-
-.booking-field:has(#booking-destination) label::before {
-  content: "📍";
-}
-
-.booking-field:has(#other-destination) label::before {
-  content: "🏙️";
-}
-
-.booking-field:has(#booking-type) label::before {
-  content: "🏨";
-}
-
-.booking-field:has(#booking-stars) label::before {
-  content: "⭐";
-}
-
-.booking-field:has(#entry-date) label::before {
-  content: "📅";
-}
-
-.booking-field:has(#exit-date) label::before {
-  content: "🗓️";
-}
-
-.booking-field:has(#booking-guests) label::before {
-  content: "👥";
-}
-
-.booking-field:has(#booking-rooms) label::before {
-  content: "🚪";
-}
 
 /* دکمه ادامه رزرو ROMISTAY */
 #next-booking-step {
@@ -3082,6 +3044,45 @@ html {
   outline: 3px solid rgba(201, 164, 92, 0.35);
   outline-offset: 3px;
 }
+
+/* آیکون‌های مینیمال فرم رزرو */
+.booking-field label::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  margin-left: 9px;
+  color: #bd984f;
+  font-size: 14px;
+}
+
+.booking-field:has(#booking-destination) label::before {
+  content: "\f3c5";
+}
+
+.booking-field:has(#other-destination) label::before {
+  content: "\f1ad";
+}
+
+.booking-field:has(#booking-type) label::before {
+  content: "\f594";
+}
+
+.booking-field:has(#booking-stars) label::before {
+  content: "\f005";
+}
+
+.booking-field:has(#entry-date) label::before,
+.booking-field:has(#exit-date) label::before {
+  content: "\f073";
+}
+
+.booking-field:has(#booking-guests) label::before {
+  content: "\f0c0";
+}
+
+.booking-field:has(#booking-rooms) label::before {
+  content: "\f236";
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
@@ -3089,6 +3090,7 @@ html {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
