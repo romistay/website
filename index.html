@@ -2349,6 +2349,37 @@ footer span {
   color: #ffffff !important;
 }
 
+/* منوی کشویی لوکس ROMISTAY */
+
+#booking-filters-step .accordion-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  border: 1px solid rgba(214, 180, 119, 0.65);
+  border-radius: 13px;
+  background: rgba(13, 31, 49, 0.82);
+  color: #f0d69d;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: right;
+}
+
+#booking-filters-step .accordion-arrow {
+  font-size: 21px;
+  transition: transform .25s ease;
+}
+
+#booking-filters-step .accordion-toggle.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+#booking-filters-step .accordion-content {
+  padding: 16px 10px 5px;
+}
+
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
@@ -2742,8 +2773,15 @@ footer span {
 
   <!-- امکانات -->
   <!-- امکانات -->
-  <div class="filter-section">
-    <h3>امکانات موردنظر شما</h3>
+ <div class="filter-section accordion-section">
+
+  <button type="button" class="accordion-toggle">
+    <span>♧ امکانات موردنظر شما</span>
+    <span class="accordion-arrow">⌄</span>
+  </button>
+
+  <div class="accordion-content" style="display: none;">
+
     <p>امکانات دلخواه خود را انتخاب کنید (امکان انتخاب چند مورد)</p>
 
     <div class="booking-options">
@@ -2775,7 +2813,7 @@ footer span {
       <label><input type="checkbox" name="amenities" value="فضای سبز"> فضای سبز</label>
       <label><input type="checkbox" name="amenities" value="پارکینگ"> پارکینگ</label>
       <label><input type="checkbox" name="amenities" value="آسانسور"> آسانسور</label>
-      <label><input type="checkbox" name="amenities" value="آب"> آب</label>
+         <label><input type="checkbox" name="amenities" value="آب"> آب</label>
       <label><input type="checkbox" name="amenities" value="برق"> برق</label>
       <label><input type="checkbox" name="amenities" value="گاز"> گاز</label>
     </div>
@@ -3052,7 +3090,16 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 
 <script>
 jQuery(function ($) {
+// باز و بسته شدن منوهای کشویی مرحله دوم
+$(document).on('click', '.accordion-toggle', function () {
 
+  var content = $(this).next('.accordion-content');
+
+  content.slideToggle(250);
+
+  $(this).toggleClass('active');
+
+});
 
 
 $('#entry-date').persianDatepicker({
