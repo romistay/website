@@ -3039,7 +3039,19 @@ rgba(9, 25, 41, 0.48) !important;
     <div class="booking-options amenities-preview">
       <label><input type="checkbox" name="amenities" value="باربیکیو"> باربیکیو</label>
       <label><input type="checkbox" name="amenities" value="اینترنت WiFi"> اینترنت (WiFi)</label>
-      <label><input type="checkbox" name="amenities" value="استخر"> استخر</label>
+      <div class="pool-option">
+  <label>
+    <input type="checkbox" name="amenities" value="استخر" id="pool-checkbox">
+    استخر
+  </label>
+
+  <div id="pool-details" style="display: none;">
+    <label><input type="checkbox" name="amenities" value="استخر سرپوشیده"> سرپوشیده</label>
+    <label><input type="checkbox" name="amenities" value="استخر سرباز"> سرباز</label>
+    <label><input type="checkbox" name="amenities" value="آب سرد"> آب سرد</label>
+    <label><input type="checkbox" name="amenities" value="آب گرم"> آب گرم</label>
+  </div>
+</div>
       <label><input type="checkbox" name="amenities" value="میز بیلیارد"> میز بیلیارد</label>
       <label><input type="checkbox" name="amenities" value="میز پینگ پنگ"> میز پینگ پنگ</label>
       <label><input type="checkbox" name="amenities" value="فوتبال دستی"> فوتبال دستی</label>
@@ -3370,7 +3382,17 @@ jQuery(function ($) {
     content.stop(true, true).slideToggle(250);
     $(this).toggleClass('active');
   });
+  // نمایش گزینه‌های جزئیات استخر
+  $(document).on('change', '#pool-checkbox', function () {
 
+    if ($(this).is(':checked')) {
+      $('#pool-details').slideDown(250);
+    } else {
+      $('#pool-details').slideUp(250);
+      $('#pool-details input[type="checkbox"]').prop('checked', false);
+    }
+
+  });
   // نمایش و مخفی کردن همه امکانات
   $(document).on('click', '#toggle-all-amenities', function () {
     var list = $('.amenities-preview');
