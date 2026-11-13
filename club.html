@@ -282,7 +282,6 @@ let waitingForMembership = false;
 
 window.addEventListener('message', function(event) {
 
-  if (event.source !== iframe.contentWindow) return;
 
   const message = event.data;
 
