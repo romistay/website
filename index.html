@@ -4033,19 +4033,13 @@ $(document).on('click', '#submit-booking-request', function () {
     showBookingMessage('لطفاً تاریخ ورود و خروج را انتخاب کنید.', false);
     return;
   }
+var dateError = getBookingDateError(entryDate, exitDate);
 
-  var normalizedEntry = normalizeDate(entryDate);
-  var normalizedExit = normalizeDate(exitDate);
-
-  var a = normalizedEntry.split('/').map(Number);
-  var b = normalizedExit.split('/').map(Number);
-
-  if (a.length !== 3 || b.length !== 3 ||
-      a.some(isNaN) || b.some(isNaN)) {
-    showBookingMessage('لطفاً تاریخ‌ها را دوباره انتخاب کنید.', false);
-    return;
-  }
-
+if (dateError) {
+  showBookingMessage(dateError, false);
+  return;
+}
+ 
   var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
   var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
 
