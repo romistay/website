@@ -3937,7 +3937,17 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 
 <script>
 jQuery(function ($) {
-$('#booking-request').hide();
+// نمایش کادر ورود نام شهر در صورت انتخاب سایر شهرها
+$(document).on('change', '#booking-destination', function () {
+  var isOther = $(this).val() === 'other';
+
+  $('#other-destination-field').toggle(isOther);
+
+  if (!isOther) {
+    $('#other-destination').val('');
+  }
+});
+ $('#booking-request').hide();
  // باز کردن فرم درخواست اقامت با کلیک روی منوی رزرو
 $(document).on('click', '#open-booking-link', function (event) {
   event.preventDefault();
