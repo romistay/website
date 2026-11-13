@@ -3012,6 +3012,45 @@ html {
     border-radius: 15px;
   }
 }
+
+/* آیکون‌های فیلدهای فرم رزرو */
+.booking-field label::before {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.booking-field:has(#booking-destination) label::before {
+  content: "📍";
+}
+
+.booking-field:has(#other-destination) label::before {
+  content: "🏙️";
+}
+
+.booking-field:has(#booking-type) label::before {
+  content: "🏨";
+}
+
+.booking-field:has(#booking-stars) label::before {
+  content: "⭐";
+}
+
+.booking-field:has(#entry-date) label::before {
+  content: "📅";
+}
+
+.booking-field:has(#exit-date) label::before {
+  content: "🗓️";
+}
+
+.booking-field:has(#booking-guests) label::before {
+  content: "👥";
+}
+
+.booking-field:has(#booking-rooms) label::before {
+  content: "🚪";
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
