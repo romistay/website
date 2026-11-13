@@ -127,6 +127,78 @@
         font-size: 22px;
       }
     }
+/* کارت عضویت باشگاه مشتریان ROMISTAY */
+.member-card {
+  display: none;
+  position: relative;
+  max-width: 460px;
+  margin: 35px auto;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(135deg, #10243a, #1c3852);
+  border: 1px solid #d6b477;
+  box-shadow: 0 18px 40px rgba(16, 36, 58, 0.18);
+  direction: rtl;
+}
+
+.member-card::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  left: -65px;
+  top: -75px;
+  border: 1px solid rgba(214, 180, 119, 0.35);
+  border-radius: 50%;
+}
+
+.member-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(214, 180, 119, 0.45);
+  padding-bottom: 18px;
+}
+
+.member-card-logo {
+  color: #e5c58d;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.member-card-label {
+  color: #f0d9ad;
+  font-size: 13px;
+}
+
+.member-card-title {
+  color: #e5c58d;
+  font-size: 20px;
+  margin: 25px 0 18px;
+}
+
+.member-card-info {
+  line-height: 2.2;
+  font-size: 14px;
+}
+
+.member-card-info strong {
+  color: #f0d9ad;
+}
+
+.member-card-number {
+  margin-top: 22px;
+  padding: 13px;
+  text-align: center;
+  border: 1px solid rgba(214, 180, 119, 0.5);
+  border-radius: 12px;
+  color: #f0d9ad;
+  font-size: 18px;
+  font-weight: 800;
+}
   </style>
 </head>
 
