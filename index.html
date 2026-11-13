@@ -2544,23 +2544,35 @@ footer span {
   </div>
 
  
+
+
 <!-- بودجه -->
 <div class="filter-section">
   <h3>بودجه موردنظر شما برای هر شب اقامت (هر واحد)</h3>
 
-  <select id="booking-budget" name="priceRange">
-    <option value="">انتخاب بودجه</option>
-    <option value="کمتر از ۱ میلیون تومان">کمتر از ۱ میلیون تومان</option>
-    <option value="۱ تا ۲ میلیون تومان">۱ تا ۲ میلیون تومان</option>
-    <option value="۲ تا ۳ میلیون تومان">۲ تا ۳ میلیون تومان</option>
-    <option value="۳ تا ۵ میلیون تومان">۳ تا ۵ میلیون تومان</option>
-    <option value="۵ تا ۸ میلیون تومان">۵ تا ۸ میلیون تومان</option>
-    <option value="۸ تا ۱۲ میلیون تومان">۸ تا ۱۲ میلیون تومان</option>
-    <option value="۱۲ تا ۲۰ میلیون تومان">۱۲ تا ۲۰ میلیون تومان</option>
-    <option value="بیشتر از ۲۰ میلیون تومان">بیشتر از ۲۰ میلیون تومان</option>
-    <option value="بدون محدودیت بودجه">بدون محدودیت بودجه</option>
-  </select>
+  <div class="budget-slider-container">
+    <input
+      type="range"
+      id="booking-budget"
+      min="500000"
+      max="100000000"
+      step="500000"
+      value="20000000"
+      dir="rtl"
+    >
+
+    <div class="budget-slider-labels">
+      <span>۱۰۰٬۰۰۰٬۰۰۰ تومان</span>
+      <span>۵۰۰٬۰۰۰ تومان</span>
+    </div>
+
+    <div class="budget-selected">
+      حداکثر بودجه:
+      <strong id="budget-value">۲۰٬۰۰۰٬۰۰۰ تومان</strong>
+    </div>
+  </div>
 </div>
+
 
 
   <!-- نوع اجاره -->
@@ -2778,7 +2790,16 @@ $('#exit-date').persianDatepicker({
   initialValue: false,
   autoClose: true
 });
+// نمایش زنده مبلغ بودجه
+$('#booking-budget').on('input change', function () {
+  var amount = Number($(this).val());
 
+  $('#budget-value').text(
+    amount.toLocaleString('fa-IR') + ' تومان'
+  );
+});
+
+$('#booking-budget').trigger('input');
 
   function normalizeDate(value) {
     return value
