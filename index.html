@@ -3131,8 +3131,34 @@ $(document).on('click', '.accordion-toggle', function () {
   $(this).toggleClass('active');
 
 });
+jQuery(function ($) {
 
+// باز و بسته شدن منوهای کشویی مرحله دوم
+$(document).on('click', '.accordion-toggle', function () {
 
+  var content = $(this).next('.accordion-content');
+
+  content.slideToggle(250);
+
+  $(this).toggleClass('active');
+
+});
+
+// نمایش و مخفی کردن همه امکانات
+$(document).on('click', '#toggle-all-amenities', function () {
+
+  var list = $('.amenities-preview');
+  list.toggleClass('show-all');
+
+  if (list.hasClass('show-all')) {
+    $(this).text('− نمایش کمتر');
+  } else {
+    $(this).text('+ مشاهده همه امکانات');
+  }
+
+});
+
+});
 $('#entry-date').persianDatepicker({
   format: 'YYYY/MM/DD',
   initialValue: false,
