@@ -9,343 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-/* طراحی لوکس کارت عضویت ROMISTAY */
-.member-card {
-  display: none;
-  position: relative;
-  isolation: isolate;
-  max-width: 500px;
-  min-height: 300px;
-  margin: 35px auto;
-  padding: 32px;
-  overflow: hidden;
-  border-radius: 26px;
-  direction: rtl;
-  color: #ffffff;
-  background: linear-gradient(135deg, #10243a 0%, #1c3852 55%, #29445b 100%);
-  border: 1px solid #d6b477;
-  box-shadow: 0 22px 50px rgba(16, 36, 58, 0.22);
-}
-
-.member-card::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 260px;
-  height: 260px;
-  left: -90px;
-  top: -100px;
-  border: 1px solid rgba(229, 197, 141, 0.3);
-  border-radius: 50%;
-}
-
-.member-card::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 190px;
-  height: 190px;
-  left: -55px;
-  top: -65px;
-  border: 1px solid rgba(229, 197, 141, 0.2);
-  border-radius: 50%;
-}
-
-.member-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(214, 180, 119, 0.5);
-}
-
-.member-card-logo {
-  color: #e5c58d;
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.member-card-label {
-  color: #10243a;
-  background: linear-gradient(135deg, #f5dfad, #c9a45c);
-  padding: 8px 15px;
-  border-radius: 30px;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-.member-card-decoration {
-  position: absolute;
-  left: 35px;
-  top: 105px;
-  color: rgba(229, 197, 141, 0.09);
-  font-size: 180px;
-  font-weight: 900;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.member-card-title {
-  position: relative;
-  color: #e5c58d;
-  font-size: 21px;
-  margin: 27px 0 22px;
-}
-
-.member-card-info {
-  position: relative;
-  line-height: 2.6;
-  font-size: 14px;
-}
-
-.member-card-info strong {
-  color: #f0d9ad;
-  margin-right: 5px;
-}
-
-.member-card-number {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 22px;
-  padding: 14px;
-  text-align: center;
-  border: 1px solid rgba(229, 197, 141, 0.75);
-  border-radius: 16px;
-  background: linear-gradient(
-    135deg,
-    rgba(229, 197, 141, 0.16),
-    rgba(255, 255, 255, 0.03)
-  );
-  box-shadow: inset 0 0 18px rgba(229, 197, 141, 0.08);
-}
-
-.member-card-number span {
-  color: #c9b38e;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.member-card-number strong {
-  color: #f0d9ad;
-  font-size: 24px;
-  letter-spacing: 3px;
-}
-
-.member-card-footer {
-  margin-top: 20px;
-  text-align: center;
-  color: #d9c6a5;
-  font-size: 12px;
-}
-
-.member-card-actions {
-  display: block;
-  text-align: center;
-  margin: 20px auto 35px;
-}
-
-.member-card-actions button {
-  padding: 13px 30px;
-  border: none;
-  border-radius: 12px;
-  background: #d6b477;
-  color: #10243a;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.member-card-actions button:hover {
-  background: #e5c58d;
-}
-
-@media print {
-  body * {
-    visibility: hidden !important;
-  }
-
-  #member-card,
-  #member-card * {
-    visibility: visible !important;
-  }
-
-  #member-card {
-    display: block !important;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 500px;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  .member-card-actions {
-    display: none !important;
-  }
-}
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 35px 15px;
-      background: #f8f6f0;
-      color: #10243a;
-      font-family: 'Vazirmatn', sans-serif;
-      min-height: 100vh;
-    }
-
-    .club-page {
-      max-width: 850px;
-      margin: 35px auto;
-      padding: 45px;
-      background: linear-gradient(145deg, #ffffff, #fdfbf6);
-      border: 1px solid rgba(201, 164, 92, 0.55);
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(16, 36, 58, 0.08);
-    }
-
-    .club-heading {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .club-heading span {
-      color: #b28b45;
-      font-size: 12px;
-      letter-spacing: 3px;
-      font-weight: 700;
-    }
-
-    .club-heading h1 {
-      color: #10243a;
-      font-size: 27px;
-      margin: 15px 0;
-    }
-
-    .club-heading p {
-      color: #78818b;
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    .club-field {
-      margin-bottom: 22px;
-    }
-
-    .club-field label {
-      display: block;
-      color: #10243a;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 9px;
-    }
-
-    .club-field input {
-      width: 100%;
-      padding: 15px 17px;
-      border: 1px solid #ded6c8;
-      border-radius: 12px;
-      background: #fff;
-      color: #10243a;
-      font-family: inherit;
-      font-size: 14px;
-      outline: none;
-    }
-
-    .club-field input:focus {
-      border-color: #c9a45c;
-      box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.12);
-    }
-
-    .club-submit {
-      width: 100%;
-      padding: 16px;
-      border: none;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #c9a45c, #a98238);
-      color: #fff;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .club-note {
-      text-align: center;
-      color: #858585;
-      font-size: 12px;
-      margin-top: 20px;
-      line-height: 2;
-    }
-
-    .club-back {
-      display: block;
-      text-align: center;
-      margin-top: 25px;
-      color: #a98238;
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-
-  .club-page {
-    margin: 15px auto;
-    padding: 28px 20px;
-  }
-
-  .club-heading h1 {
-    font-size: 24px;
-  }
-
-  .member-card {
-    padding: 24px 20px;
-    min-height: 320px;
-    margin: 25px auto;
-  }
-
-  .member-card-logo {
-    font-size: 21px;
-  }
-
-  .member-card-label {
-    font-size: 8px;
-    padding: 7px 10px;
-  }
-
-  .member-card-title {
-    font-size: 19px;
-  }
-
-  .member-card-number strong {
-    font-size: 20px;
-  }
-
-  .member-vip-seal {
-    width: 55px;
-    height: 55px;
-    left: 20px;
-    bottom: 20px;
-  }
-
-}
-      }
-
-     
-
-/* طراحی لوکس کارت عضویت ROMISTAY */
+/* طراحی کارت عضویت ROMISTAY */
 .member-card {
   display: none;
   position: relative;
@@ -447,12 +113,6 @@
 }
 
 .member-card-info strong {
-  color: #f5dfad;
-  margin-right: 7px;
-  font-weight: 800;
-}
-
-.member-card-info strong {
   color: #f0d9ad;
   margin-right: 5px;
 }
@@ -489,14 +149,40 @@
   font-size: 12px;
 }
 
+.member-vip-seal {
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
+  width: 66px;
+  height: 66px;
+  border: 2px solid #d6b477;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f5dfad;
+  font-size: 19px;
+  font-weight: 900;
+  background: rgba(214, 180, 119, 0.10);
+  box-shadow: 0 0 18px rgba(214, 180, 119, 0.16);
+}
+
+.member-vip-seal span {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+/* دکمه‌های کارت */
 .member-card-actions {
-  display: block;
+  display: none;
   text-align: center;
   margin: 20px auto 35px;
 }
 
 .member-card-actions button {
   padding: 13px 30px;
+  margin: 5px;
   border: none;
   border-radius: 12px;
   background: #d6b477;
@@ -511,6 +197,12 @@
   background: #e5c58d;
 }
 
+.member-card-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* چاپ کارت */
 @media print {
   body * {
     visibility: hidden !important;
@@ -537,131 +229,273 @@
     display: none !important;
   }
 }
-.member-vip-seal {
-  position: absolute;
-  left: 32px;
-  bottom: 30px;
-  width: 66px;
-  height: 66px;
-  border: 2px solid #d6b477;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #f5dfad;
-  font-size: 19px;
-  font-weight: 900;
-  background: rgba(214, 180, 119, 0.10);
-  box-shadow: 0 0 18px rgba(214, 180, 119, 0.16);
+
+/* ساختار صفحه */
+* {
+  box-sizing: border-box;
 }
 
-.member-vip-seal span {
-  font-size: 8px;
-  letter-spacing: 1px;
+body {
+  margin: 0;
+  padding: 35px 15px;
+  background: #f8f6f0;
+  color: #10243a;
+  font-family: 'Vazirmatn', sans-serif;
+  min-height: 100vh;
 }
-  </style>
+
+.club-page {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 45px;
+  background: linear-gradient(145deg, #ffffff, #fdfbf6);
+  border: 1px solid rgba(201, 164, 92, 0.55);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(16, 36, 58, 0.08);
+}
+
+.club-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.club-heading span {
+  color: #b28b45;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.club-heading h1 {
+  color: #10243a;
+  font-size: 27px;
+  margin: 15px 0;
+}
+
+.club-heading p {
+  color: #78818b;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.club-field {
+  margin-bottom: 22px;
+}
+
+.club-field label {
+  display: block;
+  color: #10243a;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.club-field input {
+  width: 100%;
+  padding: 15px 17px;
+  border: 1px solid #ded6c8;
+  border-radius: 12px;
+  background: #fff;
+  color: #10243a;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.club-field input:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.12);
+}
+
+.club-submit {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #c9a45c, #a98238);
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.club-note {
+  text-align: center;
+  color: #858585;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+.club-back {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #a98238;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* نمایش موبایل */
+@media (max-width: 600px) {
+  .club-page {
+    margin: 15px auto;
+    padding: 28px 20px;
+  }
+
+  .club-heading h1 {
+    font-size: 24px;
+  }
+
+  .member-card {
+    padding: 24px 20px;
+    min-height: 320px;
+    margin: 25px auto;
+  }
+
+  .member-card-logo {
+    font-size: 21px;
+  }
+
+  .member-card-label {
+    font-size: 8px;
+    padding: 7px 10px;
+  }
+
+  .member-card-title {
+    font-size: 19px;
+  }
+
+  .member-card-number strong {
+    font-size: 20px;
+  }
+
+  .member-vip-seal {
+    width: 55px;
+    height: 55px;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .member-card-actions button {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <main class="club-page">
+<main class="club-page">
 
-    <div class="club-heading">
-      <span>JOIN THE CLUB</span>
-      <h1>به خانواده ROMISTAY بپیوندید</h1>
-      <p>عضویت رایگان است؛ سفرهای جذاب‌تری در انتظار شماست.</p>
-    </div>
-    <form id="club-membership-form">
-
-      <div class="club-field">
-        <label for="club-name">نام و نام خانوادگی</label>
-        <input type="text" id="club-name" name="name"
-          placeholder="نام کامل خود را وارد کنید" required>
-      </div>
-
-      <div class="club-field">
-        <label for="club-mobile">شماره موبایل</label>
-        <input type="tel" id="club-mobile" name="mobile"
-          placeholder="مثلاً 09123456789" required>
-      </div>
-
-      <div class="club-field">
-        <label for="club-city">شهر محل سکونت</label>
-        <input type="text" id="club-city" name="city"
-          placeholder="نام شهر خود را وارد کنید" required>
-      </div>
-
-      <button type="submit" class="club-submit">
-        ثبت درخواست عضویت رایگان
-      </button>
-
-      <p class="club-note">
-        عضویت در باشگاه مشتریان ROMISTAY کاملاً رایگان است.
-      </p>
-
-    </form>
-
-<!-- کارت عضویت ROMISTAY -->
-<div class="member-card" id="member-card">
-
-  <div class="member-card-header">
-    <div class="member-card-logo">ROMISTAY</div>
-    <div class="member-card-label">EXCLUSIVE MEMBER</div>
+  <div class="club-heading">
+    <span>JOIN THE CLUB</span>
+    <h1>به خانواده ROMISTAY بپیوندید</h1>
+    <p>عضویت رایگان است؛ سفرهای جذاب‌تری در انتظار شماست.</p>
   </div>
 
- <div class="member-card-decoration">R</div>
+  <form id="club-membership-form">
 
-<div class="member-vip-seal">
-  VIP
-  <span>MEMBER</span>
-</div>
-
-  <h3 class="member-card-title">
-    کارت عضویت باشگاه مشتریان
-  </h3>
-
-  <div class="member-card-info">
-    <div>
-      نام و نام خانوادگی:
-      <strong id="card-member-name">---</strong>
+    <div class="club-field">
+      <label for="club-name">نام و نام خانوادگی</label>
+      <input type="text" id="club-name" name="name"
+        placeholder="نام کامل خود را وارد کنید" required>
     </div>
 
-    <div>
-      تاریخ عضویت:
-      <strong id="card-member-date">---</strong>
+    <div class="club-field">
+      <label for="club-mobile">شماره موبایل</label>
+      <input type="tel" id="club-mobile" name="mobile"
+        placeholder="مثلاً 09123456789" required>
     </div>
+
+    <div class="club-field">
+      <label for="club-city">شهر محل سکونت</label>
+      <input type="text" id="club-city" name="city"
+        placeholder="نام شهر خود را وارد کنید" required>
+    </div>
+
+    <button type="submit" class="club-submit">
+      ثبت درخواست عضویت رایگان
+    </button>
+
+    <p class="club-note">
+      عضویت در باشگاه مشتریان ROMISTAY کاملاً رایگان است.
+    </p>
+
+  </form>
+
+  <!-- کارت عضویت ROMISTAY -->
+  <div class="member-card" id="member-card">
+
+    <div class="member-card-header">
+      <div class="member-card-logo">ROMISTAY</div>
+      <div class="member-card-label">EXCLUSIVE MEMBER</div>
+    </div>
+
+    <div class="member-card-decoration">R</div>
+
+    <div class="member-vip-seal">
+      VIP
+      <span>MEMBER</span>
+    </div>
+
+    <h3 class="member-card-title">
+      کارت عضویت باشگاه مشتریان
+    </h3>
+
+    <div class="member-card-info">
+      <div>
+        نام و نام خانوادگی:
+        <strong id="card-member-name">---</strong>
+      </div>
+
+      <div>
+        تاریخ عضویت:
+        <strong id="card-member-date">---</strong>
+      </div>
+    </div>
+
+    <div class="member-card-number">
+      <span>MEMBERSHIP NUMBER</span>
+      <strong id="card-member-number">---</strong>
+    </div>
+
+    <div class="member-card-footer">
+      سفر متفاوت، اقامت خاطره‌انگیز
+    </div>
+
   </div>
 
-  <div class="member-card-number">
-    <span>MEMBERSHIP NUMBER</span>
-    <strong id="card-member-number">---</strong>
+  <div class="member-card-actions" id="member-card-actions">
+
+    <button type="button" onclick="window.print()">
+      چاپ کارت عضویت
+    </button>
+
+    <button type="button"
+      class="download-card-btn"
+      onclick="downloadMemberCard()">
+      دانلود کارت عضویت PNG
+    </button>
+
   </div>
 
-  <div class="member-card-footer">
-    سفر متفاوت، اقامت خاطره‌انگیز
-  </div>
+  <iframe
+    name="membership-frame"
+    id="membership-frame"
+    style="display:none;"
+  ></iframe>
 
-</div>
+  <a href="index.html" class="club-back">
+    بازگشت به صفحه اصلی ROMISTAY
+  </a>
 
-<div class="member-card-actions" id="member-card-actions">
-  <button type="button" onclick="window.print()">
-    چاپ کارت عضویت
-  </button>
-</div>
+</main>
 
- <iframe
-  name="membership-frame"
-  id="membership-frame"
-  style="display:none;"
-></iframe>
-    <a href="index.html" class="club-back">
-      بازگشت به صفحه اصلی ROMISTAY
-    </a>
-
-  </main>
-
-  
+<!-- کتابخانه تبدیل کارت به تصویر -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwiFWd0iiJjtjba9YHCSnRVHKiPEQ8xvgPonnQjxFCzvTCS4N0RamwfUDkgRsppBNaXUA/exec';
@@ -673,7 +507,6 @@ let waitingForMembership = false;
 
 window.addEventListener('message', function(event) {
 
-
   const message = event.data;
 
   if (!message || message.type !== 'ROMISTAY_MEMBERSHIP_RESULT') return;
@@ -682,8 +515,9 @@ window.addEventListener('message', function(event) {
   waitingForMembership = false;
 
   const button = form.querySelector('button[type="submit"]');
-button.disabled = false;
-button.textContent = 'ثبت درخواست عضویت رایگان';
+
+  button.disabled = false;
+  button.textContent = 'ثبت درخواست عضویت رایگان';
 
   if (message.result.success) {
 
@@ -697,7 +531,9 @@ button.textContent = 'ثبت درخواست عضویت رایگان';
       new Date().toLocaleDateString('fa-IR');
 
     document.getElementById('member-card').style.display = 'block';
-document.getElementById('member-card-actions').style.display = 'block';
+
+    document.getElementById('member-card-actions').style.display = 'block';
+
     form.reset();
 
     document.getElementById('member-card').scrollIntoView({
@@ -706,7 +542,9 @@ document.getElementById('member-card-actions').style.display = 'block';
     });
 
   } else {
+
     alert(message.result.message);
+
   }
 
 });
@@ -731,9 +569,62 @@ form.addEventListener('submit', function(event) {
   form.submit();
 
 });
-</script>
 
+/* دانلود کارت عضویت با فرمت PNG */
+async function downloadMemberCard() {
+
+  const card = document.getElementById('member-card');
+  const button = document.querySelector('.download-card-btn');
+
+  if (!card || card.style.display === 'none') {
+    alert('ابتدا عضویت خود را ثبت کنید.');
+    return;
+  }
+
+  if (typeof html2canvas === 'undefined') {
+    alert('کتابخانه دانلود تصویر بارگذاری نشده است.');
+    return;
+  }
+
+  const originalText = button.textContent;
+
+  button.disabled = true;
+  button.textContent = 'در حال آماده‌سازی تصویر...';
+
+  try {
+
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready;
+    }
+
+    const canvas = await html2canvas(card, {
+      scale: 2,
+      backgroundColor: null,
+      useCORS: true,
+      logging: false
+    });
+
+    const link = document.createElement('a');
+
+    link.download = 'ROMISTAY-Membership-Card.png';
+    link.href = canvas.toDataURL('image/png');
+
+    link.click();
+
+  } catch (error) {
+
+    console.error(error);
+    alert('دانلود کارت با مشکل مواجه شد. دوباره تلاش کنید.');
+
+  } finally {
+
+    button.disabled = false;
+    button.textContent = originalText;
+
+  }
+
+}
+</script>
 
 </body>
 </html>
-
