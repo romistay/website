@@ -2543,22 +2543,25 @@ footer span {
     </div>
   </div>
 
-  <!-- بودجه -->
-  <div class="filter-section">
-    <h3>بودجه موردنظر شما برای هر شب اقامت (کل واحد)</h3>
+ 
+<!-- بودجه -->
+<div class="filter-section">
+  <h3>بودجه موردنظر شما برای هر شب اقامت (هر واحد)</h3>
 
-    <div class="booking-choice-cards">
-      <label><input type="radio" name="priceRange" value="کمتر از ۱ میلیون تومان"><span>کمتر از ۱ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="۱ تا ۲ میلیون تومان"><span>۱ تا ۲ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="۲ تا ۳ میلیون تومان"><span>۲ تا ۳ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="۳ تا ۵ میلیون تومان"><span>۳ تا ۵ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="۵ تا ۸ میلیون تومان"><span>۵ تا ۸ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="۸ تا ۱۲ میلیون تومان"><span>۸ تا ۱۲ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="۱۲ تا ۲۰ میلیون تومان"><span>۱۲ تا ۲۰ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="بیشتر از ۲۰ میلیون تومان"><span>بیشتر از ۲۰ میلیون</span></label>
-      <label><input type="radio" name="priceRange" value="بدون محدودیت بودجه"><span>بدون محدودیت بودجه</span></label>
-    </div>
-  </div>
+  <select id="booking-budget" name="priceRange">
+    <option value="">انتخاب بودجه</option>
+    <option value="کمتر از ۱ میلیون تومان">کمتر از ۱ میلیون تومان</option>
+    <option value="۱ تا ۲ میلیون تومان">۱ تا ۲ میلیون تومان</option>
+    <option value="۲ تا ۳ میلیون تومان">۲ تا ۳ میلیون تومان</option>
+    <option value="۳ تا ۵ میلیون تومان">۳ تا ۵ میلیون تومان</option>
+    <option value="۵ تا ۸ میلیون تومان">۵ تا ۸ میلیون تومان</option>
+    <option value="۸ تا ۱۲ میلیون تومان">۸ تا ۱۲ میلیون تومان</option>
+    <option value="۱۲ تا ۲۰ میلیون تومان">۱۲ تا ۲۰ میلیون تومان</option>
+    <option value="بیشتر از ۲۰ میلیون تومان">بیشتر از ۲۰ میلیون تومان</option>
+    <option value="بدون محدودیت بودجه">بدون محدودیت بودجه</option>
+  </select>
+</div>
+
 
   <!-- نوع اجاره -->
   <div class="filter-section">
@@ -2966,8 +2969,8 @@ var bookingData = {
     return this.value;
   }).get(),
 
-  priceRange: $('input[name="priceRange"]:checked').val() || '',
-  rentalType: $('input[name="rentalType"]:checked').val() || ''
+  priceRange: $('#booking-budget').val() || '',
+rentalType: $('input[name="rentalType"]:checked').val() || ''
 };
 
 var submitButton = $('#submit-booking-request');
