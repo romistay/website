@@ -2974,6 +2974,44 @@ html {
   min-height: 54px;
   box-sizing: border-box;
 }
+
+/* پنل مقصد و نوع اقامتگاه */
+.booking-card > .booking-grid {
+  background: #fbf8f1;
+  border: 1px solid #eee4d2;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 16px;
+  box-sizing: border-box;
+}
+
+/* پنل تاریخ سفر و تعداد مسافران */
+.booking-step-two {
+  background: #fbf8f1;
+  border: 1px solid #eee4d2;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 24px;
+  box-sizing: border-box;
+}
+
+/* هماهنگی تیترهای پنل‌ها */
+.booking-card > h3,
+.booking-step-two > h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #10243a;
+  margin-bottom: 18px;
+}
+
+/* نمایش بهتر در موبایل */
+@media (max-width: 600px) {
+  .booking-card > .booking-grid,
+  .booking-step-two {
+    padding: 15px;
+    border-radius: 15px;
+  }
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
