@@ -2220,6 +2220,38 @@ footer span {
   font-size: 12px;
 }
 
+/* جلوه حرفه‌ای نمودار بودجه ROMISTAY */
+
+.budget-chart {
+  position: relative;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.budget-chart span {
+  background: linear-gradient(
+    180deg,
+    #687b88,
+    #405566
+  );
+  opacity: 0.65;
+  border-radius: 5px 5px 2px 2px;
+  transition: background 0.35s ease,
+              opacity 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.budget-chart span.active {
+  background: linear-gradient(
+    180deg,
+    #f4dfae,
+    #d6b477 55%,
+    #a47b42
+  );
+  opacity: 1;
+  box-shadow: 0 0 12px rgba(214, 180, 119, 0.35);
+}
+
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
