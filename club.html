@@ -292,9 +292,8 @@ window.addEventListener('message', function(event) {
   waitingForMembership = false;
 
   const button = form.querySelector('button[type="submit"]');
-
-  button.disabled = false;
-  button.textContent = 'ثبت عضویت';
+button.disabled = false;
+button.textContent = 'ثبت درخواست عضویت رایگان';
 
   if (message.result.success) {
 
