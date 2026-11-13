@@ -3151,7 +3151,6 @@ html {
 <a href="#testimonials">نظرات مهمانان</a>
 <a href="#contact">تماس</a>
 </nav>
-   </nav>
   </header>
 <section class="brand-banner">
   <img src="./images/romistay-banner.png" alt="ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز">
@@ -3879,28 +3878,7 @@ if (stays && lightbox && lightboxImage && closeButton) {
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const bookingSection = document.getElementById('booking-request');
-  const openBookingLink = document.getElementById('open-booking-link');
 
-  if (!bookingSection || !openBookingLink) return;
-
-  openBookingLink.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    bookingSection.style.display = 'block';
-
-    bookingSection.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-});
-</script>
-
-
-
-<script>
   const backToTop = document.getElementById("back-to-top");
 
   if (backToTop) {
