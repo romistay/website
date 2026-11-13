@@ -3856,7 +3856,57 @@ $('#booking-budget').trigger('input');
         return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
       });
   }
-// مخفی کردن مراحل دوم و سوم در شروع فرم
+// بررسی اعتبار تاریخ ورود و خروج
+function getBookingDateError(entryValue, exitValue) {
+  var entryText = normalizeDate(entryValue).trim();
+  var exitText = normalizeDate(exitValue).trim();
+
+  var entryParts = entryText.split('/');
+  var exitParts = exitText.split('/');
+
+  if (entryParts.length !== 3 || exitParts.length !== 3) {
+    return 'لطفاً تاریخ ورود و خروج را به‌درستی وارد کنید.';
+  }
+
+  var y1 = Number(entryParts[0]);
+  var m1 = Number(entryParts[1]);
+  var d1 = Number(entryParts[2]);
+
+  var y2 = Number(exitParts[0]);
+  var m2 = Number(exitParts[1]);
+  var d2 = Number(exitParts[2]);
+
+  if (![y1, m1, d1, y2, m2, d2].every(Number.isInteger)) {
+    return 'فرمت تاریخ واردشده صحیح نیست.';
+  }
+
+  try {
+    var entry = new persianDate([y1, m1, d1]).startOf('day');
+    var exit = new persianDate([y2, m2, d2]).startOf('day');
+
+    if (
+      entry.year() !== y1 || entry.month() !== m1 || entry.date() !== d1 ||
+      exit.year() !== y2 || exit.month() !== m2 || exit.date() !== d2
+    ) {
+      return 'یکی از تاریخ‌های واردشده معتبر نیست.';
+    }
+
+    var today = new persianDate().startOf('day');
+
+    if (entry.valueOf() < today.valueOf()) {
+      return 'تاریخ ورود نمی‌تواند قبل از امروز باشد.';
+    }
+
+    if (exit.valueOf() <= entry.valueOf()) {
+      return 'تاریخ خروج باید بعد از تاریخ ورود باشد.';
+    }
+
+    return '';
+  } catch (error) {
+    return 'تاریخ واردشده معتبر نیست.';
+  }
+}
+ // مخفی کردن مراحل دوم و سوم در شروع فرم
 $('#booking-filters-step, #booking-step-two-content').hide();
   // رفتن به مرحله دوم
   $(document).on('click', '#next-booking-step', function () {
@@ -3868,23 +3918,13 @@ $('#booking-filters-step, #booking-step-two-content').hide();
       alert('لطفاً تاریخ ورود و خروج را انتخاب کنید.');
       return;
     }
+var dateError = getBookingDateError(entry, exit);
 
-    var a = entry.split('/').map(Number);
-    var b = exit.split('/').map(Number);
+if (dateError) {
+  alert(dateError);
+  return;
+}
 
-    if (a.length !== 3 || b.length !== 3 ||
-        a.some(isNaN) || b.some(isNaN)) {
-      alert('لطفاً تاریخ‌ها را دوباره انتخاب کنید.');
-      return;
-    }
-
-    var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
-    var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
-
-    if (exitNumber <= entryNumber) {
-      alert('تاریخ خروج باید بعد از تاریخ ورود باشد.');
-      return;
-    }
 
  $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').hide();
 
