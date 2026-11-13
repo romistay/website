@@ -3873,7 +3873,25 @@ if (stays && lightbox && lightboxImage && closeButton) {
   });
 }
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const bookingSection = document.getElementById('booking-request');
+  const openBookingLink = document.getElementById('open-booking-link');
 
+  if (!bookingSection || !openBookingLink) return;
+
+  openBookingLink.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    bookingSection.style.display = 'block';
+
+    bookingSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+</script>
 
 
 
