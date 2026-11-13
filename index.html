@@ -2045,58 +2045,78 @@ footer span {
   margin-bottom: 18px;
 }
 
-.booking-options,
+
+/* چیدمان فشرده و لوکس گزینه‌های مرحله دوم */
+
+.booking-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
 .booking-choice-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .booking-options label,
 .booking-choice-cards label {
   display: flex;
   align-items: center;
-  gap: 9px;
-  padding: 13px;
-  border: 1px solid #ded6c5;
-  border-radius: 12px;
-  background: #ffffff;
-  color: #10243a;
-  font-size: 14px;
+  gap: 7px;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid rgba(214, 180, 119, 0.4);
+  border-radius: 10px;
+  background: rgba(13, 31, 49, 0.58);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.7;
   cursor: pointer;
   transition: all .25s ease;
 }
 
 .booking-options label:has(input:checked),
 .booking-choice-cards label:has(input:checked) {
-  background: #10243a;
+  background: rgba(16, 36, 58, 0.95);
   color: #f0d69d;
   border-color: #d6ad60;
 }
 
 .booking-options input,
 .booking-choice-cards input {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
   accent-color: #c9a45c;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .booking-options,
+  .booking-options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .booking-choice-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #booking-filters-step .filter-section {
+    padding: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .filter-section {
-    padding: 18px 14px;
+  .booking-choice-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 420px) {
-  .booking-options,
-  .booking-choice-cards {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* طراحی اختصاصی اسلایدر بودجه ROMISTAY */
 
@@ -2829,10 +2849,9 @@ footer span {
   </div>
 
 </div>
+</div>
 
-
-
-  <!-- نوع اجاره -->
+<!-- نوع اجاره -->
   <div class="filter-section">
     <h3>نوع اجاره موردنظر شما</h3>
 
