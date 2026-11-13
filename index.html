@@ -1731,12 +1731,7 @@ footer span {
 }
 
 /* ROMISTAY Booking Request */
-<style>
-#booking-request {
-  display: none !important;
-}
-</style>
-<style>
+
  .booking-request {
   padding: 95px 7%;
   background: linear-gradient(180deg, #f8f7f3 0%, #eee9df 100%);
@@ -3406,7 +3401,7 @@ html {
 </section>
   </main>
 
-<section id="booking-request" class="booking-request" hidden>
+<section id="booking-request" class="booking-request">
   <div class="booking-container">
 
     <div class="booking-heading">
@@ -4236,13 +4231,7 @@ if (dateError) {
   return;
 }
  
-  var entryNumber = a[0] * 10000 + a[1] * 100 + a[2];
-  var exitNumber = b[0] * 10000 + b[1] * 100 + b[2];
-
-  if (exitNumber <= entryNumber) {
-    showBookingMessage('تاریخ خروج باید بعد از تاریخ ورود باشد.', false);
-    return;
-  }
+ 
 
 
 
@@ -4299,7 +4288,6 @@ fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mz
 
 </script>
 
-<script>
 
 
 </body>
