@@ -3212,56 +3212,37 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 
 <script>
 jQuery(function ($) {
-// باز و بسته شدن منوهای کشویی مرحله دوم
-$(document).on('click', '.accordion-toggle', function () {
 
-  var content = $(this).next('.accordion-content');
+  // باز و بسته شدن منوهای کشویی
+  $(document).on('click', '.accordion-toggle', function () {
+    var content = $(this).next('.accordion-content');
+    content.stop(true, true).slideToggle(250);
+    $(this).toggleClass('active');
+  });
 
-  content.slideToggle(250);
+  // نمایش و مخفی کردن همه امکانات
+  $(document).on('click', '#toggle-all-amenities', function () {
+    var list = $('.amenities-preview');
+    list.toggleClass('show-all');
 
-  $(this).toggleClass('active');
+    $(this).text(
+      list.hasClass('show-all')
+        ? '− نمایش کمتر'
+        : '+ مشاهده همه امکانات'
+    );
+  });
 
-});
-jQuery(function ($) {
+  // نمایش و مخفی کردن همه مقررات
+  $(document).on('click', '#toggle-all-rules', function () {
+    var list = $('.rules-preview');
+    list.toggleClass('show-all');
 
-// باز و بسته شدن منوهای کشویی مرحله دوم
-$(document).on('click', '.accordion-toggle', function () {
-
-  var content = $(this).next('.accordion-content');
-
-  content.slideToggle(250);
-
-  $(this).toggleClass('active');
-
-});
-
-// نمایش و مخفی کردن همه امکانات
-$(document).on('click', '#toggle-all-amenities', function () {
-
-  var list = $('.amenities-preview');
-  list.toggleClass('show-all');
-
-  if (list.hasClass('show-all')) {
-    $(this).text('− نمایش کمتر');
-  } else {
-    $(this).text('+ مشاهده همه امکانات');
-  }
-
-});
-
-// نمایش و مخفی کردن همه مقررات
-$(document).on('click', '#toggle-all-rules', function () {
-
-  var list = $('.rules-preview');
-  list.toggleClass('show-all');
-
-  if (list.hasClass('show-all')) {
-    $(this).text('− نمایش کمتر');
-  } else {
-    $(this).text('+ مشاهده همه مقررات');
-  }
-
-});
+    $(this).text(
+      list.hasClass('show-all')
+        ? '− نمایش کمتر'
+        : '+ مشاهده همه مقررات'
+    );
+  });
 
 });
 $('#entry-date').persianDatepicker({
