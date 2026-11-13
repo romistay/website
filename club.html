@@ -300,30 +300,46 @@
         font-size: 22px;
       }
     }
-/* کارت عضویت باشگاه مشتریان ROMISTAY */
+
+/* طراحی لوکس کارت عضویت ROMISTAY */
 .member-card {
   display: none;
   position: relative;
-  max-width: 460px;
+  isolation: isolate;
+  max-width: 500px;
+  min-height: 300px;
   margin: 35px auto;
-  padding: 30px;
+  padding: 32px;
   overflow: hidden;
-  border-radius: 24px;
-  color: #fff;
-  background: linear-gradient(135deg, #10243a, #1c3852);
-  border: 1px solid #d6b477;
-  box-shadow: 0 18px 40px rgba(16, 36, 58, 0.18);
+  border-radius: 26px;
   direction: rtl;
+  color: #ffffff;
+  background: linear-gradient(135deg, #10243a 0%, #1c3852 55%, #29445b 100%);
+  border: 1px solid #d6b477;
+  box-shadow: 0 22px 50px rgba(16, 36, 58, 0.22);
 }
 
 .member-card::before {
   content: "";
   position: absolute;
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  left: -90px;
+  top: -100px;
+  border: 1px solid rgba(229, 197, 141, 0.3);
+  border-radius: 50%;
+}
+
+.member-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
   width: 190px;
   height: 190px;
-  left: -65px;
-  top: -75px;
-  border: 1px solid rgba(214, 180, 119, 0.35);
+  left: -55px;
+  top: -65px;
+  border: 1px solid rgba(229, 197, 141, 0.2);
   border-radius: 50%;
 }
 
@@ -331,47 +347,133 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(214, 180, 119, 0.45);
   padding-bottom: 18px;
+  border-bottom: 1px solid rgba(214, 180, 119, 0.5);
 }
 
 .member-card-logo {
   color: #e5c58d;
-  font-size: 23px;
-  font-weight: 800;
+  font-size: 25px;
+  font-weight: 900;
   letter-spacing: 2px;
 }
 
 .member-card-label {
   color: #f0d9ad;
-  font-size: 13px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.member-card-decoration {
+  position: absolute;
+  left: 35px;
+  top: 105px;
+  color: rgba(229, 197, 141, 0.09);
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .member-card-title {
+  position: relative;
   color: #e5c58d;
-  font-size: 20px;
-  margin: 25px 0 18px;
+  font-size: 21px;
+  margin: 27px 0 22px;
 }
 
 .member-card-info {
-  line-height: 2.2;
+  position: relative;
+  line-height: 2.6;
   font-size: 14px;
 }
 
 .member-card-info strong {
   color: #f0d9ad;
+  margin-right: 5px;
 }
 
 .member-card-number {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 22px;
-  padding: 13px;
+  padding: 14px;
   text-align: center;
-  border: 1px solid rgba(214, 180, 119, 0.5);
-  border-radius: 12px;
-  color: #f0d9ad;
-  font-size: 18px;
-  font-weight: 800;
+  border: 1px solid rgba(214, 180, 119, 0.55);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
 }
+
+.member-card-number span {
+  color: #c9b38e;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.member-card-number strong {
+  color: #f0d9ad;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.member-card-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #d9c6a5;
+  font-size: 12px;
+}
+
+.member-card-actions {
+  display: block;
+  text-align: center;
+  margin: 20px auto 35px;
+}
+
+.member-card-actions button {
+  padding: 13px 30px;
+  border: none;
+  border-radius: 12px;
+  background: #d6b477;
+  color: #10243a;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.member-card-actions button:hover {
+  background: #e5c58d;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #member-card,
+  #member-card * {
+    visibility: visible !important;
+  }
+
+  #member-card {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .member-card-actions {
+    display: none !important;
+  }
+}
+
   </style>
 </head>
 
