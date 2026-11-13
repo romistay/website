@@ -2252,6 +2252,46 @@ footer span {
   box-shadow: 0 0 12px rgba(214, 180, 119, 0.35);
 }
 
+/* طراحی لوکس کارت‌های انتخاب ROMISTAY */
+
+.booking-options label,
+.booking-choice-cards label {
+  position: relative;
+  min-height: 54px;
+  padding: 15px 14px;
+  border: 1px solid rgba(190, 163, 112, 0.35);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f5f1e8);
+  color: #172d42;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(16, 36, 58, 0.06);
+  transition: all 0.3s ease;
+}
+
+.booking-options label:hover,
+.booking-choice-cards label:hover {
+  transform: translateY(-3px);
+  border-color: #c9a45c;
+  box-shadow: 0 8px 18px rgba(16, 36, 58, 0.12);
+}
+
+.booking-options label:has(input:checked),
+.booking-choice-cards label:has(input:checked) {
+  background: linear-gradient(145deg, #1b354c, #10243a);
+  color: #f2d69b;
+  border: 1px solid #d6b477;
+  box-shadow: 0 6px 18px rgba(16, 36, 58, 0.2);
+  transform: translateY(-2px);
+}
+
+.booking-options input,
+.booking-choice-cards input {
+  width: 17px;
+  height: 17px;
+  accent-color: #d6b477;
+  flex-shrink: 0;
+}
+
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
