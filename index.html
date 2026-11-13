@@ -2945,6 +2945,7 @@ $(document).on('click', '#submit-booking-request', function () {
   }
 
 
+
 var bookingData = {
   name: name,
   phone: phone,
@@ -2969,20 +2970,33 @@ var bookingData = {
   rentalType: $('input[name="rentalType"]:checked').val() || ''
 };
 
+var submitButton = $('#submit-booking-request');
+submitButton.prop('disabled', true);
 
+fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mzaYiQmMW4LCtXJUikitY0kP86JkUmfBfHF9/exec', {
+  method: 'POST',
+  mode: 'no-cors',
+  headers: {
+    'Content-Type': 'text/plain;charset=utf-8'
+  },
+  body: JSON.stringify(bookingData)
+})
+.then(function () {
+  showBookingMessage('درخواست ارسال شد. برای اطمینان، ثبت آن را در گوگل‌شیت بررسی می‌کنیم.', true);
+  submitButton.prop('disabled', false);
+})
 .catch(function () {
-    showBookingMessage(
-      'ارسال درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.',
-      false
-    );
-    submitButton.prop('disabled', false);
-  });
-
+  showBookingMessage(
+    'ارسال درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.',
+    false
+  );
+  submitButton.prop('disabled', false);
 });
 
 });
 
 </script>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -3002,6 +3016,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
 
 </body>
 </html>
