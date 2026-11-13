@@ -1,0 +1,4303 @@
+ 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز</title> 
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+ <style>
+
+.whatsapp-icon {
+  font-size: 22px;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 95px;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #f0d69d;
+  background: #10243a;
+  color: #f0d69d;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f8f7f3;
+      color: #222;
+      line-height: 1.9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+  
+header {
+  background: linear-gradient(135deg, #061321, #10243a, #1b3854);
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  border-bottom: 2px solid #d7b56d;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, .25),
+    0 2px 12px rgba(215, 181, 109, .12);
+  position: relative;
+  z-index: 100;
+}
+
+
+.logo {
+  color: #e6c77a;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  direction: ltr;
+  text-shadow: 0 2px 12px rgba(215, 181, 109, 0.3);
+  transition: transform .3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.04);
+}
+
+.logo-name {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+  
+
+nav a {
+  font-size: 14px;
+  color: #f8f4e9;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 8px 2px;
+  transition: color .3s ease, transform .3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #d7b56d, #fff0c5);
+  transition: width .35s ease;
+}
+
+nav a:hover {
+  color: #f5d58c;
+  transform: translateY(-3px);
+  text-shadow: 0 0 12px rgba(240, 214, 157, .5);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+ .hero {
+  min-height: 620px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 17, 30, .78),
+      rgba(8, 23, 38, .48),
+      rgba(5, 17, 30, .78)
+    ),
+    url("./images/isfahan.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+   
+
+
+
+.main-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #fff0c5, #dfb95f, #b88a35);
+  color: #081a2b;
+  padding: 16px 42px;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 17px;
+  text-decoration: none;
+  box-shadow:
+    0 8px 25px rgba(215, 181, 109, .35),
+    inset 0 1px 2px rgba(255, 255, 255, .7);
+  transition: all .35s ease;
+  border: 1px solid #f5dfa5;
+  cursor: pointer;
+  letter-spacing: .3px;
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #fff7df, #edcf83);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .5);
+}
+
+.main-button:hover {
+  background: linear-gradient(135deg, #f7e4b1, #d7b56d);
+  box-shadow: 0 9px 25px rgba(215, 181, 109, 0.55);
+  transform: translateY(-4px);
+}
+
+
+.main-button:hover {
+  background: linear-gradient(135deg, #f5dfa8, #d7b56d);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(215, 181, 109, 0.55);
+}
+
+    section {
+      padding: 65px 7%;
+    }
+.brand-banner {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.brand-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.testimonials {
+  padding: 80px 7%;
+  background: linear-gradient(180deg, #10243a, #0b1d2e);
+  text-align: center;
+  color: #ffffff;
+}
+
+.testimonial-box {
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 35px 25px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #d7b56d;
+  box-shadow: 0 8px 25px rgba(16, 36, 58, 0.08);
+}
+
+.testimonial-stars {
+  color: #d7b56d;
+  font-size: 25px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.testimonial-box h3 {
+  color: #10243a;
+  margin-bottom: 12px;
+}
+
+.testimonial-box p {
+  color: #555;
+  line-height: 2;
+}
+
+ .section-title {
+  text-align: center;
+  color: #10243a;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 2.2;
+  margin-bottom: 18px;
+  position: relative;
+}
+#stays .section-title {
+  color: #b38b24;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#stays .section-title::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 3px;
+  background: linear-gradient(90deg, #b38b24, #e8cb87);
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+   .section-title::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #f7e4b1, #b8944e);
+}
+
+    .section-description {
+      text-align: center;
+      max-width: 700px;
+      margin: -20px auto 35px;
+      color: #666;
+    }
+#stays .section-description {
+  color: #6f6a5f;
+  font-size: 16px;
+  line-height: 2;
+  max-width: 720px;
+  margin: -15px auto 40px;
+  text-align: center;
+}
+  .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+    
+.card {
+  background: linear-gradient(160deg, #ffffff 0%, #fbf8f0 100%);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 25px rgba(8, 26, 43, .09),
+    0 2px 8px rgba(215, 181, 109, .08);
+  transition: transform .4s ease, box-shadow .4s ease;
+  border: 1px solid rgba(215, 181, 109, .35);
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-9px);
+  box-shadow:
+    0 18px 38px rgba(8, 26, 43, .16),
+    0 5px 18px rgba(215, 181, 109, .22);
+  border-color: #d7b56d;
+}
+
+
+#stays .card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease, filter .6s ease;
+}
+
+#stays .card:hover img {
+  transform: scale(1.07);
+  filter: brightness(1.05);
+}
+
+
+
+    
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform .7s cubic-bezier(.2, .8, .2, 1);
+}
+
+.card:hover img {
+  transform: scale(1.07);
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.06);
+}
+
+
+ .card-content {
+  padding: 25px 23px;
+  background: linear-gradient(180deg, #ffffff, #fbf8f0);
+  text-align: right;
+}
+#stays .card-content {
+  padding: 24px 22px;
+  text-align: center;
+}
+
+#stays .card-content h3 {
+  color: #10243a;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#stays .card-content h3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 45px;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b88a35, #f5dfaa);
+}
+
+#stays .card-content p {
+  color: #65645f;
+  font-size: 15px;
+  line-height: 2.2;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: .1px;
+}
+    .card h3 {
+      color: #10243a;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .services {
+      background: #10243a;
+      color: white;
+    }
+
+
+.section-title {
+  text-align: center;
+  color: #f0d69d;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 2.2;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+
+.services .section-title::after {
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+  width: 180px;
+  height: 4px;
+}
+
+
+
+.service-item {
+  text-align: center;
+  padding: 30px 22px;
+  border: 1px solid rgba(215, 181, 109, .45);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #18334d, #0b1d2e);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+  transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  border-color: #e8cb87;
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .22);
+}
+
+
+
+.service-item h3 {
+  color: #f0d69d;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(215, 181, 109, .25);
+  transition: color .3s ease;
+}
+
+.service-item:hover h3 {
+  color: #fff0c5;
+}
+
+
+   
+.about {
+  text-align: center;
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 45px 35px;
+  background: linear-gradient(145deg, #18334d, #0b1d2e);
+  border: 1px solid rgba(215, 181, 109, .45);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(16, 36, 58, .18);
+  color: #ffffff;
+}
+
+
+
+.about p {
+  color: #f1f3f5;
+  font-size: 16px;
+  line-height: 2.4;
+  font-weight: 400;
+  margin: 0;
+  opacity: .95;
+}
+
+
+    .trust {
+      background: #eee9df;
+      text-align: center;
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+
+.trust-item {
+  padding: 28px 22px;
+  background: linear-gradient(145deg, #18334d, #0b1d2e);
+  color: #ffffff;
+  border: 1px solid rgba(215, 181, 109, .45);
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .22);
+}
+
+
+.trust-item h3 {
+  color: #f0d69d;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(215, 181, 109, .25);
+  transition: color .3s ease;
+}
+
+.trust-item:hover h3 {
+  color: #fff0c5;
+}
+
+
+
+.contact {
+  text-align: center;
+  background: linear-gradient(135deg, #10243a, #1b3854, #0b1d2e);
+  color: #ffffff;
+  padding: 90px 20px;
+  border-top: 3px solid #d7b56d;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .section-title {
+  color: #e5c782;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  color: #f1f3f5;
+  margin: 20px 0;
+  font-size: 17px;
+  line-height: 2.3;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.contact p a {
+  color: #f5d995;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.contact p a:hover {
+  color: #fff0c5;
+}
+
+.contact p:last-of-type {
+  color: #f0d69d;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 22px;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 16px 42px;
+  background: linear-gradient(135deg, #fff0c5, #d7b56d, #f0d69d);
+  color: #10243a;
+  border: 2px solid #f5d995;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(215,181,109,.35);
+  transition: all .35s ease;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(215, 181, 109, .45);
+  background: linear-gradient(135deg, #fff8df, #f0d69d);
+  border-color: #fff0c5;
+}
+  footer {
+  background: linear-gradient(135deg, #0b1d2e, #10243a, #18334d);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid #d7b56d;
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, .15);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  text-align: right;
+}
+
+.footer-content h3 {
+  color: #f5d995;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.footer-content p {
+  color: #e6edf3;
+  font-size: 14px;
+  line-height: 2.2;
+  margin: 8px 0;
+}
+
+.footer-links a,
+.footer-contact a {
+  display: block;
+  color: #e6edf3;
+  text-decoration: none;
+  margin: 10px 0;
+  transition: color .3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #f5d995;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(215, 181, 109, .35);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 8px 0;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 2;
+  color: #e6edf3;
+}
+
+footer span {
+  color: #f0d69d;
+  font-weight: 900;
+}
+
+    footer span {
+      color: #d7b56d;
+    }
+
+    
+
+
+
+    .whatsapp-button:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-icon {
+      font-size: 23px;
+    }
+.hero {
+  background-position: center;
+}
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  position: relative;
+  z-index: 2;
+  animation: heroFadeIn 1.2s ease both;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  height: 100%;
+}
+
+.card-content {
+  min-height: 150px;
+}
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 45px 18px;
+    background-position: center;
+  }
+
+.hero h1 {
+  font-size: 27px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-weight: 900;
+  color: #f5dfaa;
+  text-shadow:
+    0 3px 8px rgba(0, 0, 0, .65),
+    0 0 20px rgba(215, 181, 109, .25);
+}
+
+.hero p {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 25px;
+  color: #f5f2e9;
+  font-weight: 400;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+}
+ .hero .main-button {
+  padding: 13px 30px;
+  font-size: 15px;
+  border-radius: 40px;
+  width: auto;
+  max-width: 100%;
+}
+
+  section {
+    padding: 45px 5%;
+  }
+}
+
+.brand-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  background: #10243a;
+}
+
+.brand-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.why-romistay {
+  padding: 85px 7%;
+  background: linear-gradient(180deg, #10243a, #0b1d2e);
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px solid rgba(215, 181, 109, .35);
+}
+
+
+
+.why-romistay h2 {
+  color: #f0d69d;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .25);
+}
+
+.why-romistay h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
+
+.why-intro {
+  color: #eeeeee;
+  margin-bottom: 35px;
+}
+
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.why-card {
+  background: linear-gradient(145deg, #1b3b58, #0b1d2e);
+  color: #ffffff;
+  padding: 35px 26px;
+  border: 1px solid rgba(215, 181, 109, .5);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+  text-align: center;
+  transition: all .35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+..why-card:hover {
+  transform: translateY(-8px);
+  border-color: #e5c77e;
+  box-shadow: 0 16px 35px rgba(215, 181, 109, .22);
+}
+
+
+.why-card h3 {
+  color: #f5d995;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 18px;
+  line-height: 1.9;
+  text-shadow: 0 3px 12px rgba(215, 181, 109, .3);
+  transition: all .35s ease;
+}
+.why-card:hover h3 {
+  color: #fff0c5;
+  transform: scale(1.04);
+}
+
+
+.why-card p {
+  color: #e6edf3;
+  font-size: 15px;
+  line-height: 2.3;
+  font-weight: 400;
+  margin: 0;
+  opacity: .95;
+  transition: color .35s ease;
+}
+
+.why-card:hover p {
+  color: #ffffff;
+}
+
+
+.travel-experiences {
+  background: linear-gradient(180deg, #f8f7f3, #eee9df);
+  padding: 80px 7%;
+}
+
+.travel-experiences .section-title {
+  color: #10243a;
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.travel-experiences .section-title::after {
+  display: none;
+}
+
+.travel-experiences .card {
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff, #fffaf0);
+  border: 1px solid rgba(215, 181, 109, .5);
+  box-shadow: 0 10px 28px rgba(16, 36, 58, .12);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.travel-experiences .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .38);
+  border-color: #d7b56d;
+}
+
+.travel-experiences .card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.travel-experiences .card:hover img {
+  transform: scale(1.06);
+}
+
+.travel-experiences .card h3 {
+  color: #a78340;
+}
+
+/* Luxury ROMISTAY Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  direction: ltr;
+}
+
+.logo-symbol {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #f0d69d;
+  background: radial-gradient(
+    circle at 30% 25%,
+    #496987 0%,
+    #10243a 55%,
+    #071522 100%
+  );
+  color: #ffe7ad;
+  font-family: Georgia, serif;
+  font-size: 39px;
+  font-weight: bold;
+  box-shadow:
+    0 0 0 3px rgba(215,181,109,.22),
+    0 0 22px rgba(215,181,109,.55),
+    inset 0 0 14px rgba(240,214,157,.22);
+  text-shadow: 0 0 12px rgba(240,214,157,.75);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.logo-symbol:hover {
+  transform: rotate(8deg) scale(1.06);
+}
+
+
+
+.logo-name {
+  background: linear-gradient(
+    90deg,
+    #f7e4b1,
+    #d7b56d,
+    #fff0c5
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 12px rgba(215,181,109,.2);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 5%;
+    gap: 20px;
+  }
+
+  .logo-symbol {
+    width: 48px;
+    height: 48px;
+    font-size: 31px;
+  }
+
+  .logo-name {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+.main-button {
+  display: inline-block;
+  padding: 15px 38px;
+  background: linear-gradient(135deg, #f7e4b1, #d7b56d, #b8944e);
+  color: #10243a;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 50px;
+  border: 1px solid #fff0c5;
+  box-shadow: 0 6px 22px rgba(215, 181, 109, .35);
+  transition: all .3s ease;
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(215, 181, 109, .55);
+  background: linear-gradient(135deg, #fff0c5, #e5c47e);
+}
+.card-content h3 {
+  color: #18334d;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  transition: color .3s ease;
+}
+
+.card:hover .card-content h3 {
+  color: #b8944e;
+}
+
+.card-content p {
+  color: #5b6470;
+  font-size: 15px;
+  line-height: 2;
+}
+
+#destinations .card {
+  border-radius: 26px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #ffffff, #fbf7eb);
+  border: 1px solid rgba(215, 181, 109, .45);
+  box-shadow:
+    0 10px 30px rgba(8, 26, 43, .10),
+    0 3px 10px rgba(215, 181, 109, .08);
+  transition: opacity .8s ease, transform .8s ease, box-shadow .45s ease;
+}
+
+#destinations .card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 42px rgba(8, 26, 43, .17),
+    0 5px 18px rgba(215, 181, 109, .2);
+}
+/* ROMISTAY Premium Stays */
+
+#stays {
+  background: linear-gradient(180deg, #f8f7f3, #eee9df);
+  padding: 80px 7%;
+}
+
+
+#stays .section-description {
+  margin-bottom: 40px;
+}
+
+
+/* تنظیم اقامتگاه‌ها در کامپیوتر */
+#stays .cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: center;
+  max-width: 1100px;
+  gap: 25px;
+}
+
+/* تنظیم فوتر در کامپیوتر */
+@media (min-width: 769px) {
+  .footer-content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    text-align: right;
+  }
+}
+
+/* تنظیم فوتر و اقامتگاه‌ها در موبایل */
+@media (max-width: 768px) {
+  #stays .cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 22px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+}
+
+/* تنظیم جزئیات فوتر */
+.footer-about,
+.footer-links,
+.footer-contact {
+  min-width: 0;
+}
+
+.footer-content h3 {
+  font-size: 19px;
+}
+
+.footer-bottom {
+  padding-top: 18px;
+}
+
+
+@media (max-width: 768px) {
+  #stays .card img {
+    height: 220px;
+  }
+
+  #stays .card-content {
+    padding: 22px 18px;
+  }
+
+  #stays .card-content h3 {
+    font-size: 19px;
+  }
+  #stays .card-content p {
+    font-size: 14px;
+  }
+
+
+  .services .cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 18px;
+  }
+
+  .service-item {
+    padding: 25px 20px;
+  }
+}
+
+
+
+
+
+#stays .card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 18px 38px rgba(184, 148, 78, .28);
+}
+
+
+
+
+#stays .card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+#stays .card:hover img {
+  transform: scale(1.07);
+}
+
+
+
+#stays .card-content {
+  padding: 28px 22px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #fffaf0);
+}
+
+#stays .card-content h3 {
+  color: #10243a;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+
+/* ROMISTAY Service Description */
+
+.service-item p {
+  color: #f1f3f5;
+  font-size: 15px;
+  line-height: 2.2;
+  font-weight: 400;
+  margin-top: 8px;
+  opacity: .95;
+}
+
+  
+#stays .card-content p {
+  color: #68717c;
+  font-size: 15px;
+  line-height: 2;
+  margin: 0;
+}
+
+.trust-item p {
+  color: #f1f3f5;
+  font-size: 15px;
+  line-height: 2.2;
+  font-weight: 400;
+  margin-top: 8px;
+  opacity: .95;
+}
+
+
+.testimonials .section-title p {
+  color: #f1f3f5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.2;
+  text-shadow: none;
+  opacity: 1;
+}
+
+
+.testimonials .section-title::after {
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+  width: 180px;
+  height: 4px;
+}
+
+.testimonial-item {
+  background: linear-gradient(145deg, #18334d, #0b1d2e);
+  color: #ffffff;
+  padding: 30px 25px;
+  border: 1px solid rgba(215, 181, 109, .45);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+  text-align: center;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .22);
+}
+
+.testimonial-box p {
+  color: #f1f3f5;
+  font-size: 15px;
+  line-height: 2.3;
+  margin: 0 0 18px;
+  opacity: .95;
+}
+
+.testimonial-box h3 {
+  color: #f0d69d;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+
+.testimonial-stars {
+  color: #e8cb87;
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.about h2 {
+  color: #f0d69d;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 22px;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .25);
+  line-height: 1.8;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
+.contact h2 {
+  color: #f5d995;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 18px rgba(215, 181, 109, .35);
+  line-height: 1.8;
+}
+
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
+.contact a {
+  display: inline-block;
+  color: #10243a;
+  background: linear-gradient(135deg, #e8cb87, #c49a45);
+  padding: 12px 28px;
+  margin: 10px 8px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(215, 181, 109, .25);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contact a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 24px rgba(215, 181, 109, .4);
+}
+
+#about .about h2.section-title {
+  color: #f0d69d !important;
+  font-size: 30px;
+  font-weight: 900;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .35);
+}
+
+#destinations .card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform .7s cubic-bezier(.2, .7, .3, 1), filter .7s ease;
+}
+.services .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 35px auto 0;
+  gap: 25px;
+  align-items: stretch;
+}
+  @media (max-width: 768px) {
+  #destinations .card img {
+    height: 230px;
+  }
+}
+
+#destinations .card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.06);
+}
+
+
+#destinations .card-content {
+  padding: 30px 24px;
+  text-align: center;
+  background: linear-gradient(160deg, #ffffff, #fbf7eb);
+  position: relative;
+  border-top: 1px solid rgba(215, 181, 109, .25);
+}
+
+#destinations .card-content h3 {
+  color: #10243a;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 9px;
+}
+
+#destinations .card-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 42px;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b88a35, #f5dfaa);
+}
+
+#destinations .card-content p {
+  color: #626b75;
+  font-size: 15px;
+  line-height: 2.3;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: .15px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#destinations .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 45px auto 0;
+  align-items: stretch;
+  padding: 10px 5px 25px;
+}
+@media (max-width: 768px) {
+  #destinations .cards {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    gap: 22px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #destinations .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+  .why-romistay {
+    padding: 60px 5%;
+  }
+
+  .why-romistay h2 {
+    font-size: 26px;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 18px;
+  }
+
+  .why-card {
+    padding: 28px 20px;
+  }
+
+  .contact {
+    padding: 60px 18px;
+  }
+
+  .contact h2 {
+    font-size: 27px;
+  }
+
+  .contact-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .contact p {
+    font-size: 15px;
+  }
+}
+
+
+  .why-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 18px;
+  }
+
+  .why-card {
+    padding: 28px 20px;
+  }
+}
+#destinations .section-title {
+  color: #f0d69d;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  text-shadow: 0 3px 15px rgba(215, 181, 109, .3);
+}
+
+#destinations .section-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b8944e, #fff0c5, #b8944e);
+}
+
+#destinations .section-description {
+  color: #f1f3f5;
+  font-size: 16px;
+  line-height: 2.3;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  opacity: .95;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 95px;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff0c5, #d7b56d);
+  color: #10243a;
+  border: 2px solid #f5d995;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+  z-index: 999;
+  transition: all .3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(215, 181, 109, .45);
+}
+
+/* نمایش بزرگ تصاویر اقامتگاه‌ها */
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+#image-lightbox {
+  pointer-events: none;
+}
+
+#image-lightbox.active {
+  pointer-events: auto;
+}
+.image-lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+}
+#destinations h2 {
+  color: #10243a;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 18px;
+  letter-spacing: .3px;
+}
+
+#destinations h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 75px;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #b88a35, #f5dfaa, #b88a35);
+}
+ #destinations {
+  background: linear-gradient(
+    180deg,
+    #f8f5ec 0%,
+    #ffffff 50%,
+    #f3eee2 100%
+  );
+  padding: 75px 7%;
+  position: relative;
+}
+#destinations .card {
+  opacity: 0;
+  translate: 0 35px;
+  transition:
+    opacity .8s ease,
+    translate .8s cubic-bezier(.2, .7, .3, 1),
+    box-shadow .45s ease;
+}
+
+#destinations .card.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+#destinations .card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#destinations .card:nth-child(1) {
+  transition-delay: .1s;
+}
+
+#destinations .card:nth-child(2) {
+  transition-delay: .25s;
+}
+
+#destinations .card:nth-child(3) {
+  transition-delay: .4s;
+}
+/* دکمه شناور واتساپ ROMISTAY */
+.whatsapp-float {
+  position: fixed;
+ bottom: 12px;
+  left: 25px;
+  z-index: 9999;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  direction: rtl;
+  white-space: nowrap;
+  padding: 13px 22px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #d7b56d, #f5e2ad);
+  color: #10243a;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(8, 26, 43, .25);
+  transition: all .3s ease;
+}
+
+.whatsapp-float .whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.whatsapp-float span:last-child {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+.testimonial-box {
+  background: #17324d;
+  border: 1px solid #d7b56d;
+  border-radius: 22px;
+  padding: 35px 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.testimonial-stars {
+  color: #f0d69d;
+  font-size: 28px;
+  letter-spacing: 5px;
+  opacity: 1;
+}
+
+.testimonial-box h3 {
+  color: #f0d69d;
+  font-size: 22px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.testimonial-box p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 2.3;
+  opacity: 1;
+}
+
+/* ROMISTAY Booking Request */
+
+ .booking-request {
+  padding: 95px 7%;
+  background: linear-gradient(180deg, #f8f7f3 0%, #eee9df 100%);
+  direction: rtl;
+  position: relative;
+}
+
+#booking-request[style*="display: none"] {
+  display: none !important;
+}
+
+
+.booking-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.booking-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.booking-kicker {
+  color: #b58b43;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.booking-heading h2 {
+  color: #10243a;
+  font-size: 38px;
+  font-weight: 800;
+  margin: 18px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.8;
+}
+
+.booking-heading p {
+  color: #647080;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.booking-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fdfbf6 100%);
+  border: 1px solid rgba(214, 173, 96, 0.65);
+  border-radius: 28px;
+  padding: 45px;
+  box-shadow: 0 18px 45px rgba(16, 36, 58, 0.10);
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-progress {
+  display: flex;
+  justify-content: space-between;
+  color: #10243a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.booking-progress-line {
+  height: 6px;
+  background: #e9e9e9;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.booking-progress-line span {
+  display: block;
+  width: 25%;
+  height: 100%;
+  background: #d6ad60;
+  border-radius: 20px;
+}
+
+.booking-card h3 {
+  color: #10243a;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.booking-field label {
+  color: #10243a;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.8;
+  padding-right: 3px;
+  transition: color 0.3s ease;
+}
+
+.booking-field select {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #ded6c5;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #10243a;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.booking-field select:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
+  background: #ffffff;
+}
+.booking-field input {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #ded6c5;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #10243a;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.booking-field input:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
+  background: #ffffff;
+}
+
+.booking-field input:focus {
+  border-color: #d6ad60;
+}
+.booking-field select:focus {
+  border-color: #d6ad60;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.booking-actions button {
+  background: linear-gradient(135deg, #10243a, #1b3855);
+  color: #f0d69d;
+  border: 1px solid #d6ad60;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+}
+
+.booking-actions button:hover {
+  background: linear-gradient(135deg, #d6ad60, #ebd39b);
+  color: #10243a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(214, 180, 119, 0.2);
+}
+
+/* دکمه ادامه */
+#next-to-contact-step {
+  background: linear-gradient(135deg, #d6ad60, #ebd39b);
+  color: #10243a;
+}
+
+/* افکت دکمه ادامه */
+#next-to-contact-step:hover {
+  background: linear-gradient(135deg, #ebd39b, #f5e5bd);
+}
+
+.booking-note {
+  text-align: center;
+  color: #f5e5bd;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 30px;
+  line-height: 2;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+}
+
+
+@media (max-width: 768px) {
+  .booking-request {
+    padding: 55px 5%;
+  }
+
+  .booking-card {
+    padding: 25px 18px;
+  }
+
+  .booking-heading h2 {
+    font-size: 27px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-actions button {
+    width: 100%;
+  }
+}
+
+/* تنظیمات کارت‌های تجربه سفر در موبایل */
+@media (max-width: 600px) {
+  .travel-experiences {
+    padding: 45px 5%;
+  }
+
+  .travel-experiences .section-title {
+    font-size: 24px;
+    line-height: 1.8;
+  }
+
+  .travel-experiences .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .travel-experiences .card img {
+    height: 210px;
+  }
+}
+ .booking-field textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #ded6c5;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #10243a;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 2;
+  outline: none;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.booking-field textarea:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
+  background: #ffffff;
+} 
+/* بهینه‌سازی فرم درخواست اقامت در موبایل */
+@media (max-width: 600px) {
+  .booking-request {
+    padding: 45px 5%;
+  }
+
+  .booking-card {
+    padding: 25px 16px;
+    border-radius: 20px;
+  }
+
+  .booking-heading h2 {
+    font-size: 27px;
+  }
+
+  .booking-heading p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .booking-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .booking-actions button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* فیلترهای تکمیلی فرم رزرو */
+.booking-extra-filters {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.filter-section {
+  padding: 20px;
+  background: rgba(9, 25, 41, 0.16);
+  border: 1px solid rgba(226, 189, 117, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.filter-section h3 {
+  color: #10243a;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.filter-section p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+
+/* چیدمان فشرده و لوکس گزینه‌های مرحله دوم */
+
+.booking-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.booking-choice-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.booking-options label,
+.booking-choice-cards label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid rgba(214, 180, 119, 0.5);
+  border-radius: 12px;
+  background: rgba(9, 25, 41, 0.82);
+  color: #f5f1e8;
+  font-size: 12px;
+  line-height: 1.7;
+  cursor: pointer;
+  transition: all .25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.booking-options label:has(input:checked),
+.booking-choice-cards label:has(input:checked) {
+  background: linear-gradient(
+    135deg,
+    rgba(214, 180, 119, 0.22),
+    rgba(16, 36, 58, 0.96)
+  );
+  color: #f5d99e;
+  border: 1px solid #e2bd75;
+  box-shadow:
+    0 0 0 1px rgba(214, 180, 119, 0.15),
+    0 5px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.booking-options input,
+.booking-choice-cards input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: #e2bd75;
+  cursor: pointer;
+  filter: drop-shadow(0 0 3px rgba(214, 180, 119, 0.25));
+}
+
+@media (max-width: 768px) {
+  .booking-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+  .booking-choice-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #booking-filters-step .filter-section {
+    padding: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-choice-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* طراحی اختصاصی اسلایدر بودجه ROMISTAY */
+
+.budget-slider-container {
+  position: relative;
+  direction: rtl;
+  padding: 28px 24px 24px;
+  margin-top: 22px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #172b3d, #243c50);
+  box-shadow: 0 12px 30px rgba(15, 35, 52, 0.16);
+  overflow: hidden;
+}
+
+.budget-chart {
+  height: 76px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0 3px;
+  margin-bottom: -5px;
+}
+
+.budget-chart span {
+  flex: 1;
+  min-width: 0;
+  display: block;
+  border-radius: 5px 5px 2px 2px;
+  background: linear-gradient(180deg, #d9bd82, #947344);
+  opacity: 0.8;
+  box-shadow: 0 0 9px rgba(214, 180, 119, 0.12);
+}
+
+#booking-budget {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#booking-budget::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 20px;
+  background: linear-gradient(to left, #d6b477, #8e7045);
+}
+
+#booking-budget::-moz-range-track {
+  height: 8px;
+  border-radius: 20px;
+  background: linear-gradient(to left, #d6b477, #8e7045);
+}
+
+#booking-budget::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fffdf5, #e7d2a8 65%, #b58a43);
+  border: 3px solid #fff8e9;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35),
+              0 0 0 5px rgba(214, 180, 119, 0.18);
+}
+
+#booking-budget::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fffdf5, #e7d2a8 65%, #b58a43);
+  border: 3px solid #fff8e9;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35),
+              0 0 0 5px rgba(214, 180, 119, 0.18);
+}
+
+.budget-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #e6d8bd;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.budget-selected {
+  margin-top: 20px;
+  padding: 13px 16px;
+  border: 1px solid rgba(214, 180, 119, 0.35);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #f5ead6;
+  text-align: center;
+  font-size: 13px;
+}
+
+.budget-selected strong {
+  display: block;
+  margin-top: 6px;
+  color: #e6c98c;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+/* چیدمان برچسب‌های بودجه زیر نمودار */
+.budget-slider-labels {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center;
+  direction: rtl;
+  width: 100%;
+  margin-top: 14px;
+  color: #e6d8bd;
+  font-size: 12px;
+}
+
+/* جلوه حرفه‌ای نمودار بودجه ROMISTAY */
+
+.budget-chart {
+  position: relative;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.budget-chart span {
+  background: linear-gradient(
+    180deg,
+    #687b88,
+    #405566
+  );
+  opacity: 0.65;
+  border-radius: 5px 5px 2px 2px;
+  transition: background 0.35s ease,
+              opacity 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.budget-chart span.active {
+  background: linear-gradient(
+    180deg,
+    #f4dfae,
+    #d6b477 55%,
+    #a47b42
+  );
+  opacity: 1;
+  box-shadow: 0 0 12px rgba(214, 180, 119, 0.35);
+}
+
+/* طراحی لوکس کارت‌های انتخاب ROMISTAY */
+
+.booking-options label,
+.booking-choice-cards label {
+  position: relative;
+  min-height: 54px;
+  padding: 15px 14px;
+  border: 1px solid rgba(226, 189, 117, 0.22);
+  border-radius: 13px;
+  background: rgba(12, 29, 45, 0.38);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.booking-options label:hover,
+.booking-choice-cards label:hover {
+  transform: translateY(-3px);
+  border-color: #c9a45c;
+  box-shadow: 0 8px 18px rgba(16, 36, 58, 0.12);
+}
+
+.booking-options label:has(input:checked),
+.booking-choice-cards label:has(input:checked) {
+  background: linear-gradient(145deg, #1b354c, #10243a);
+  color: #f2d69b;
+  border: 1px solid #d6b477;
+  box-shadow: 0 6px 18px rgba(16, 36, 58, 0.2);
+  transform: translateY(-2px);
+}
+
+.booking-options input,
+.booking-choice-cards input {
+  width: 17px;
+  height: 17px;
+  accent-color: #d6b477;
+  flex-shrink: 0;
+}
+
+
+/* پس‌زمینه تصویری مرحله دوم رزرو */
+
+#booking-filters-step {
+  background-image: linear-gradient(
+    rgba(7, 20, 34, 0.20),
+    rgba(7, 20, 34, 0.20)
+  ), url('https://romistay.github.io/website/images/Luxury%20Villa%20at%20Twilight.png') !important;
+
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+ #booking-filters-step {
+  padding: 24px !important;
+  border: 1px solid #c9a45c !important;
+  border-radius: 24px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* کارت‌های امکانات و مقررات */
+
+#booking-filters-step .filter-section p {
+  color: rgba(245, 241, 232, 0.82) !important;
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 10px 2px 14px;
+}
+#booking-filters-step .filter-section {
+  background: rgba(9, 25, 41, 0.48) !important;
+  border: 1px solid rgba(214, 180, 119, 0.45) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* عنوان‌ها */
+
+#booking-filters-step .filter-section h3 {
+  color: #f0d69d !important;
+}
+
+/* توضیحات */
+
+
+/* منوی کشویی لوکس ROMISTAY */
+
+#booking-filters-step .accordion-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 16px;
+  border: 1px solid rgba(214, 180, 119, 0.55);
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 40, 60, 0.95),
+    rgba(9, 25, 41, 0.95)
+  );
+  color: #f2d69b;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: right;
+  transition: all .25s ease;
+}
+#booking-filters-step .accordion-arrow {
+  font-size: 19px;
+  color: #e2bd75;
+  transition: transform .3s ease, color .3s ease;
+  display: inline-block;
+}
+
+#booking-filters-step .accordion-toggle.active .accordion-arrow {
+  transform: rotate(180deg);
+  color: #f5d99e;
+}
+
+#booking-filters-step .accordion-toggle.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+#booking-filters-step .accordion-content {
+  padding: 16px 10px 5px;
+}
+/* نمایش خلاصه امکانات */
+
+.amenities-preview:not(.show-all) label:nth-child(n+7) {
+  display: none !important;
+}
+
+/* دکمه مشاهده همه امکانات */
+
+#toggle-all-amenities {
+  display: block;
+  margin: 12px auto 4px;
+  padding: 8px 20px;
+  border: 1px solid rgba(226, 189, 117, 0.8);
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 43, 63, 0.95),
+    rgba(9, 25, 41, 0.95)
+  );
+  color: #f2d69b;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+#toggle-all-amenities:hover {
+  background: linear-gradient(135deg, #e2bd75, #c9a45c);
+  color: #10243a;
+  box-shadow: 0 5px 15px rgba(214, 180, 119, 0.22);
+  transform: translateY(-2px);
+}
+#toggle-all-amenities:hover {
+  background: #d6b477;
+  color: #10243a;
+}
+/* نمایش خلاصه مقررات */
+
+.rules-preview:not(.show-all) label:nth-child(n+4) {
+  display: none !important;
+}
+
+/* ظاهر دکمه مشاهده همه مقررات */
+
+#toggle-all-rules {
+  display: block;
+  margin: 12px auto 4px;
+  padding: 8px 20px;
+  border: 1px solid rgba(226, 189, 117, 0.8);
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 43, 63, 0.95),
+    rgba(9, 25, 41, 0.95)
+  );
+  color: #f2d69b;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+#toggle-all-rules:hover {
+  background: linear-gradient(135deg, #e2bd75, #c9a45c);
+  color: #10243a;
+  box-shadow: 0 5px 15px rgba(214, 180, 119, 0.22);
+  transform: translateY(-2px);
+}
+
+#toggle-all-rules:hover {
+  background: #d6b477;
+  color: #10243a;
+}
+/* طراحی عنوان آکاردئون */
+.accordion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(214, 180, 119, 0.45);
+  border-radius: 12px;
+  background: rgba(13, 31, 49, 0.65);
+  color: #f0d69d;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* چرخش فلش هنگام باز و بسته شدن */
+.accordion-arrow {
+  display: inline-block;
+  color: #d6b477;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+/* فاصله محتوای آکاردئون */
+.accordion-content {
+  padding-top: 14px;
+}
+/* طراحی لوکس بخش بودجه */
+#booking-filters-step .filter-section:has(#booking-budget) {
+  background: rgba(13, 31, 49, 0.48) !important;
+  border: 1px solid rgba(214, 180, 119, 0.55) !important;
+  border-radius: 18px !important;
+  padding: 20px !important;
+}
+
+/* عنوان بودجه */
+#booking-filters-step .filter-section:has(#booking-budget) h3 {
+  color: #f0d69d !important;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  text-align: right;
+}
+
+/* پنل داخلی نمودار و اسلایدر */
+.budget-slider-container {
+  background: rgba(7, 20, 34, 0.48);
+  border: 1px solid rgba(214, 180, 119, 0.25);
+  border-radius: 15px;
+  padding: 18px 16px;
+}
+@media (max-width: 480px) {
+  .booking-actions {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .booking-actions button {
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+}
+/* پنل‌های شیشه‌ای امکانات و مقررات */
+#booking-filters-step .filter-section:has(.accordion-toggle) {
+  background: rgba(9, 25, 41, 0.22) !important;
+  border: 1px solid rgba(226, 189, 117, 0.55) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* حذف پس‌زمینه مات محتوای پنل‌ها */
+#booking-filters-step .accordion-content {
+  background: transparent !important;
+}
+
+/* کارت‌های انتخاب شیشه‌ای */
+#booking-filters-step .booking-options label,
+#booking-filters-step .booking-choice-cards label {
+  background: rgba(9, 25, 41, 0.48) !important;
+  color: #fff !important;
+  border: 1px solid rgba(226, 189, 117, 0.55) !important;
+}
+
+/* کارت انتخاب‌شده */
+#booking-filters-step .booking-options label:has(input:checked),
+#booking-filters-step .booking-choice-cards label:has(input:checked) {
+  background: rgba(214, 180, 119, 0.28) !important;
+  color: #ffe4ad !important;
+}
+/* یکسان‌سازی شفافیت پنل امکانات و مقررات */
+
+#booking-filters-step .filter-section {
+ background: rgba(9, 25, 41, 0.08) !important;
+  border: 1px solid rgba(226, 189, 117, 0.22) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+#booking-filters-step .accordion-content {
+  background: transparent !important;
+}
+/* شفافیت کارت هنگام نمایش مرحله دوم */
+
+.booking-card:has(#booking-filters-step:not([style*="display: none"])) {
+  background: rgba(9, 25, 41, 0.08) !important;
+  border-color: rgba(226, 189, 117, 0.35) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+/* تصویر پس‌زمینه برای تمام کارت در مرحله دوم */
+.booking-card:has(#booking-filters-step:not([style*="display: none"])) {
+  background:
+    linear-gradient(
+      rgba(7, 20, 34, 0.20),
+      rgba(7, 20, 34, 0.20)
+    ),
+    url('https://romistay.github.io/website/images/Luxury%20Villa%20at%20Twilight.png')
+    center center / cover no-repeat !important;
+}
+
+/* حذف تصویر تکراری از بخش داخلی */
+.booking-card:has(#booking-filters-step:not([style*="display: none"])) #booking-filters-step {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+ 
+/* ==============================
+   ROMISTAY CLUB - WORLD OF TRAVEL
+============================== */
+
+#romistay-club {
+  background: #f8f7f3;
+  color: #26384a;
+  font-family: Tahoma, Arial, sans-serif;
+  overflow: hidden;
+}
+
+#romistay-club .world-hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 65px 20px;
+  background:
+    linear-gradient(rgba(8, 25, 40, .38), rgba(8, 25, 40, .62)),
+    url('./images/Luxury Villa at Twilight.png') center/cover no-repeat;
+  border-bottom: 3px solid #d7b56d;
+}
+
+#romistay-club .world-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(9, 28, 45, .18), rgba(9, 28, 45, .35));
+}
+
+#romistay-club .world-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  color: #fff;
+}
+
+#romistay-club .world-label {
+  display: inline-block;
+  color: #f0d69d;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+#romistay-club .world-content h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.6;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#romistay-club .world-content h1 span {
+  color: #f0d69d;
+  letter-spacing: 3px;
+}
+
+#romistay-club .world-content p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+#romistay-club .world-button {
+  display: inline-block;
+  padding: 12px 34px;
+  background: linear-gradient(135deg, #e8ce91, #c9a65d);
+  color: #172b3e;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+  transition: .3s ease;
+}
+
+#romistay-club .world-button:hover {
+  transform: translateY(-3px);
+  background: #f5dfaa;
+}
+
+#romistay-club .world-note {
+  margin-top: 17px;
+  font-size: 12px;
+  color: #f5e8c8;
+}
+
+#romistay-club .world-benefits {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 65px 22px 75px;
+}
+
+#romistay-club .world-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+#romistay-club .world-heading > span {
+  color: #b18b49;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+#romistay-club .world-heading h2 {
+  color: #20364b;
+  font-size: clamp(23px, 3vw, 32px);
+  margin: 10px 0;
+}
+
+#romistay-club .world-heading p {
+  color: #78818b;
+  font-size: 14px;
+}
+
+#romistay-club .world-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+#romistay-club .world-card {
+  background: #fff;
+  border: 1px solid rgba(201, 166, 93, .35);
+  border-radius: 18px;
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(16, 36, 58, .06);
+  transition: .3s ease;
+}
+
+#romistay-club .world-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(16, 36, 58, .12);
+}
+
+#romistay-club .world-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f8f1e2;
+  color: #b18b49;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+#romistay-club .world-card h3 {
+  color: #20364b;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+#romistay-club .world-card p {
+  color: #78818b;
+  font-size: 13px;
+  line-height: 2;
+}
+
+@media (max-width: 700px) {
+  #romistay-club .world-hero {
+    min-height: 390px;
+    padding: 50px 18px;
+  }
+
+  #romistay-club .world-content p {
+    font-size: 14px;
+  }
+
+  #romistay-club .world-benefits {
+    padding: 45px 16px 55px;
+  }
+
+  #romistay-club .world-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #romistay-club .world-card {
+    padding: 25px 18px;
+  }
+}
+
+/* فونت اختصاصی باشگاه مشتریان ROMISTAY */
+#romistay-club,
+#romistay-club * {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* ROMISTAY CLUB MEMBERSHIP FORM */
+
+#romistay-club .club-register {
+  max-width: 850px;
+  margin: 70px auto;
+  padding: 45px;
+  background: linear-gradient(145deg, #ffffff, #fdfbf6);
+  border: 1px solid rgba(201, 164, 92, 0.55);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(16, 36, 58, 0.08);
+  direction: rtl;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+#romistay-club .club-register-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#romistay-club .club-register-heading span {
+  color: #b28b45;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+#romistay-club .club-register-heading h2 {
+  color: #10243a;
+  font-size: 25px;
+  margin: 12px 0;
+}
+
+#romistay-club .club-register-heading p {
+  color: #78818b;
+  font-size: 14px;
+  line-height: 2;
+}
+
+#romistay-club .club-form-field {
+  margin-bottom: 22px;
+}
+
+#romistay-club .club-form-field label {
+  display: block;
+  color: #10243a;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+#romistay-club .club-form-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 17px;
+  border: 1px solid #ded6c8;
+  border-radius: 12px;
+  background: #fff;
+  color: #10243a;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#romistay-club .club-form-field input:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.12);
+}
+
+#romistay-club .club-form-field input::placeholder {
+  color: #a4a4a4;
+}
+
+#romistay-club .club-submit-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #c9a45c, #a98238);
+  color: #fff;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#romistay-club .club-submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(169, 130, 56, 0.25);
+}
+
+#romistay-club .club-form-note {
+  text-align: center;
+  color: #858585;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  #romistay-club .club-register {
+    margin: 40px 15px;
+    padding: 25px 18px;
+  }
+
+  #romistay-club .club-register-heading h2 {
+    font-size: 20px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#club-register {
+  scroll-margin-top: 100px;
+}
+/* هماهنگ‌سازی طراحی مرحله اول رزرو با مرحله دوم */
+.booking-card > h3,
+.booking-step-two > h3 {
+  color: #10243a;
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e9e1d2;
+}
+
+.booking-card > .booking-grid,
+.booking-step-two > .booking-grid {
+  margin-bottom: 28px;
+}
+
+.booking-step-two {
+  margin-top: 28px;
+}
+
+.booking-field {
+  gap: 12px;
+}
+
+.booking-field select,
+.booking-field input {
+  min-height: 54px;
+  box-sizing: border-box;
+}
+
+/* پنل مقصد و نوع اقامتگاه */
+.booking-card > .booking-grid {
+  background: #fbf8f1;
+  border: 1px solid #eee4d2;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 16px;
+  box-sizing: border-box;
+}
+
+/* پنل تاریخ سفر و تعداد مسافران */
+.booking-step-two {
+  background: #fbf8f1;
+  border: 1px solid #eee4d2;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 24px;
+  box-sizing: border-box;
+}
+
+/* هماهنگی تیترهای پنل‌ها */
+.booking-card > h3,
+.booking-step-two > h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #10243a;
+  margin-bottom: 18px;
+}
+
+/* نمایش بهتر در موبایل */
+@media (max-width: 600px) {
+  .booking-card > .booking-grid,
+  .booking-step-two {
+    padding: 15px;
+    border-radius: 15px;
+  }
+}
+
+
+/* دکمه ادامه رزرو ROMISTAY */
+#next-booking-step {
+  background: linear-gradient(135deg, #d9b66f, #bd9144);
+  color: #10243a;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 35px;
+  min-height: 54px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(189, 145, 68, 0.22);
+  transition: all 0.3s ease;
+}
+
+#next-booking-step:hover {
+  background: linear-gradient(135deg, #e5c783, #c9a45c);
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(189, 145, 68, 0.3);
+}
+
+#next-booking-step:active {
+  transform: translateY(0);
+}
+
+#next-booking-step:focus-visible {
+  outline: 3px solid rgba(201, 164, 92, 0.35);
+  outline-offset: 3px;
+}
+
+/* آیکون‌های مینیمال فرم رزرو */
+.booking-field label::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  margin-left: 9px;
+  color: #bd984f;
+  font-size: 14px;
+}
+
+.booking-field:has(#booking-destination) label::before {
+  content: "\f3c5";
+}
+
+.booking-field:has(#other-destination) label::before {
+  content: "\f1ad";
+}
+
+.booking-field:has(#booking-type) label::before {
+  content: "\f594";
+}
+
+.booking-field:has(#booking-stars) label::before {
+  content: "\f005";
+}
+
+.booking-field:has(#entry-date) label::before,
+.booking-field:has(#exit-date) label::before {
+  content: "\f073";
+}
+
+.booking-field:has(#booking-guests) label::before {
+  content: "\f0c0";
+}
+
+.booking-field:has(#booking-rooms) label::before {
+  content: "\f236";
+}
+/* افزایش خوانایی توضیحات فرم رزرو */
+.booking-note {
+  color: #526174;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 2;
+}
+/* طراحی حرفه‌ای دکمه ثبت درخواست اقامت */
+#submit-booking-request {
+  background: linear-gradient(135deg, #d9b66f, #bd9144);
+  color: #10243a;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 35px;
+  min-height: 54px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(189, 145, 68, 0.22);
+  transition: all 0.3s ease;
+}
+
+#submit-booking-request:hover {
+  background: linear-gradient(135deg, #e5c783, #c9a45c);
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(189, 145, 68, 0.3);
+}
+
+#submit-booking-request:active {
+  transform: translateY(0);
+}
+
+#submit-booking-request:focus-visible {
+  outline: 3px solid rgba(201, 164, 92, 0.35);
+  outline-offset: 3px;
+}
+ </style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+ <header> 
+<div class="logo">
+  <span class="logo-symbol">R</span>
+  <span class="logo-name">ROMISTAY</span>
+</div>    <nav>
+
+<a href="#booking-request" id="open-booking-link">رزرو</a>
+<a href="#destinations">مقصدها</a>
+<a href="#services">خدمات</a>
+<a href="#stays">اقامتگاه‌ها</a>
+<a href="#about">درباره ما</a>
+<a href="#testimonials">نظرات مهمانان</a>
+<a href="#contact">تماس</a>
+</nav>
+  </header>
+<section class="brand-banner">
+  <img src="./images/romistay-banner.png" alt="ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز">
+</section>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>سفر متفاوت، اقامت خاطره‌انگیز</h1>
+        <p>ایران را جور دیگری ببین؛ با ROMISTAY مقصدهای زیبا و اقامتگاه‌های خاص را کشف کن.</p>
+        <a href="#destinations" class="main-button">کشف مقصدها</a>
+      </div>
+    </section>
+
+<section id="destinations">
+  <h2 class="section-title">مقصدهای ویژه ROMISTAY</h2>
+  <p class="section-description">
+    از شهرهای تاریخی و فرهنگی تا جزایر زیبا و طبیعت سرسبز شمال؛ مقصد بعدی سفر شما با ROMISTAY منتظر شماست.
+  </p>
+
+  <div class="cards">
+
+    <article class="card">
+      <img src="./images/isfahan.jpg" alt="اصفهان">
+      <div class="card-content">
+        <h3>اصفهان؛ شکوه تاریخ و هنر ایران</h3>
+        <p>از شکوه نقش‌جهان تا پل‌های تاریخی و خانه‌های اصیل؛ اصفهان مقصدی برای عاشقان زیبایی و خاطره‌سازی است.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/mashhad.jpg" alt="مشهد">
+      <div class="card-content">
+        <h3>مشهد؛ مقصدی برای آرامش و خاطره</h3>
+        <p>از حال‌وهوای معنوی حرم مطهر تا جاذبه‌های دیدنی و مراکز خرید؛ مشهد تجربه‌ای متفاوت برای هر مسافر دارد.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/kish.jpg" alt="جزیره کیش">
+      <div class="card-content">
+        <h3>کیش؛ زیبایی دریای نیلگون</h3>
+        <p>ساحل زیبا، تفریحات دریایی و لحظه‌های فراموش‌نشدنی.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/shiraz.jpg" alt="شیراز">
+      <div class="card-content">
+        <h3>شیراز؛ شهر شعر و بهارنارنج</h3>
+        <p>از حافظیه تا باغ‌های تاریخی و عطر دلنشین بهارنارنج.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/tehran.png" alt="تهران">
+      <div class="card-content">
+        <h3>تهران؛ پایتخت دیدنی ایران</h3>
+        <p>ترکیبی از جاذبه‌های تاریخی، مدرن و تجربه‌های شهری.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/yazd.jpg" alt="یزد">
+      <div class="card-content">
+        <h3>یزد؛ شهر بادگیرها</h3>
+        <p>کوچه‌های خشتی، معماری اصیل و آرامش کویر.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/qeshm.jpg" alt="قشم">
+      <div class="card-content">
+        <h3>قشم؛ شگفتی‌های طبیعت</h3>
+        <p>دره‌های شگفت‌انگیز، سواحل زیبا و طبیعت منحصربه‌فرد.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/north.jpg" alt="شمال ایران">
+      <div class="card-content">
+        <h3>شمال؛ آرامش در آغوش طبیعت</h3>
+        <p>جنگل‌های سرسبز، هوای دلپذیر و چشم‌اندازهای تماشایی.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/traditional.jpg" alt="معماری سنتی ایرانی">
+      <div class="card-content">
+        <h3>اقامت در دل اصالت ایرانی</h3>
+        <p>خانه‌های سنتی، معماری اصیل و مهمان‌نوازی ایرانی.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    
+<section class="services" id="services">  <h2 class="section-title">خدمات ROMISTAY</h2>
+      <div class="cards">
+        <div class="service-item">
+          <h3>مقصدهای منتخب</h3>
+          <p>معرفی مکان‌های دیدنی و جذاب ایران.</p>
+        </div>
+
+        <div class="service-item">
+          <h3>اقامتگاه‌های خاص</h3>
+          <p>آشنایی با اقامتگاه‌های زیبا و متفاوت.</p>
+        </div>
+
+        <div class="service-item">
+          <h3>تجربه متفاوت</h3>
+          <p>الهام گرفتن برای سفرهایی به‌یادماندنی.</p>
+        </div>
+      </div>
+    </section>
+
+
+<section id="stays">
+  <h2 class="section-title">اقامتگاه‌های منتخب</h2>
+  <p class="section-description">با اقامتگاه‌های زیبا و متفاوت بیشتر آشنا شوید.</p>
+
+  <div class="cards">
+
+<article class="card">
+  <a href="./hotels/isfahan.html" style="display:block; color:inherit; text-decoration:none;">
+    <img src="./images/traditional.jpg" alt="اقامتگاه سنتی اصفهان">
+    <div class="card-content">
+      <h3>اقامتگاه‌های اصفهان</h3>
+      <p>تجربه اقامتی دلنشین در شهر تاریخی اصفهان.</p>
+    </div>
+  </a>
+</article>
+
+<article class="card">
+  <a href="./hotels/mashhad.html" style="display:block; color:inherit; text-decoration:none;">
+    <img src="./images/darvishi.jpg" alt="اتاق هتل درویشی مشهد">
+    <div class="card-content">
+      <h3>هتل درویشی مشهد</h3>
+      <p>تجربه اقامتی لوکس و خاطره‌انگیز در مشهد.</p>
+    </div>
+  </a>
+</article>
+
+<article class="card">
+  <a href="./hotels/index.html" style="display:block; color:inherit; text-decoration:none;">
+    <img src="./images/isfahan.jpg" alt="اقامت در ایران">
+    <div class="card-content">
+      <h3>اقامت‌های خاص</h3>
+      <p>پیشنهادهایی برای تجربه سفری متفاوت و خاطره‌انگیز.</p>
+    </div>
+  </a>
+</article>
+
+</div>
+</section>
+
+
+
+    <section class="trust">
+      <h2 class="section-title">اعتماد و همراهی با شما</h2>
+      <div class="trust-items">
+        <div class="trust-item">
+          <h3>معرفی شفاف</h3>
+          <p>اطلاعات روشن برای انتخاب بهتر.</p>
+        </div>
+        <div class="trust-item">
+          <h3>ارتباط مستقیم</h3>
+          <p>امکان ارتباط با ما برای دریافت راهنمایی.</p>
+        </div>
+        <div class="trust-item">
+          <h3>نگاه متفاوت</h3>
+          <p>معرفی تجربه‌های جذاب سفر در ایران.</p>
+        </div>
+      </div>
+    </section>
+
+<section class="testimonials" id="testimonials">
+  <div class="section-title">
+    <h2>تجربه مهمانان ROMISTAY</h2>
+    <p>خاطرات خوب سفر، ارزشمندترین همراه ما هستند.</p>
+  </div>
+
+  <div class="testimonial-box">
+    <div class="testimonial-stars">★★★★★</div>
+    <h3>به‌زودی، تجربه‌های شما</h3>
+    <p>
+      مشتاقیم تجربه واقعی شما از سفر و اقامت را بشنویم
+      و با دیگر مسافران به اشتراک بگذاریم.
+    </p>
+  </div>
+</section>
+
+    <section id="about">
+      <div class="about">
+        <h2 class="section-title">درباره ROMISTAY</h2>
+<p>
+  ROMISTAY همراه شماست تا با مقصدهای دیدنی ایران، اقامتگاه‌های منتخب و
+  تجربه‌های متفاوت سفر بیشتر آشنا شوید. هدف ما الهام‌بخشیدن برای
+  انتخاب مقصدی زیبا و ساختن خاطراتی ماندگار است.
+</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+   
+<h2 class="section-title">با ما در ارتباط باشید</h2>
+<p>برای دریافت اطلاعات بیشتر درباره مقصدها و اقامتگاه‌های ویژه ROMISTAY، با ما در ارتباط باشید.</p>
+
+<a href="https://wa.me/989359154490?text=سلام، برای دریافت اطلاعات بیشتر درباره خدمات ROMISTAY پیام می‌دهم."
+   target="_blank"
+   rel="noopener"
+   class="contact-button">
+     ✆ ارتباط با ما در واتساپ
+</a>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSe44ioKv5_clWdc3xBAA4_U1rH54RLQ1eyQFGsWPOuxETTakw/viewform?usp=dialog"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="contact-button">
+   📞 درخواست تماس پشتیبانی
+</a>
+
+<p>شماره تماس:
+  <a href="tel:+989359154490">09359154490</a>
+</p></section>
+<section class="why-romistay">
+  <h2>چرا ROMISTAY؟</h2>
+  <p class="why-intro">ما باور داریم هر سفر باید به خاطره‌ای ماندگار تبدیل شود.</p>
+
+  <div class="why-cards">
+    <div class="why-card">
+      <h3>✨ مقصدهای خاص</h3>
+      <p>معرفی دیدنی‌های ایران و تجربه‌هایی متفاوت در اصفهان و مشهد.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>🏡 اقامتگاه‌های متفاوت</h3>
+      <p>آشنایی با اقامتگاه‌هایی با حال‌وهوای اصیل و دوست‌داشتنی.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>🤝 ارتباط آسان</h3>
+      <p>برای دریافت اطلاعات بیشتر، به‌راحتی از طریق واتساپ با ما در ارتباط باشید.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+<section id="booking-request" class="booking-request">
+  <div class="booking-container">
+
+    <div class="booking-heading">
+      <span class="booking-kicker">ROMISTAY EXPERIENCE</span>
+      <h2>درخواست اقامت</h2>
+      <p>اقامت دلخواهتان را انتخاب کنید؛ بررسی بهترین گزینه‌ها با ماست.</p>
+    </div>
+
+    <div class="booking-card">
+      <div class="booking-progress">
+        <span>درخواست اقامت شما</span>
+        <span>مرحله ۱ از ۳</span>
+      </div>
+
+      <div class="booking-progress-line">
+        <span></span>
+      </div>
+
+      <h3>مقصد و نوع اقامتگاه</h3>
+
+      <div class="booking-grid">
+
+      
+<div class="booking-field">
+  <label for="booking-destination">شهر مقصد</label>
+  <select id="booking-destination">
+    <option value="">انتخاب شهر</option>
+    <option value="اصفهان">اصفهان</option>
+    <option value="مشهد">مشهد</option>
+    <option value="تهران">تهران</option>
+    <option value="کیش">کیش</option>
+    <option value="شیراز">شیراز</option>
+    <option value="other">سایر شهرها</option>
+  </select>
+</div>
+
+<div class="booking-field" id="other-destination-field" style="display:none;">
+  <label for="other-destination">نام شهر موردنظر</label>
+  <input
+    type="text"
+    id="other-destination"
+    placeholder="نام شهر را وارد کنید"
+  >
+</div>
+
+<div class="booking-field">
+  <label>نوع اقامتگاه</label>
+  <select id="booking-type">
+    <option>انتخاب نوع اقامتگاه</option>
+    <option>هتل</option>
+    <option>هتل‌آپارتمان</option>
+    <option>سوئیت</option>
+    <option>اقامتگاه بوم‌گردی</option>
+    <option>فرقی ندارد</option>
+  </select>
+</div>
+
+
+        <div class="booking-field">
+          <label>تعداد ستاره</label>
+<select id="booking-stars">
+            <option>فرقی ندارد</option>
+            <option>۱ تا ۲ ستاره</option>
+            <option>۳ ستاره</option>
+            <option>۴ ستاره</option>
+            <option>۵ ستاره</option>
+          </select>
+        </div>
+
+      </div>
+<div class="booking-step-two">
+  <h3>تاریخ سفر و تعداد مسافران</h3>
+
+  <div class="booking-grid">
+
+    
+<div class="booking-field">
+  <label>تاریخ ورود (شمسی)</label>
+  <input type="text" id="entry-date" class="jalali-date" placeholder="انتخاب تاریخ ورود">
+</div>
+
+<div class="booking-field">
+  <label>تاریخ خروج (شمسی)</label>
+  <input type="text" id="exit-date" class="jalali-date" placeholder="انتخاب تاریخ خروج">
+</div>
+
+
+    <div class="booking-field">
+      <label>تعداد مسافران</label>
+<select id="booking-guests">
+        <option>۱ نفر</option>
+        <option>۲ نفر</option>
+        <option>۳ نفر</option>
+        <option>۴ نفر</option>
+        <option>۵ نفر</option>
+        <option>۶ نفر یا بیشتر</option>
+      </select>
+    </div>
+
+    <div class="booking-field">
+      <label>تعداد اتاق</label>
+      <select id="booking-rooms">
+        <option>۱ اتاق</option>
+        <option>۲ اتاق</option>
+        <option>۳ اتاق</option>
+        <option>۴ اتاق یا بیشتر</option>
+      </select>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+     <div class="booking-actions">
+       <button type="button" id="next-booking-step">ادامه درخواست ←</button>
+      </div>
+<div id="booking-filters-step" style="display: none;">
+
+  <!-- امکانات -->
+  <!-- امکانات -->
+ <div class="filter-section accordion-section">
+
+  <button type="button" class="accordion-toggle">
+    <span>♧ امکانات موردنظر شما</span>
+    <span class="accordion-arrow">⌄</span>
+  </button>
+
+<div class="accordion-content">
+    <p>امکانات دلخواه خود را انتخاب کنید (امکان انتخاب چند مورد)</p>
+
+    <div class="booking-options amenities-preview">
+      <label><input type="checkbox" name="amenities" value="باربیکیو"> باربیکیو</label>
+      <label><input type="checkbox" name="amenities" value="اینترنت WiFi"> اینترنت (WiFi)</label>
+      <div class="pool-option">
+  <label>
+    <input type="checkbox" name="amenities" value="استخر" id="pool-checkbox">
+    استخر
+  </label>
+
+  <div id="pool-details" style="display: none;">
+    <label><input type="checkbox" name="amenities" value="استخر سرپوشیده"> سرپوشیده</label>
+    <label><input type="checkbox" name="amenities" value="استخر سرباز"> سرباز</label>
+    <label><input type="checkbox" name="amenities" value="آب سرد"> آب سرد</label>
+    <label><input type="checkbox" name="amenities" value="آب گرم"> آب گرم</label>
+  </div>
+</div>
+      <label><input type="checkbox" name="amenities" value="میز بیلیارد"> میز بیلیارد</label>
+      <label><input type="checkbox" name="amenities" value="میز پینگ پنگ"> میز پینگ پنگ</label>
+      <label><input type="checkbox" name="amenities" value="فوتبال دستی"> فوتبال دستی</label>
+      <label><input type="checkbox" name="amenities" value="جکوزی"> جکوزی</label>
+      <label><input type="checkbox" name="amenities" value="سونا"> سونا</label>
+      <label><input type="checkbox" name="amenities" value="سیستم تهویه هوا"> سیستم تهویه هوا</label>
+      <label><input type="checkbox" name="amenities" value="وعده غذایی"> وعده غذایی</label>
+      <label><input type="checkbox" name="amenities" value="اجاق گاز"> اجاق گاز</label>
+      <label><input type="checkbox" name="amenities" value="سیستم سرمایشی"> سیستم سرمایشی</label>
+      <label><input type="checkbox" name="amenities" value="تلویزیون"> تلویزیون</label>
+      <label><input type="checkbox" name="amenities" value="یخچال"> یخچال</label>
+      <label><input type="checkbox" name="amenities" value="سیستم گرمایشی"> سیستم گرمایشی</label>
+      <label><input type="checkbox" name="amenities" value="سیستم صوتی"> سیستم صوتی</label>
+      <label><input type="checkbox" name="amenities" value="مبلمان"> مبلمان</label>
+      <label><input type="checkbox" name="amenities" value="لوازم سرو غذا"> لوازم سرو غذا</label>
+      <label><input type="checkbox" name="amenities" value="آشپزخانه"> آشپزخانه</label>
+      <label><input type="checkbox" name="amenities" value="پوشش شبکه موبایل"> پوشش شبکه موبایل</label>
+      <label><input type="checkbox" name="amenities" value="حمام"> حمام</label>
+      <label><input type="checkbox" name="amenities" value="بالکن"> بالکن</label>
+      <label><input type="checkbox" name="amenities" value="آلاچیق"> آلاچیق</label>
+      <label><input type="checkbox" name="amenities" value="سرویس بهداشتی فرنگی"> سرویس بهداشتی فرنگی</label>
+      <label><input type="checkbox" name="amenities" value="سرویس بهداشتی ایرانی"> سرویس بهداشتی ایرانی</label>
+      <label><input type="checkbox" name="amenities" value="فضای سبز"> فضای سبز</label>
+      <label><input type="checkbox" name="amenities" value="پارکینگ"> پارکینگ</label>
+      <label><input type="checkbox" name="amenities" value="آسانسور"> آسانسور</label>
+              <label><input type="checkbox" name="amenities" value="آب"> آب</label>
+      <label><input type="checkbox" name="amenities" value="برق"> برق</label>
+      <label><input type="checkbox" name="amenities" value="گاز"> گاز</label>
+    </div>
+
+    <button type="button" id="toggle-all-amenities">
+      + مشاهده همه امکانات
+    </button>
+
+  </div>
+  </div>
+
+<!-- مقررات -->
+<div class="filter-section accordion-section">
+  <button type="button" class="accordion-toggle">
+    <span>مقررات و شرایط اقامتگاه موردنظر شما</span>
+    <span class="accordion-arrow">⌄</span>
+  </button>
+
+  <div class="accordion-content">
+    <p>شرایط موردنظر خود را انتخاب کنید</p>
+
+    <div class="booking-options rules-preview">
+      <label><input type="checkbox" name="rules" value="امکان برگزاری مراسم و مهمانی"> امکان برگزاری مراسم و مهمانی</label>
+      <label><input type="checkbox" name="rules" value="امکان ورود حیوانات خانگی"> امکان ورود حیوانات خانگی</label>
+      <label><input type="checkbox" name="rules" value="امکان استعمال دخانیات"> امکان استعمال دخانیات</label>
+      <label><input type="checkbox" name="rules" value="پذیرش ۲۴ ساعته مهمان"> امکان پذیرش ۲۴ ساعته مهمان</label>
+      <label><input type="checkbox" name="rules" value="پذیرش گروه‌های مجردی"> امکان پذیرش گروه‌های مجردی (فقط آقایان یا فقط خانم‌ها)</label>
+    </div>
+
+    <button type="button" id="toggle-all-rules">
+      + مشاهده همه مقررات
+        </button>
+
+  </div>
+</div>
+ 
+
+
+<!-- بودجه -->
+<div class="filter-section">
+  <h3>بودجه موردنظر شما برای هر شب اقامت (هر واحد)</h3>
+
+  
+<div class="budget-slider-container">
+
+  <div class="budget-chart">
+    <span style="height: 18%"></span>
+    <span style="height: 28%"></span>
+    <span style="height: 22%"></span>
+    <span style="height: 38%"></span>
+    <span style="height: 30%"></span>
+    <span style="height: 52%"></span>
+    <span style="height: 43%"></span>
+    <span style="height: 68%"></span>
+    <span style="height: 55%"></span>
+    <span style="height: 82%"></span>
+    <span style="height: 62%"></span>
+    <span style="height: 45%"></span>
+    <span style="height: 72%"></span>
+    <span style="height: 50%"></span>
+    <span style="height: 35%"></span>
+    <span style="height: 24%"></span>
+    <span style="height: 42%"></span>
+    <span style="height: 30%"></span>
+    <span style="height: 20%"></span>
+    <span style="height: 12%"></span>
+  </div>
+
+  <input
+    type="range"
+    id="booking-budget"
+    min="500000"
+    max="100000000"
+    step="500000"
+    value="20000000"
+    dir="rtl"
+  >
+
+ <div class="budget-slider-labels">
+  <span>۵۰۰٬۰۰۰ تومان</span>
+  <span>۱۰۰٬۰۰۰٬۰۰۰ تومان</span>
+</div>
+
+  <div class="budget-selected">
+    حداکثر بودجه:
+    <strong id="budget-value">۲۰٬۰۰۰٬۰۰۰ تومان</strong>
+  </div>
+
+</div>
+</div>
+
+<!-- نوع اجاره -->
+  <div class="filter-section">
+   <button type="button" class="accordion-toggle">
+  <span>نوع اجاره موردنظر شما</span>
+  <span class="accordion-arrow">⌄</span>
+</button>
+
+<div class="accordion-content">
+  <div class="booking-choice-cards">
+      <label><input type="radio" name="rentalType" value="دربست"><span>دربست</span></label>
+      <label><input type="radio" name="rentalType" value="نیمه‌دربست"><span>نیمه‌دربست</span></label>
+      <label><input type="radio" name="rentalType" value="غیردربست"><span>غیردربست</span></label>
+        </div>
+
+  </div>
+</div>
+
+<!-- پایان فیلترهای تکمیلی -->
+ <div class="booking-actions">
+  <button type="button" id="back-to-main-step">→ بازگشت</button>
+  <button type="button" id="next-to-contact-step">ادامه ←</button>
+</div>
+
+</div>
+   <div id="booking-step-two-content" style="display: none;"> 
+   <h3>مشخصات و اطلاعات تماس</h3>
+
+  <div class="booking-grid">
+
+    <div class="booking-field">
+      <label>نام و نام خانوادگی</label>
+      <input type="text" id="guest-name" placeholder="نام کامل خود را وارد کنید">
+    </div>
+
+    <div class="booking-field">
+      <label>شماره موبایل</label>
+      <input type="tel" id="guest-phone" placeholder="مثلاً 09123456789">
+    </div>
+
+    <div class="booking-field" style="grid-column: 1 / -1;">
+      <label>توضیحات و درخواست‌های خاص</label>
+      <textarea id="guest-notes" rows="4" placeholder="اگر درخواست یا توضیح خاصی دارید بنویسید..."></textarea>
+    </div>
+
+  </div>
+<div class="booking-actions">
+  <button type="button" id="back-booking-step">→ بازگشت</button>
+  <button type="button" id="submit-booking-request">ثبت و ارسال درخواست</button>
+</div>
+
+<div id="booking-message" style="display:none; margin-top:20px; padding:15px 20px; border-radius:12px; font-size:14px; line-height:2;"></div>
+  </div>
+      <div class="booking-note">
+        ما بهترین گزینه‌های اقامت را متناسب با سلیقه و بودجه شما بررسی می‌کنیم.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- شروع باشگاه مشتریان -->
+<section id="romistay-club">
+
+<div class="world-hero">
+
+  <div class="world-overlay"></div>
+
+  <div class="world-content">
+
+    <span class="world-label">WORLD OF TRAVEL</span>
+
+    <h1>باشگاه مشتریان<br>
+      <span>ROMISTAY</span>
+    </h1>
+
+    <p>
+      سفرهای خاص، امتیازهای ویژه،
+      تجربه‌ای فراتر از اقامت.
+    </p>
+
+    <a href="club.html" class="world-button">
+      عضویت رایگان
+    </a>
+
+    <div class="world-note">
+      عضویت رایگان برای همه، بدون محدودیت
+    </div>
+
+  </div>
+
+</div>
+
+<div class="world-benefits">
+
+  <div class="world-heading">
+    <span>YOUR JOURNEY STARTS HERE</span>
+    <h2>دنیایی از امتیازهای ویژه</h2>
+    <p>با ما همراه شوید و از مزایای عضویت لذت ببرید.</p>
+  </div>
+
+  <div class="world-cards">
+
+    <div class="world-card">
+      <span>✧</span>
+      <h3>امتیاز وفاداری</h3>
+      <p>با همراهی و فعالیت در باشگاه امتیاز جمع کنید.</p>
+    </div>
+
+    <div class="world-card">
+      <span>◇</span>
+      <h3>تخفیف‌های ویژه</h3>
+      <p>از پیشنهادهای اختصاصی اعضای ROMISTAY بهره‌مند شوید.</p>
+    </div>
+
+    <div class="world-card">
+      <span>♕</span>
+      <h3>جوایز ارزشمند</h3>
+      <p>از پاداش‌ها و مزایای ویژه باشگاه لذت ببرید.</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-about">
+      <h3>ROMISTAY</h3>
+      <p>سفر متفاوت، اقامت خاطره‌انگیز</p>
+      <p>همراه شما برای کشف مقصدهای زیبا و تجربه سفرهای به‌یادماندنی.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>دسترسی سریع</h3>
+      <a href="#home">خانه</a>
+      <a href="#destinations">مقصدها</a>
+      <a href="#stays">اقامتگاه‌ها</a>
+      <a href="#about">درباره ما</a>
+    </div>
+
+    <div class="footer-contact">
+      <h3>ارتباط با ما</h3>
+      <a href="tel:+989359154490">09359154490</a>
+      <a href="https://wa.me/989359154490" target="_blank" rel="noopener">ارتباط در واتساپ</a>
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© تمامی حقوق برای <span>ROMISTAY</span> محفوظ است.</p>
+    <p>با عشق برای عاشقان سفر ❤️</p>
+  </div>
+</footer>
+
+
+<button id="back-to-top" type="button" class="back-to-top" aria-label="بازگشت به بالای صفحه">
+  ↑
+</button>
+
+ 
+
+
+
+
+<div id="image-lightbox" class="image-lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-image" src="" alt="نمایش بزرگ تصویر">
+</div>
+
+<script>
+const stays = document.getElementById('stays');
+const lightbox = document.getElementById('image-lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const closeButton = document.querySelector('.lightbox-close');
+
+if (stays && lightbox && lightboxImage && closeButton) {
+
+  stays.addEventListener('click', function(event) {
+    const img = event.target.closest('.card img');
+
+    if (!img) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightbox.classList.add('active');
+
+  }, true);
+
+  closeButton.addEventListener('click', function() {
+    lightbox.classList.remove('active');
+  });
+
+  lightbox.addEventListener('click', function(event) {
+    if (event.target === lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      lightbox.classList.remove('active');
+    }
+  });
+}
+</script>
+<script>
+
+  const backToTop = document.getElementById("back-to-top");
+
+  if (backToTop) {
+    function updateBackToTop() {
+      if (window.scrollY > 300) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    }
+
+    window.addEventListener("scroll", updateBackToTop);
+    updateBackToTop();
+
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll("#destinations .card");
+console.log("تعداد کارت‌های پیدا شده:", cards.length);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  cards.forEach((card) => observer.observe(card));
+});
+</script>
+
+<!-- دکمه شناور واتساپ ROMISTAY -->
+<a href="https://wa.me/989359154490"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="ارتباط با ما در واتساپ">
+  <span class="whatsapp-icon">☏</span>
+  <span>ارتباط با ما</span>
+</a>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/persian-date@1.1.0/dist/persian-date.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
+
+<script>
+jQuery(function ($) {
+// نمایش کادر ورود نام شهر در صورت انتخاب سایر شهرها
+$(document).on('change', '#booking-destination', function () {
+  var isOther = $(this).val() === 'other';
+
+  $('#other-destination-field').toggle(isOther);
+
+  if (!isOther) {
+    $('#other-destination').val('');
+  }
+});
+ // باز کردن فرم درخواست اقامت با کلیک روی منوی رزرو
+$(document).on('click', '#open-booking-link', function (event) {
+  event.preventDefault();
+
+  $('#booking-request')
+    .stop(true, true)
+    .slideDown(400);
+
+  $('#booking-request')[0].scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+  // باز و بسته شدن منوهای کشویی
+  $(document).on('click', '.accordion-toggle', function () {
+    var content = $(this).next('.accordion-content');
+    content.stop(true, true).slideToggle(250);
+    $(this).toggleClass('active');
+  });
+  // نمایش گزینه‌های جزئیات استخر
+  $(document).on('change', '#pool-checkbox', function () {
+
+    if ($(this).is(':checked')) {
+      $('#pool-details').slideDown(250);
+    } else {
+      $('#pool-details').slideUp(250);
+      $('#pool-details input[type="checkbox"]').prop('checked', false);
+    }
+
+  });
+  // نمایش و مخفی کردن همه امکانات
+  $(document).on('click', '#toggle-all-amenities', function () {
+    var list = $('.amenities-preview');
+    list.toggleClass('show-all');
+
+    $(this).text(
+      list.hasClass('show-all')
+        ? '− نمایش کمتر'
+        : '+ مشاهده همه امکانات'
+    );
+  });
+ // فعال‌سازی تاریخ‌شمار ورود و خروج
+$('.jalali-date').persianDatepicker({
+  format: 'YYYY/MM/DD',
+  initialValue: false,
+  autoClose: true,
+  minDate: new persianDate().startOf('day').valueOf()
+});
+  // نمایش و مخفی کردن همه مقررات
+  $(document).on('click', '#toggle-all-rules', function () {
+    var list = $('.rules-preview');
+    list.toggleClass('show-all');
+
+    $(this).text(
+      list.hasClass('show-all')
+        ? '− نمایش کمتر'
+        : '+ مشاهده همه مقررات'
+    );
+  });
+
+
+
+// نمایش زنده مبلغ و اتصال نمودار به اسلایدر بودجه
+$('#booking-budget').on('input change', function () {
+
+  var amount = Number($(this).val());
+  var min = Number($(this).attr('min'));
+  var max = Number($(this).attr('max'));
+
+  var percentage = ((amount - min) / (max - min)) * 100;
+
+  // نمایش مبلغ انتخابی
+  $('#budget-value').text(
+    amount.toLocaleString('fa-IR') + ' تومان'
+  );
+
+  // رنگی شدن نوار از راست به چپ
+  this.style.background = 'transparent';
+  this.style.setProperty('--budget-progress', percentage + '%');
+
+  $(this).css(
+    'background',
+    'linear-gradient(to left, #D6B477 0%, #B58A43 ' +
+    percentage + '%, #526474 ' +
+    percentage + '%, #526474 100%)'
+  );
+
+  // روشن شدن میله‌های نمودار
+  var bars = $('.budget-chart span');
+  var activeCount = Math.round(percentage / 100 * bars.length);
+
+  bars.each(function (index) {
+    $(this).toggleClass('active', index < activeCount);
+  });
+
+});
+
+// نمایش مقدار اولیه
+$('#booking-budget').trigger('input');
+
+  function normalizeDate(value) {
+    return value
+      .replace(/[۰-۹]/g, function (d) {
+        return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d);
+      })
+      .replace(/[٠-٩]/g, function (d) {
+        return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
+      });
+  }
+// بررسی اعتبار تاریخ ورود و خروج
+function getBookingDateError(entryValue, exitValue) {
+  var entryText = normalizeDate(entryValue).trim();
+  var exitText = normalizeDate(exitValue).trim();
+
+  var entryParts = entryText.split('/');
+  var exitParts = exitText.split('/');
+
+  if (entryParts.length !== 3 || exitParts.length !== 3) {
+    return 'لطفاً تاریخ ورود و خروج را به‌درستی وارد کنید.';
+  }
+
+  var y1 = Number(entryParts[0]);
+  var m1 = Number(entryParts[1]);
+  var d1 = Number(entryParts[2]);
+
+  var y2 = Number(exitParts[0]);
+  var m2 = Number(exitParts[1]);
+  var d2 = Number(exitParts[2]);
+
+  if (![y1, m1, d1, y2, m2, d2].every(Number.isInteger)) {
+    return 'فرمت تاریخ واردشده صحیح نیست.';
+  }
+
+  try {
+    var entry = new persianDate([y1, m1, d1]).startOf('day');
+    var exit = new persianDate([y2, m2, d2]).startOf('day');
+
+    if (
+      entry.year() !== y1 || entry.month() !== m1 || entry.date() !== d1 ||
+      exit.year() !== y2 || exit.month() !== m2 || exit.date() !== d2
+    ) {
+      return 'یکی از تاریخ‌های واردشده معتبر نیست.';
+    }
+
+    var today = new persianDate().startOf('day');
+
+    if (entry.valueOf() < today.valueOf()) {
+      return 'تاریخ ورود نمی‌تواند قبل از امروز باشد.';
+    }
+
+    if (exit.valueOf() <= entry.valueOf()) {
+      return 'تاریخ خروج باید بعد از تاریخ ورود باشد.';
+    }
+
+    return '';
+  } catch (error) {
+    return 'تاریخ واردشده معتبر نیست.';
+  }
+}
+ // مخفی کردن مراحل دوم و سوم در شروع فرم
+$('#booking-filters-step, #booking-step-two-content').hide();
+  // رفتن به مرحله دوم
+  $(document).on('click', '#next-booking-step', function () {
+
+    var entry = normalizeDate($('#entry-date').val().trim());
+    var exit = normalizeDate($('#exit-date').val().trim());
+
+    if (!entry || !exit) {
+      alert('لطفاً تاریخ ورود و خروج را انتخاب کنید.');
+      return;
+    }
+var dateError = getBookingDateError(entry, exit);
+
+if (dateError) {
+  alert(dateError);
+  return;
+}
+
+
+ $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').hide();
+
+$('.booking-card > .booking-step-two').hide();
+
+$('#booking-filters-step').show();
+
+$('.booking-progress span:last-child').text('مرحله ۲ از ۳');
+
+  });
+
+ // بازگشت از اطلاعات تماس به فیلترها
+$(document).on('click', '#back-booking-step', function () {
+
+  $('#booking-step-two-content').hide();
+
+  $('#booking-filters-step').show();
+
+  $('.booking-progress span:last-child').text('مرحله ۲ از ۳');
+
+});
+// ادامه از فیلترها به اطلاعات تماس
+$(document).on('click', '#next-to-contact-step', function () {
+
+  $('#booking-filters-step').hide();
+
+  $('#booking-step-two-content').show();
+
+  $('.booking-progress span:last-child').text('مرحله ۳ از ۳');
+
+});
+// بازگشت از فیلترها به مرحله اول
+$(document).on('click', '#back-to-main-step', function () {
+
+  $('#booking-filters-step').hide();
+
+  $('.booking-card > h3, .booking-card > .booking-grid, .booking-card > .booking-step-two, .booking-card > .booking-actions').show();
+
+  $('.booking-progress span:last-child').text('مرحله ۱ از ۳');
+
+});
+// ثبت درخواست
+$(document).on('click', '#submit-booking-request', function () {
+
+  function showBookingMessage(message, success) {
+    $('#booking-message')
+      .text(message)
+      .css({
+        display: 'block',
+        background: success ? '#e8f5ec' : '#fff0f0',
+        color: success ? '#246b3c' : '#b42318',
+        border: success ? '1px solid #b7dfc2' : '1px solid #f2c2c2'
+      });
+  }
+
+  var name = $('#guest-name').val().trim();
+
+  var phone = $('#guest-phone').val().trim()
+    .replace(/[۰-۹]/g, function (d) {
+      return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d);
+    })
+    .replace(/[٠-٩]/g, function (d) {
+      return '٠١٢٣٤٥٦٧٨٩'.indexOf(d);
+    });
+
+  $('#booking-message').hide().text('');
+
+  if (!name) {
+    showBookingMessage('لطفاً نام و نام خانوادگی را وارد کنید.', false);
+    return;
+  }
+
+  if (!/^09[0-9]{9}$/.test(phone)) {
+    showBookingMessage('لطفاً شماره موبایل معتبر ۱۱ رقمی وارد کنید.', false);
+    return;
+  }
+
+  var selectedDestination = $('#booking-destination').val();
+  var otherCity = $('#other-destination').val().trim();
+
+  if (!selectedDestination) {
+    showBookingMessage('لطفاً شهر مقصد را انتخاب کنید.', false);
+    return;
+  }
+
+  if (selectedDestination === 'other' && !otherCity) {
+    showBookingMessage('لطفاً نام شهر موردنظر را وارد کنید.', false);
+    return;
+  }
+
+  var destination = selectedDestination === 'other'
+    ? otherCity
+    : selectedDestination;
+
+  var accommodationType = $('#booking-type').val();
+
+  if (!accommodationType || accommodationType === 'انتخاب نوع اقامتگاه') {
+    showBookingMessage('لطفاً نوع اقامتگاه را انتخاب کنید.', false);
+    return;
+  }
+
+  var entryDate = $('#entry-date').val().trim();
+  var exitDate = $('#exit-date').val().trim();
+
+  if (!entryDate || !exitDate) {
+    showBookingMessage('لطفاً تاریخ ورود و خروج را انتخاب کنید.', false);
+    return;
+  }
+var dateError = getBookingDateError(entryDate, exitDate);
+
+if (dateError) {
+  showBookingMessage(dateError, false);
+  return;
+}
+ 
+ 
+
+
+
+var bookingData = {
+  name: name,
+  phone: phone,
+  destination: destination,
+  accommodationType: accommodationType,
+  stars: $('#booking-stars').val(),
+  entryDate: entryDate,
+  exitDate: exitDate,
+  guests: $('#booking-guests').val(),
+  rooms: $('#booking-rooms').val(),
+  notes: $('#guest-notes').val().trim(),
+
+  amenities: $('input[name="amenities"]:checked').map(function () {
+    return this.value;
+  }).get(),
+
+  rules: $('input[name="rules"]:checked').map(function () {
+    return this.value;
+  }).get(),
+
+  priceRange: $('#booking-budget').val() || '',
+rentalType: $('input[name="rentalType"]:checked').val() || ''
+};
+
+var submitButton = $('#submit-booking-request');
+submitButton.prop('disabled', true);
+
+fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mzaYiQmMW4LCtXJUikitY0kP86JkUmfBfHF9/exec', {
+  method: 'POST',
+  mode: 'no-cors',
+  headers: {
+    'Content-Type': 'text/plain;charset=utf-8'
+  },
+  body: JSON.stringify(bookingData)
+})
+.then(function () {
+  showBookingMessage('درخواست ارسال شد. برای اطمینان، ثبت آن را در گوگل‌شیت بررسی می‌کنیم.', true);
+  submitButton.prop('disabled', false);
+})
+.catch(function () {
+  showBookingMessage(
+    'ارسال درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.',
+    false
+  );
+  submitButton.prop('disabled', false);
+});
+
+}); // پایان تابع کلیک ثبت درخواست
+
+}); // پایان تابع اصلی jQuery
+
+</script>
+
+
+
+</body>
+</html>
