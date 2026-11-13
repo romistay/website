@@ -207,8 +207,13 @@
         throw new Error(result.message || 'ثبت اطلاعات انجام نشد.');
       }
 
-      alert('عضویت شما با موفقیت ثبت شد. به خانواده ROMISTAY خوش آمدید!');
-      form.reset();
+     alert(
+  'عضویت شما با موفقیت ثبت شد! 🎉\n\n' +
+  'شماره عضویت شما: ' + result.membershipNumber +
+  '\n\nبه خانواده ROMISTAY خوش آمدید ❤️'
+);
+
+form.reset();
 
     } catch (error) {
       alert('ثبت عضویت با مشکل مواجه شد. لطفاً دوباره تلاش کنید.');
