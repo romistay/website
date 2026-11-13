@@ -2563,6 +2563,33 @@ rgba(9, 25, 41, 0.48) !important;
     border-radius: 10px;
   }
 }
+/* پنل‌های شیشه‌ای امکانات و مقررات */
+#booking-filters-step .filter-section:has(.accordion-toggle) {
+  background: rgba(9, 25, 41, 0.22) !important;
+  border: 1px solid rgba(226, 189, 117, 0.55) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* حذف پس‌زمینه مات محتوای پنل‌ها */
+#booking-filters-step .accordion-content {
+  background: transparent !important;
+}
+
+/* کارت‌های انتخاب شیشه‌ای */
+#booking-filters-step .booking-options label,
+#booking-filters-step .booking-choice-cards label {
+  background: rgba(9, 25, 41, 0.48) !important;
+  color: #fff !important;
+  border: 1px solid rgba(226, 189, 117, 0.55) !important;
+}
+
+/* کارت انتخاب‌شده */
+#booking-filters-step .booking-options label:has(input:checked),
+#booking-filters-step .booking-choice-cards label:has(input:checked) {
+  background: rgba(214, 180, 119, 0.28) !important;
+  color: #ffe4ad !important;
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
