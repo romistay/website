@@ -2405,6 +2405,32 @@ footer span {
   background: #d6b477;
   color: #10243a;
 }
+/* نمایش خلاصه مقررات */
+
+.rules-preview:not(.show-all) label:nth-child(n+4) {
+  display: none !important;
+}
+
+/* ظاهر دکمه مشاهده همه مقررات */
+
+#toggle-all-rules {
+  display: block;
+  margin: 14px auto 4px;
+  padding: 8px 18px;
+  border: 1px solid #d6b477;
+  border-radius: 20px;
+  background: rgba(13, 31, 49, 0.75);
+  color: #f0d69d;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+#toggle-all-rules:hover {
+  background: #d6b477;
+  color: #10243a;
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
@@ -2854,15 +2880,19 @@ footer span {
     <h3>مقررات و شرایط اقامتگاه موردنظر شما</h3>
     <p>شرایط موردنظر خود را انتخاب کنید</p>
 
-    <div class="booking-options">
+    <div class="booking-options rules-preview">
       <label><input type="checkbox" name="rules" value="امکان برگزاری مراسم و مهمانی"> امکان برگزاری مراسم و مهمانی</label>
       <label><input type="checkbox" name="rules" value="امکان ورود حیوانات خانگی"> امکان ورود حیوانات خانگی</label>
       <label><input type="checkbox" name="rules" value="امکان استعمال دخانیات"> امکان استعمال دخانیات</label>
       <label><input type="checkbox" name="rules" value="پذیرش ۲۴ ساعته مهمان"> امکان پذیرش ۲۴ ساعته مهمان</label>
       <label><input type="checkbox" name="rules" value="پذیرش گروه‌های مجردی"> امکان پذیرش گروه‌های مجردی (فقط آقایان یا فقط خانم‌ها)</label>
     </div>
-  </div>
 
+    <button type="button" id="toggle-all-rules">
+      + مشاهده همه مقررات
+    </button>
+
+  </div>
  
 
 
@@ -3153,6 +3183,20 @@ $(document).on('click', '#toggle-all-amenities', function () {
     $(this).text('− نمایش کمتر');
   } else {
     $(this).text('+ مشاهده همه امکانات');
+  }
+
+});
+
+// نمایش و مخفی کردن همه مقررات
+$(document).on('click', '#toggle-all-rules', function () {
+
+  var list = $('.rules-preview');
+  list.toggleClass('show-all');
+
+  if (list.hasClass('show-all')) {
+    $(this).text('− نمایش کمتر');
+  } else {
+    $(this).text('+ مشاهده همه مقررات');
   }
 
 });
