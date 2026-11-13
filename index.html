@@ -3400,332 +3400,37 @@ html {
   </div>
 </section>
   </main>
+<!-- کارت ورود به صفحه اختصاصی درخواست اقامت -->
+<section id="booking-request" class="booking-request-preview">
 
-<section id="booking-request" class="booking-request">
-  <div class="booking-container">
+  <a href="booking.html" class="booking-preview-card">
 
-    <div class="booking-heading">
+    <div class="booking-preview-content">
+
       <span class="booking-kicker">ROMISTAY EXPERIENCE</span>
+
       <h2>درخواست اقامت</h2>
-      <p>اقامت دلخواهتان را انتخاب کنید؛ بررسی بهترین گزینه‌ها با ماست.</p>
-    </div>
 
-    <div class="booking-card">
-      <div class="booking-progress">
-        <span>درخواست اقامت شما</span>
-        <span>مرحله ۱ از ۳</span>
-      </div>
+      <p>
+        اقامت دلخواهتان را انتخاب کنید؛
+        بررسی بهترین گزینه‌ها با ماست.
+      </p>
 
-      <div class="booking-progress-line">
-        <span></span>
-      </div>
-
-      <h3>مقصد و نوع اقامتگاه</h3>
-
-      <div class="booking-grid">
-
-      
-<div class="booking-field">
-  <label for="booking-destination">شهر مقصد</label>
-  <select id="booking-destination">
-    <option value="">انتخاب شهر</option>
-    <option value="اصفهان">اصفهان</option>
-    <option value="مشهد">مشهد</option>
-    <option value="تهران">تهران</option>
-    <option value="کیش">کیش</option>
-    <option value="شیراز">شیراز</option>
-    <option value="other">سایر شهرها</option>
-  </select>
-</div>
-
-<div class="booking-field" id="other-destination-field" style="display:none;">
-  <label for="other-destination">نام شهر موردنظر</label>
-  <input
-    type="text"
-    id="other-destination"
-    placeholder="نام شهر را وارد کنید"
-  >
-</div>
-
-<div class="booking-field">
-  <label>نوع اقامتگاه</label>
-  <select id="booking-type">
-    <option>انتخاب نوع اقامتگاه</option>
-    <option>هتل</option>
-    <option>هتل‌آپارتمان</option>
-    <option>سوئیت</option>
-    <option>اقامتگاه بوم‌گردی</option>
-    <option>فرقی ندارد</option>
-  </select>
-</div>
-
-
-        <div class="booking-field">
-          <label>تعداد ستاره</label>
-<select id="booking-stars">
-            <option>فرقی ندارد</option>
-            <option>۱ تا ۲ ستاره</option>
-            <option>۳ ستاره</option>
-            <option>۴ ستاره</option>
-            <option>۵ ستاره</option>
-          </select>
-        </div>
-
-      </div>
-<div class="booking-step-two">
-  <h3>تاریخ سفر و تعداد مسافران</h3>
-
-  <div class="booking-grid">
-
-    
-<div class="booking-field">
-  <label>تاریخ ورود (شمسی)</label>
-  <input type="text" id="entry-date" class="jalali-date" placeholder="انتخاب تاریخ ورود">
-</div>
-
-<div class="booking-field">
-  <label>تاریخ خروج (شمسی)</label>
-  <input type="text" id="exit-date" class="jalali-date" placeholder="انتخاب تاریخ خروج">
-</div>
-
-
-    <div class="booking-field">
-      <label>تعداد مسافران</label>
-<select id="booking-guests">
-        <option>۱ نفر</option>
-        <option>۲ نفر</option>
-        <option>۳ نفر</option>
-        <option>۴ نفر</option>
-        <option>۵ نفر</option>
-        <option>۶ نفر یا بیشتر</option>
-      </select>
-    </div>
-
-    <div class="booking-field">
-      <label>تعداد اتاق</label>
-      <select id="booking-rooms">
-        <option>۱ اتاق</option>
-        <option>۲ اتاق</option>
-        <option>۳ اتاق</option>
-        <option>۴ اتاق یا بیشتر</option>
-      </select>
-    </div>
-
-  </div>
-
-</div>
-
-
-
-     <div class="booking-actions">
-       <button type="button" id="next-booking-step">ادامه درخواست ←</button>
-      </div>
-<div id="booking-filters-step" style="display: none;">
-
-  <!-- امکانات -->
-  <!-- امکانات -->
- <div class="filter-section accordion-section">
-
-  <button type="button" class="accordion-toggle">
-    <span>♧ امکانات موردنظر شما</span>
-    <span class="accordion-arrow">⌄</span>
-  </button>
-
-<div class="accordion-content">
-    <p>امکانات دلخواه خود را انتخاب کنید (امکان انتخاب چند مورد)</p>
-
-    <div class="booking-options amenities-preview">
-      <label><input type="checkbox" name="amenities" value="باربیکیو"> باربیکیو</label>
-      <label><input type="checkbox" name="amenities" value="اینترنت WiFi"> اینترنت (WiFi)</label>
-      <div class="pool-option">
-  <label>
-    <input type="checkbox" name="amenities" value="استخر" id="pool-checkbox">
-    استخر
-  </label>
-
-  <div id="pool-details" style="display: none;">
-    <label><input type="checkbox" name="amenities" value="استخر سرپوشیده"> سرپوشیده</label>
-    <label><input type="checkbox" name="amenities" value="استخر سرباز"> سرباز</label>
-    <label><input type="checkbox" name="amenities" value="آب سرد"> آب سرد</label>
-    <label><input type="checkbox" name="amenities" value="آب گرم"> آب گرم</label>
-  </div>
-</div>
-      <label><input type="checkbox" name="amenities" value="میز بیلیارد"> میز بیلیارد</label>
-      <label><input type="checkbox" name="amenities" value="میز پینگ پنگ"> میز پینگ پنگ</label>
-      <label><input type="checkbox" name="amenities" value="فوتبال دستی"> فوتبال دستی</label>
-      <label><input type="checkbox" name="amenities" value="جکوزی"> جکوزی</label>
-      <label><input type="checkbox" name="amenities" value="سونا"> سونا</label>
-      <label><input type="checkbox" name="amenities" value="سیستم تهویه هوا"> سیستم تهویه هوا</label>
-      <label><input type="checkbox" name="amenities" value="وعده غذایی"> وعده غذایی</label>
-      <label><input type="checkbox" name="amenities" value="اجاق گاز"> اجاق گاز</label>
-      <label><input type="checkbox" name="amenities" value="سیستم سرمایشی"> سیستم سرمایشی</label>
-      <label><input type="checkbox" name="amenities" value="تلویزیون"> تلویزیون</label>
-      <label><input type="checkbox" name="amenities" value="یخچال"> یخچال</label>
-      <label><input type="checkbox" name="amenities" value="سیستم گرمایشی"> سیستم گرمایشی</label>
-      <label><input type="checkbox" name="amenities" value="سیستم صوتی"> سیستم صوتی</label>
-      <label><input type="checkbox" name="amenities" value="مبلمان"> مبلمان</label>
-      <label><input type="checkbox" name="amenities" value="لوازم سرو غذا"> لوازم سرو غذا</label>
-      <label><input type="checkbox" name="amenities" value="آشپزخانه"> آشپزخانه</label>
-      <label><input type="checkbox" name="amenities" value="پوشش شبکه موبایل"> پوشش شبکه موبایل</label>
-      <label><input type="checkbox" name="amenities" value="حمام"> حمام</label>
-      <label><input type="checkbox" name="amenities" value="بالکن"> بالکن</label>
-      <label><input type="checkbox" name="amenities" value="آلاچیق"> آلاچیق</label>
-      <label><input type="checkbox" name="amenities" value="سرویس بهداشتی فرنگی"> سرویس بهداشتی فرنگی</label>
-      <label><input type="checkbox" name="amenities" value="سرویس بهداشتی ایرانی"> سرویس بهداشتی ایرانی</label>
-      <label><input type="checkbox" name="amenities" value="فضای سبز"> فضای سبز</label>
-      <label><input type="checkbox" name="amenities" value="پارکینگ"> پارکینگ</label>
-      <label><input type="checkbox" name="amenities" value="آسانسور"> آسانسور</label>
-              <label><input type="checkbox" name="amenities" value="آب"> آب</label>
-      <label><input type="checkbox" name="amenities" value="برق"> برق</label>
-      <label><input type="checkbox" name="amenities" value="گاز"> گاز</label>
-    </div>
-
-    <button type="button" id="toggle-all-amenities">
-      + مشاهده همه امکانات
-    </button>
-
-  </div>
-  </div>
-
-<!-- مقررات -->
-<div class="filter-section accordion-section">
-  <button type="button" class="accordion-toggle">
-    <span>مقررات و شرایط اقامتگاه موردنظر شما</span>
-    <span class="accordion-arrow">⌄</span>
-  </button>
-
-  <div class="accordion-content">
-    <p>شرایط موردنظر خود را انتخاب کنید</p>
-
-    <div class="booking-options rules-preview">
-      <label><input type="checkbox" name="rules" value="امکان برگزاری مراسم و مهمانی"> امکان برگزاری مراسم و مهمانی</label>
-      <label><input type="checkbox" name="rules" value="امکان ورود حیوانات خانگی"> امکان ورود حیوانات خانگی</label>
-      <label><input type="checkbox" name="rules" value="امکان استعمال دخانیات"> امکان استعمال دخانیات</label>
-      <label><input type="checkbox" name="rules" value="پذیرش ۲۴ ساعته مهمان"> امکان پذیرش ۲۴ ساعته مهمان</label>
-      <label><input type="checkbox" name="rules" value="پذیرش گروه‌های مجردی"> امکان پذیرش گروه‌های مجردی (فقط آقایان یا فقط خانم‌ها)</label>
-    </div>
-
-    <button type="button" id="toggle-all-rules">
-      + مشاهده همه مقررات
-        </button>
-
-  </div>
-</div>
- 
-
-
-<!-- بودجه -->
-<div class="filter-section">
-  <h3>بودجه موردنظر شما برای هر شب اقامت (هر واحد)</h3>
-
-  
-<div class="budget-slider-container">
-
-  <div class="budget-chart">
-    <span style="height: 18%"></span>
-    <span style="height: 28%"></span>
-    <span style="height: 22%"></span>
-    <span style="height: 38%"></span>
-    <span style="height: 30%"></span>
-    <span style="height: 52%"></span>
-    <span style="height: 43%"></span>
-    <span style="height: 68%"></span>
-    <span style="height: 55%"></span>
-    <span style="height: 82%"></span>
-    <span style="height: 62%"></span>
-    <span style="height: 45%"></span>
-    <span style="height: 72%"></span>
-    <span style="height: 50%"></span>
-    <span style="height: 35%"></span>
-    <span style="height: 24%"></span>
-    <span style="height: 42%"></span>
-    <span style="height: 30%"></span>
-    <span style="height: 20%"></span>
-    <span style="height: 12%"></span>
-  </div>
-
-  <input
-    type="range"
-    id="booking-budget"
-    min="500000"
-    max="100000000"
-    step="500000"
-    value="20000000"
-    dir="rtl"
-  >
-
- <div class="budget-slider-labels">
-  <span>۵۰۰٬۰۰۰ تومان</span>
-  <span>۱۰۰٬۰۰۰٬۰۰۰ تومان</span>
-</div>
-
-  <div class="budget-selected">
-    حداکثر بودجه:
-    <strong id="budget-value">۲۰٬۰۰۰٬۰۰۰ تومان</strong>
-  </div>
-
-</div>
-</div>
-
-<!-- نوع اجاره -->
-  <div class="filter-section">
-   <button type="button" class="accordion-toggle">
-  <span>نوع اجاره موردنظر شما</span>
-  <span class="accordion-arrow">⌄</span>
-</button>
-
-<div class="accordion-content">
-  <div class="booking-choice-cards">
-      <label><input type="radio" name="rentalType" value="دربست"><span>دربست</span></label>
-      <label><input type="radio" name="rentalType" value="نیمه‌دربست"><span>نیمه‌دربست</span></label>
-      <label><input type="radio" name="rentalType" value="غیردربست"><span>غیردربست</span></label>
-        </div>
-
-  </div>
-</div>
-
-<!-- پایان فیلترهای تکمیلی -->
- <div class="booking-actions">
-  <button type="button" id="back-to-main-step">→ بازگشت</button>
-  <button type="button" id="next-to-contact-step">ادامه ←</button>
-</div>
-
-</div>
-   <div id="booking-step-two-content" style="display: none;"> 
-   <h3>مشخصات و اطلاعات تماس</h3>
-
-  <div class="booking-grid">
-
-    <div class="booking-field">
-      <label>نام و نام خانوادگی</label>
-      <input type="text" id="guest-name" placeholder="نام کامل خود را وارد کنید">
-    </div>
-
-    <div class="booking-field">
-      <label>شماره موبایل</label>
-      <input type="tel" id="guest-phone" placeholder="مثلاً 09123456789">
-    </div>
-
-    <div class="booking-field" style="grid-column: 1 / -1;">
-      <label>توضیحات و درخواست‌های خاص</label>
-      <textarea id="guest-notes" rows="4" placeholder="اگر درخواست یا توضیح خاصی دارید بنویسید..."></textarea>
-    </div>
-
-  </div>
-<div class="booking-actions">
-  <button type="button" id="back-booking-step">→ بازگشت</button>
-  <button type="button" id="submit-booking-request">ثبت و ارسال درخواست</button>
-</div>
-
-<div id="booking-message" style="display:none; margin-top:20px; padding:15px 20px; border-radius:12px; font-size:14px; line-height:2;"></div>
-  </div>
-      <div class="booking-note">
-        ما بهترین گزینه‌های اقامت را متناسب با سلیقه و بودجه شما بررسی می‌کنیم.
-      </div>
+      <span class="booking-preview-button">
+        مشاهده و تکمیل فرم درخواست
+        <i class="fa-solid fa-arrow-left"></i>
+      </span>
 
     </div>
-  </div>
+
+    <div class="booking-preview-icon">
+      <i class="fa-solid fa-hotel"></i>
+    </div>
+
+  </a>
+
 </section>
+
 
 <!-- شروع باشگاه مشتریان -->
 <section id="romistay-club">
