@@ -3792,7 +3792,8 @@ jQuery(function ($) {
 $('.jalali-date').persianDatepicker({
   format: 'YYYY/MM/DD',
   initialValue: false,
-  autoClose: true
+  autoClose: true,
+  minDate: new persianDate().startOf('day').valueOf()
 });
   // نمایش و مخفی کردن همه مقررات
   $(document).on('click', '#toggle-all-rules', function () {
