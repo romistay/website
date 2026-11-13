@@ -2925,15 +2925,43 @@ $('#exit-date').persianDatepicker({
   initialValue: false,
   autoClose: true
 });
-// نمایش زنده مبلغ بودجه
-$('#booking-budget').on('input change', function () {
-  var amount = Number($(this).val());
 
+// نمایش زنده مبلغ و اتصال نمودار به اسلایدر بودجه
+$('#booking-budget').on('input change', function () {
+
+  var amount = Number($(this).val());
+  var min = Number($(this).attr('min'));
+  var max = Number($(this).attr('max'));
+
+  var percentage = ((amount - min) / (max - min)) * 100;
+
+  // نمایش مبلغ انتخابی
   $('#budget-value').text(
     amount.toLocaleString('fa-IR') + ' تومان'
   );
+
+  // رنگی شدن نوار از راست به چپ
+  this.style.background = 'transparent';
+  this.style.setProperty('--budget-progress', percentage + '%');
+
+  $(this).css(
+    'background',
+    'linear-gradient(to left, #D6B477 0%, #B58A43 ' +
+    percentage + '%, #526474 ' +
+    percentage + '%, #526474 100%)'
+  );
+
+  // روشن شدن میله‌های نمودار
+  var bars = $('.budget-chart span');
+  var activeCount = Math.round(percentage / 100 * bars.length);
+
+  bars.each(function (index) {
+    $(this).toggleClass('active', index < activeCount);
+  });
+
 });
 
+// نمایش مقدار اولیه
 $('#booking-budget').trigger('input');
 
   function normalizeDate(value) {
