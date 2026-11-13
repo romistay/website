@@ -3090,6 +3090,36 @@ html {
   font-weight: 600;
   line-height: 2;
 }
+/* طراحی حرفه‌ای دکمه ثبت درخواست اقامت */
+#submit-booking-request {
+  background: linear-gradient(135deg, #d9b66f, #bd9144);
+  color: #10243a;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 35px;
+  min-height: 54px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(189, 145, 68, 0.22);
+  transition: all 0.3s ease;
+}
+
+#submit-booking-request:hover {
+  background: linear-gradient(135deg, #e5c783, #c9a45c);
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(189, 145, 68, 0.3);
+}
+
+#submit-booking-request:active {
+  transform: translateY(0);
+}
+
+#submit-booking-request:focus-visible {
+  outline: 3px solid rgba(201, 164, 92, 0.35);
+  outline-offset: 3px;
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
