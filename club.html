@@ -247,7 +247,11 @@
     <div class="member-card-logo">ROMISTAY</div>
     <div class="member-card-label">MEMBERS CLUB</div>
   </div>
-
+<iframe
+  name="membership-frame"
+  id="membership-frame"
+  style="display:none;"
+></iframe>
   <h3 class="member-card-title">کارت عضویت باشگاه مشتریان</h3>
 
   <div class="member-card-info">
@@ -269,45 +273,75 @@
   
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwiFWd0iiJjtjba9YHCSnRVHKiPEQ8xvgPonnQjxFCzvTCS4N0RamwfUDkgRsppBNaXUA/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwiFWd0iiJjtjba9YHCSnRVHKiPEQ8xvgPonnQjxFCzvTCS4N0RamwfUDkgRsppBNaXUA/exec';
 
-  document.getElementById('club-membership-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
+const form = document.getElementById('club-membership-form');
+const iframe = document.getElementById('membership-frame');
 
-    const form = this;
-    const button = form.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
+let waitingForMembership = false;
 
-    const data = {
-      name: form.querySelector('[name="name"]').value.trim(),
-      mobile: form.querySelector('[name="mobile"]').value.trim(),
-      city: form.querySelector('[name="city"]').value.trim()
-    };
+window.addEventListener('message', function(event) {
 
-    button.disabled = true;
-    button.textContent = 'در حال ثبت اطلاعات...';
+  if (event.source !== iframe.contentWindow) return;
 
-    try {
-      await fetch(scriptURL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(data)
-      });
+  const message = event.data;
 
-      alert(
-        'درخواست عضویت شما ارسال شد! 🎉\n\n' +
-        'به خانواده ROMISTAY خوش آمدید ❤️'
-      );
+  if (!message || message.type !== 'ROMISTAY_MEMBERSHIP_RESULT') return;
+  if (!waitingForMembership) return;
 
-      form.reset();
+  waitingForMembership = false;
 
-    } catch (error) {
-      alert('ارسال درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.');
-    } finally {
-      button.disabled = false;
-      button.textContent = originalText;
-    }
-  });
+  const button = form.querySelector('button[type="submit"]');
+
+  button.disabled = false;
+  button.textContent = 'ثبت عضویت';
+
+  if (message.result.success) {
+
+    document.getElementById('card-member-name').textContent =
+      message.result.name;
+
+    document.getElementById('card-member-number').textContent =
+      message.result.membershipNumber;
+
+    document.getElementById('card-member-date').textContent =
+      new Date().toLocaleDateString('fa-IR');
+
+    document.getElementById('member-card').style.display = 'block';
+
+    form.reset();
+
+    document.getElementById('member-card').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+
+  } else {
+    alert(message.result.message);
+  }
+
+});
+
+form.addEventListener('submit', function(event) {
+
+  event.preventDefault();
+
+  if (waitingForMembership) return;
+
+  const button = form.querySelector('button[type="submit"]');
+
+  waitingForMembership = true;
+
+  button.disabled = true;
+  button.textContent = 'در حال ثبت عضویت...';
+
+  form.method = 'POST';
+  form.action = scriptURL;
+  form.target = 'membership-frame';
+
+  form.submit();
+
+});
 </script>
 
 
