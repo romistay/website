@@ -3127,6 +3127,87 @@ html {
   outline: 3px solid rgba(201, 164, 92, 0.35);
   outline-offset: 3px;
 }
+/* کارت ورود به صفحه درخواست اقامت */
+.booking-request-preview {
+  padding: 65px 7%;
+  background: linear-gradient(180deg, #f8f7f3, #eee9df);
+  direction: rtl;
+}
+
+.booking-preview-card {
+  max-width: 1050px;
+  margin: auto;
+  padding: 35px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(120deg, #10283d, #183c53);
+  border: 1px solid #c5a66b;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(10, 30, 45, 0.15);
+  transition: 0.3s ease;
+}
+
+.booking-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(10, 30, 45, 0.22);
+}
+
+.booking-preview-content {
+  flex: 1;
+}
+
+.booking-preview-content .booking-kicker {
+  color: #d6b875;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.booking-preview-content h2 {
+  color: #f0d69d;
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+.booking-preview-content p {
+  color: #fff;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.booking-preview-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  color: #142b3d;
+  background: #d6b875;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.booking-preview-icon {
+  color: #d6b875;
+  font-size: 65px;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .booking-preview-card {
+    padding: 25px;
+  }
+
+  .booking-preview-content h2 {
+    font-size: 23px;
+  }
+
+  .booking-preview-icon {
+    font-size: 38px;
+    padding: 5px;
+  }
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
