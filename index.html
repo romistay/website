@@ -2379,7 +2379,32 @@ footer span {
 #booking-filters-step .accordion-content {
   padding: 16px 10px 5px;
 }
+/* نمایش خلاصه امکانات */
 
+.amenities-preview:not(.show-all) label:nth-child(n+7) {
+  display: none !important;
+}
+
+/* دکمه مشاهده همه امکانات */
+
+#toggle-all-amenities {
+  display: block;
+  margin: 14px auto 4px;
+  padding: 8px 18px;
+  border: 1px solid #d6b477;
+  border-radius: 20px;
+  background: rgba(13, 31, 49, 0.75);
+  color: #f0d69d;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+#toggle-all-amenities:hover {
+  background: #d6b477;
+  color: #10243a;
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
@@ -2784,7 +2809,7 @@ footer span {
 
     <p>امکانات دلخواه خود را انتخاب کنید (امکان انتخاب چند مورد)</p>
 
-    <div class="booking-options">
+    <div class="booking-options amenities-preview">
       <label><input type="checkbox" name="amenities" value="باربیکیو"> باربیکیو</label>
       <label><input type="checkbox" name="amenities" value="اینترنت WiFi"> اینترنت (WiFi)</label>
       <label><input type="checkbox" name="amenities" value="استخر"> استخر</label>
@@ -2813,10 +2838,16 @@ footer span {
       <label><input type="checkbox" name="amenities" value="فضای سبز"> فضای سبز</label>
       <label><input type="checkbox" name="amenities" value="پارکینگ"> پارکینگ</label>
       <label><input type="checkbox" name="amenities" value="آسانسور"> آسانسور</label>
-         <label><input type="checkbox" name="amenities" value="آب"> آب</label>
+              <label><input type="checkbox" name="amenities" value="آب"> آب</label>
       <label><input type="checkbox" name="amenities" value="برق"> برق</label>
       <label><input type="checkbox" name="amenities" value="گاز"> گاز</label>
     </div>
+
+    <button type="button" id="toggle-all-amenities">
+      + مشاهده همه امکانات
+    </button>
+
+  </div>
   </div>
 
   <!-- مقررات -->
