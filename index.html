@@ -3395,7 +3395,7 @@ html {
 </section>
   </main>
 
-<section id="booking-request" class="booking-request">
+<section id="booking-request" class="booking-request" style="display: none;">
   <div class="booking-container">
 
     <div class="booking-heading">
@@ -3952,7 +3952,19 @@ console.log("تعداد کارت‌های پیدا شده:", cards.length);
 
 <script>
 jQuery(function ($) {
+// باز کردن فرم درخواست اقامت با کلیک روی منوی رزرو
+$(document).on('click', '#open-booking-link', function (event) {
+  event.preventDefault();
 
+  $('#booking-request')
+    .stop(true, true)
+    .slideDown(400);
+
+  $('#booking-request')[0].scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
   // باز و بسته شدن منوهای کشویی
   $(document).on('click', '.accordion-toggle', function () {
     var content = $(this).next('.accordion-content');
@@ -4297,23 +4309,6 @@ fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mz
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const destination = document.getElementById('booking-destination');
-  const otherField = document.getElementById('other-destination-field');
-  const otherInput = document.getElementById('other-destination');
-
-  if (!destination || !otherField || !otherInput) return;
-
-  destination.addEventListener('change', function () {
-    const isOther = destination.value === 'other';
-    otherField.style.display = isOther ? 'block' : 'none';
-
-    if (!isOther) {
-      otherInput.value = '';
-    }
-  });
-});
-</script>
 
 
 </body>
