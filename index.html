@@ -3231,12 +3231,12 @@ jQuery(function ($) {
         : '+ مشاهده همه امکانات'
     );
   });
-  // تاریخ‌شمار
-  $('#entry-date').persianDatepicker({
-    format: 'YYYY/MM/DD',
-    initialValue: false,
-    autoClose: true
-  });
+ // فعال‌سازی تاریخ‌شمار ورود و خروج
+$('.jalali-date').persianDatepicker({
+  format: 'YYYY/MM/DD',
+  initialValue: false,
+  autoClose: true
+});
   // نمایش و مخفی کردن همه مقررات
   $(document).on('click', '#toggle-all-rules', function () {
     var list = $('.rules-preview');
