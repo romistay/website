@@ -1,1 +1,188 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عضویت در باشگاه مشتریان ROMISTAY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 35px 15px;
+      background: #f8f6f0;
+      color: #10243a;
+      font-family: 'Vazirmatn', sans-serif;
+      min-height: 100vh;
+    }
+
+    .club-page {
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 45px;
+      background: linear-gradient(145deg, #ffffff, #fdfbf6);
+      border: 1px solid rgba(201, 164, 92, 0.55);
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(16, 36, 58, 0.08);
+    }
+
+    .club-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .club-heading span {
+      color: #b28b45;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .club-heading h1 {
+      color: #10243a;
+      font-size: 27px;
+      margin: 15px 0;
+    }
+
+    .club-heading p {
+      color: #78818b;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .club-field {
+      margin-bottom: 22px;
+    }
+
+    .club-field label {
+      display: block;
+      color: #10243a;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .club-field input {
+      width: 100%;
+      padding: 15px 17px;
+      border: 1px solid #ded6c8;
+      border-radius: 12px;
+      background: #fff;
+      color: #10243a;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .club-field input:focus {
+      border-color: #c9a45c;
+      box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.12);
+    }
+
+    .club-submit {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #c9a45c, #a98238);
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .club-note {
+      text-align: center;
+      color: #858585;
+      font-size: 12px;
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    .club-back {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      color: #a98238;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .club-page {
+        margin: 15px auto;
+        padding: 28px 20px;
+      }
+
+      .club-heading h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="club-page">
+
+    <div class="club-heading">
+      <span>JOIN THE CLUB</span>
+      <h1>به خانواده ROMISTAY بپیوندید</h1>
+      <p>عضویت رایگان است؛ سفرهای جذاب‌تری در انتظار شماست.</p>
+    </div>
+
+    <form id="club-membership-form">
+
+      <div class="club-field">
+        <label for="club-name">نام و نام خانوادگی</label>
+        <input type="text" id="club-name" name="name"
+          placeholder="نام کامل خود را وارد کنید" required>
+      </div>
+
+      <div class="club-field">
+        <label for="club-mobile">شماره موبایل</label>
+        <input type="tel" id="club-mobile" name="mobile"
+          placeholder="مثلاً 09123456789" required>
+      </div>
+
+      <div class="club-field">
+        <label for="club-city">شهر محل سکونت</label>
+        <input type="text" id="club-city" name="city"
+          placeholder="نام شهر خود را وارد کنید" required>
+      </div>
+
+      <button type="submit" class="club-submit">
+        ثبت درخواست عضویت رایگان
+      </button>
+
+      <p class="club-note">
+        عضویت در باشگاه مشتریان ROMISTAY کاملاً رایگان است.
+      </p>
+
+    </form>
+
+    <a href="index.html" class="club-back">
+      بازگشت به صفحه اصلی ROMISTAY
+    </a>
+
+  </main>
+
+  <script>
+    document.getElementById('club-membership-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('فرم عضویت هنوز به سامانه ثبت اطلاعات متصل نشده است.');
+    });
+  </script>
+
+</body>
+</html>
+
