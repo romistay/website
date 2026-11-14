@@ -2171,7 +2171,30 @@ footer span {
   font-size: 14px;
   margin-bottom: 18px;
 }
+/* هماهنگی مرحله دوم رزرو در موبایل ROMISTAY */
+@media (max-width: 600px) {
+  #booking-filters-step {
+    padding: 16px !important;
+    border-radius: 20px !important;
+  }
 
+  #booking-filters-step .filter-section {
+    padding: 16px !important;
+    margin-bottom: 14px !important;
+    border-radius: 16px !important;
+  }
+
+  #booking-filters-step .accordion-toggle {
+    padding: 14px 12px;
+    font-size: 13px;
+  }
+
+  #booking-filters-step .booking-options label,
+  #booking-filters-step .booking-choice-cards label {
+    padding: 12px !important;
+    font-size: 13px !important;
+  }
+}
 
 /* چیدمان فشرده و لوکس گزینه‌های مرحله دوم */
 
@@ -2492,64 +2515,54 @@ footer span {
   line-height: 1.8;
   margin: 10px 2px 14px;
 }
+/* پنل‌های لوکس بخش فیلترهای رزرو */
 #booking-filters-step .filter-section {
-  background: rgba(9, 25, 41, 0.48) !important;
-  border: 1px solid rgba(214, 180, 119, 0.45) !important;
-  border-radius: 16px !important;
-  padding: 16px !important;
-  margin-bottom: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  background: rgba(7, 20, 34, 0.88) !important;
+  border: 1px solid rgba(214, 173, 96, 0.85) !important;
+  border-radius: 20px !important;
+  padding: 22px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
 }
 
-/* عنوان‌ها */
-
+/* عنوان‌های طلایی پنل‌های مرحله دوم */
 #booking-filters-step .filter-section h3 {
   color: #f0d69d !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(214, 173, 96, 0.55);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
 }
-
 /* توضیحات */
 
-
-/* منوی کشویی لوکس ROMISTAY */
 
 #booking-filters-step .accordion-toggle {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 16px;
-  border: 1px solid rgba(214, 180, 119, 0.55);
-  border-radius: 12px;
-  background: linear-gradient(
-    135deg,
-    rgba(18, 40, 60, 0.95),
-    rgba(9, 25, 41, 0.95)
-  );
-  color: #f2d69b;
-  font-size: 13px;
-  font-weight: 700;
+  padding: 15px 18px;
+  border: 1px solid rgba(214, 173, 96, 0.85);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #10243a, #1b3855);
+  color: #f0d69d !important;
+  font-size: 14px;
+  font-weight: 800;
   cursor: pointer;
   text-align: right;
-  transition: all .25s ease;
-}
-#booking-filters-step .accordion-arrow {
-  font-size: 19px;
-  color: #e2bd75;
-  transition: transform .3s ease, color .3s ease;
-  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
 }
 
-#booking-filters-step .accordion-toggle.active .accordion-arrow {
-  transform: rotate(180deg);
-  color: #f5d99e;
-}
-
-#booking-filters-step .accordion-toggle.active .accordion-arrow {
-  transform: rotate(180deg);
-}
-
-#booking-filters-step .accordion-content {
-  padding: 16px 10px 5px;
+#booking-filters-step .accordion-toggle:hover {
+  border-color: #f0d69d;
+  background: linear-gradient(135deg, #1b3855, #254765);
 }
 /* نمایش خلاصه امکانات */
 
@@ -2709,28 +2722,43 @@ footer span {
   background: transparent !important;
 }
 
-/* کارت‌های انتخاب شیشه‌ای */
+/* کارت‌های انتخاب امکانات با طراحی لوکس */
 #booking-filters-step .booking-options label,
 #booking-filters-step .booking-choice-cards label {
-  background: rgba(9, 25, 41, 0.48) !important;
-  color: #fff !important;
-  border: 1px solid rgba(226, 189, 117, 0.55) !important;
+  background: rgba(16, 36, 58, 0.92) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(214, 173, 96, 0.75) !important;
+  border-radius: 12px !important;
+  padding: 13px 16px !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
-/* کارت انتخاب‌شده */
+/* کارت انتخاب‌شده با جلوه طلایی */
 #booking-filters-step .booking-options label:has(input:checked),
 #booking-filters-step .booking-choice-cards label:has(input:checked) {
-  background: rgba(214, 180, 119, 0.28) !important;
-  color: #ffe4ad !important;
+  background: linear-gradient(
+    135deg,
+    #ead5a5,
+    #d6ad60
+  ) !important;
+  color: #10243a !important;
+  border: 1px solid #fff0c9 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 5px 16px rgba(214, 173, 96, 0.35) !important;
+  transform: translateY(-2px);
 }
-/* یکسان‌سازی شفافیت پنل امکانات و مقررات */
-
+/* هماهنگی نهایی پنل‌های امکانات و مقررات */
 #booking-filters-step .filter-section {
- background: rgba(9, 25, 41, 0.08) !important;
-  border: 1px solid rgba(226, 189, 117, 0.22) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: rgba(7, 20, 34, 0.88) !important;
+  border: 1px solid rgba(214, 173, 96, 0.85) !important;
+  border-radius: 20px !important;
+  padding: 22px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 #booking-filters-step .accordion-content {
