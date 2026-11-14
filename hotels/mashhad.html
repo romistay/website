@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,18 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>هتل درویشی مشهد | ROMISTAY</title>
 
-<style>
-/* پنجره بزرگ‌نمایی تصاویر */
-.gallery-lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: rgba(4, 15, 27, 0.94);
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-}
+  <style>
+    /* آزمایش توقف افکت تصاویر */
+    img {
+      opacity: 1 !important;
+      visibility: visible !important;
+      clip-path: none !important;
+      mask: none !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    /* پنجره بزرگ‌نمایی تصاویر */
+    .gallery-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(4, 15, 27, 0.94);
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+  </style>
+</head>
+</html>
+
 
 .gallery-lightbox.active {
   display: flex;
