@@ -2724,15 +2724,8 @@ footer span {
     border-radius: 10px;
   }
 }
-/* پنل‌های شیشه‌ای امکانات و مقررات */
-#booking-filters-step .filter-section:has(.accordion-toggle) {
-  background: rgba(7, 20, 34, 0.78) !important;
-  border: 1px solid rgba(214, 173, 96, 0.85) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 20px !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
-}
+
+  
 /* حذف پس‌زمینه مات محتوای پنل‌ها */
 #booking-filters-step .accordion-content {
   background: transparent !important;
@@ -2767,16 +2760,17 @@ footer span {
 }
 /* هماهنگی نهایی پنل‌های امکانات و مقررات */
 #booking-filters-step .filter-section {
- background: rgba(7, 20, 34, 0.78) !important;
-  border: 1px solid rgba(214, 173, 96, 0.85) !important;
-  border-radius: 20px !important;
+  background: rgba(7, 20, 34, 0.58) !important;
+  border: 1px solid rgba(240, 214, 157, 0.75) !important;
+  border-radius: 22px !important;
   padding: 22px !important;
   margin-bottom: 16px !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
   backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
-
 #booking-filters-step .accordion-content {
   background: transparent !important;
 }
@@ -3152,15 +3146,17 @@ html {
 
 /* پنل لوکس مقصد و نوع اقامتگاه */
 .booking-card > .booking-grid {
-  background: rgba(7, 20, 34, 0.78);
-  border: 1px solid rgba(214, 173, 96, 0.85);
-  border-radius: 20px;
+  background: rgba(7, 20, 34, 0.58);
+  border: 1px solid rgba(240, 214, 157, 0.75);
+  border-radius: 22px;
   padding: 25px;
   margin-top: 18px;
   box-sizing: border-box;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 /* پنل لوکس تاریخ سفر و تعداد مسافران */
