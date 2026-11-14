@@ -3366,6 +3366,31 @@ html {
     padding: 5px;
   }
 }
+/* اصلاح چیدمان خدمات در موبایل */
+@media (max-width: 768px) {
+
+  #services .cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 420px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    gap: 20px !important;
+  }
+
+  #services .service-item {
+    width: 100% !important;
+    padding: 25px 20px !important;
+  }
+
+  #services .service-item h3 {
+    font-size: 19px !important;
+  }
+
+  #services .service-item p {
+    font-size: 15px !important;
+  }
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
