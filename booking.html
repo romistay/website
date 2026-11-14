@@ -3432,6 +3432,25 @@ html {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+/* آیکون‌های اختصاصی اطلاعات تماس مرحله سوم */
+
+#booking-step-two-content .booking-field:has(#guest-name) label::before {
+  content: "\f007";
+}
+
+#booking-step-two-content .booking-field:has(#guest-phone) label::before {
+  content: "\f095";
+}
+
+#booking-step-two-content .booking-field:has(#guest-notes) label::before {
+  content: "\f4ad";
+}
+
+#booking-step-two-content .booking-field label::before {
+  color: #f0d69d !important;
+  font-size: 16px !important;
+  margin-left: 10px !important;
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
