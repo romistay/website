@@ -1955,18 +1955,11 @@ footer span {
   border-color: #d6ad60;
 }
 
-.booking-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-top: 24px;
-}
 
 .booking-actions button {
-  background: linear-gradient(135deg, #142d43, #23445d);
+  background: rgba(255, 255, 255, 0.13);
   color: #f0d69d;
-  border: 1px solid #c6a466;
+  border: 1px solid rgba(240, 214, 157, 0.75);
   border-radius: 12px;
   padding: 14px 30px;
   font-family: inherit;
@@ -1974,22 +1967,18 @@ footer span {
   font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 16px rgba(16, 36, 58, 0.16);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .booking-actions button:hover {
-  background: linear-gradient(135deg, #b9975b, #dfc58f);
-  color: #142d43;
-  transform: translateY(-3px);
-  box-shadow: 0 9px 20px rgba(185, 151, 91, 0.25);
-}
-
-.booking-actions button:hover {
-  background: linear-gradient(135deg, #d6ad60, #ebd39b);
-  color: #10243a;
+  background: rgba(214, 173, 96, 0.28);
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(214, 180, 119, 0.2);
 }
+
 
 /* دکمه ادامه */
 #next-to-contact-step {
