@@ -1787,27 +1787,11 @@ footer span {
   position: relative;
 }
 #destinations .card {
-  opacity: 0;
-  translate: 0 35px;
-  transition:
-    opacity .8s ease,
-    translate .8s cubic-bezier(.2, .7, .3, 1),
-    box-shadow .45s ease;
-}
-
-#destinations .card.is-visible {
   opacity: 1;
   translate: 0 0;
+  transform: none;
+  transition: box-shadow .45s ease;
 }
-
-#destinations .card.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-#destinations .card:nth-child(1) {
-  transition-delay: .1s;
-}
-
 #destinations .card:nth-child(2) {
   transition-delay: .25s;
 }
