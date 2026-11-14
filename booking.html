@@ -2721,12 +2721,15 @@ footer span {
 }
 /* شفافیت کارت هنگام نمایش مرحله دوم */
 
+
+/* ظاهر کارت در مرحله اول */
 .booking-card:has(#booking-filters-step:not([style*="display: none"])) {
   background: rgba(9, 25, 41, 0.08) !important;
   border-color: rgba(226, 189, 117, 0.35) !important;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
-/* تصویر پس‌زمینه برای تمام کارت در مرحله دوم */
+
+/* تصویر پس‌زمینه کارت مرحله اول */
 .booking-card:has(#booking-filters-step:not([style*="display: none"])) {
   background:
     linear-gradient(
@@ -2736,6 +2739,7 @@ footer span {
     url('https://romistay.github.io/website/images/Luxury%20Villa%20at%20Twilight.png')
     center center / cover no-repeat !important;
 }
+
 
 /* حذف تصویر تکراری از بخش داخلی */
 .booking-card:has(#booking-filters-step:not([style*="display: none"])) #booking-filters-step {
