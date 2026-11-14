@@ -1100,7 +1100,28 @@ footer span {
   max-width: 1100px;
   gap: 25px;
 }
+/* کارت‌های لوکس اقامتگاه ROMISTAY */
+#stays .card {
+  background: linear-gradient(
+    145deg,
+    rgba(20, 44, 67, 0.97),
+    rgba(9, 25, 41, 0.99)
+  ) !important;
+  border: 1px solid rgba(240, 214, 157, 0.75) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.28),
+    0 3px 12px rgba(214, 180, 119, 0.12) !important;
+  transition: all 0.4s ease !important;
+}
 
+#stays .card:hover {
+  transform: translateY(-9px) !important;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.38),
+    0 5px 20px rgba(240, 214, 157, 0.25) !important;
+}
 /* تنظیم فوتر در کامپیوتر */
 @media (min-width: 769px) {
   .footer-content {
