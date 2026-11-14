@@ -1765,44 +1765,6 @@ footer span {
 }
 
 .booking-heading h2 {
- .booking-card {
-  background:
-    linear-gradient(
-      rgba(7, 20, 34, 0.25),
-      rgba(7, 20, 34, 0.25)
-    ),
-    url('https://romistay.github.io/website/images/Luxury%20Villa%20at%20Twilight.png')
-    center center / cover no-repeat !important;
-
-  border: 1px solid rgba(198, 164, 102, 0.75);
-  border-radius: 26px;
-  padding: 45px;
-  box-shadow:
-    0 20px 50px rgba(16, 36, 58, 0.10),
-    0 4px 12px rgba(198, 164, 102, 0.08);
-  max-width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-  font-size: 34px;
-  font-weight: 800;
-  margin: 12px 0;
-}
-
-.booking-heading p {
-  color: #687783;
-  font-size: 16px;
-  line-height: 2;
-}
-
-.booking-kicker {
-  color: #b58b43;
-  font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
-
-.booking-heading h2 {
   color: #10243a;
   font-size: 38px;
   font-weight: 800;
@@ -1817,7 +1779,25 @@ footer span {
   line-height: 2;
 }
 
-
+.booking-kicker {
+  color: #b58b43;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.booking-card {
+  background:
+    linear-gradient(rgba(7, 20, 34, 0.25), rgba(7, 20, 34, 0.25)),
+    url('https://romistay.github.io/website/images/Luxury%20Villa%20at%20Twilight.png')
+    center center / cover no-repeat !important;
+  border: 1px solid rgba(198, 164, 102, 0.75);
+  border-radius: 26px;
+  padding: 45px;
+  box-shadow: 0 20px 50px rgba(16, 36, 58, 0.10);
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
 
 .booking-card::before {
   content: "";
