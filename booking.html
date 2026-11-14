@@ -3509,6 +3509,10 @@ html {
   text-shadow: 0 2px 8px rgba(240, 214, 157, 0.25) !important;
   letter-spacing: 0.3px !important;
 }
+/* مخفی کردن دکمه ادامه درخواست هنگام نمایش مرحله سوم */
+.booking-card:has(#booking-step-two-content:not([style*="display: none"])) #next-booking-step {
+  display: none !important;
+}
  </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
