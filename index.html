@@ -268,7 +268,276 @@ nav a:hover::after {
  .section-title {
   text-align: center;
   color: #10243a;
+  font- 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROMISTAY | سفر متفاوت، اقامت خاطره‌انگیز</title> 
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+ <style>
+
+.whatsapp-icon {
+  font-size: 22px;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 95px;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #f0d69d;
+  background: #10243a;
+  color: #f0d69d;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f8f7f3;
+      color: #222;
+      line-height: 1.9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+  
+header {
+  background: linear-gradient(135deg, #061321, #10243a, #1b3854);
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  border-bottom: 2px solid #d7b56d;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, .25),
+    0 2px 12px rgba(215, 181, 109, .12);
+  position: relative;
+  z-index: 100;
+}
+
+
+.logo {
+  color: #e6c77a;
   font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  direction: ltr;
+  text-shadow: 0 2px 12px rgba(215, 181, 109, 0.3);
+  transition: transform .3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.04);
+}
+
+.logo-name {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+  
+
+nav a {
+  font-size: 14px;
+  color: #f8f4e9;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 8px 2px;
+  transition: color .3s ease, transform .3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #d7b56d, #fff0c5);
+  transition: width .35s ease;
+}
+
+nav a:hover {
+  color: #f5d58c;
+  transform: translateY(-3px);
+  text-shadow: 0 0 12px rgba(240, 214, 157, .5);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+ .hero {
+  min-height: 620px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 17, 30, .78),
+      rgba(8, 23, 38, .48),
+      rgba(5, 17, 30, .78)
+    ),
+        url("./images/isfahan.webp") center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+   
+
+
+
+.main-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #fff0c5, #dfb95f, #b88a35);
+  color: #081a2b;
+  padding: 16px 42px;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 17px;
+  text-decoration: none;
+  box-shadow:
+    0 8px 25px rgba(215, 181, 109, .35),
+    inset 0 1px 2px rgba(255, 255, 255, .7);
+  transition: all .35s ease;
+  border: 1px solid #f5dfa5;
+  cursor: pointer;
+  letter-spacing: .3px;
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #fff7df, #edcf83);
+  box-shadow: 0 14px 32px rgba(215, 181, 109, .5);
+}
+
+.main-button:hover {
+  background: linear-gradient(135deg, #f7e4b1, #d7b56d);
+  box-shadow: 0 9px 25px rgba(215, 181, 109, 0.55);
+  transform: translateY(-4px);
+}
+
+
+.main-button:hover {
+  background: linear-gradient(135deg, #f5dfa8, #d7b56d);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(215, 181, 109, 0.55);
+}
+
+    section {
+      padding: 65px 7%;
+    }
+.brand-banner {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.brand-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.testimonials {
+  padding: 80px 7%;
+  background: linear-gradient(180deg, #10243a, #0b1d2e);
+  text-align: center;
+  color: #ffffff;
+}
+
+.testimonial-box {
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 35px 25px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #d7b56d;
+  box-shadow: 0 8px 25px rgba(16, 36, 58, 0.08);
+}
+
+.testimonial-stars {
+  color: #d7b56d;
+  font-size: 25px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.testimonial-box h3 {
+  color: #10243a;
+  margin-bottom: 12px;
+}
+
+.testimonial-box p {
+  color: #555;
+  line-height: 2;
+}
+
+ .section-title {
+  text-align: center;
+  color: #10243a;size: 30px;
   font-weight: 900;
   line-height: 2.2;
   margin-bottom: 18px;
@@ -4242,27 +4511,7 @@ fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mz
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const images = document.querySelectorAll('img[loading="lazy"]');
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-
-        img.loading = 'eager';
-
-        observer.unobserve(img);
-      }
-    });
-  }, {
-    rootMargin: '3000px 0px'
-  });
-
-  images.forEach(function (img) {
-    observer.observe(img);
-  });
-});
 </script>
 </body>
 </html>
