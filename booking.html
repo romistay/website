@@ -1896,28 +1896,40 @@ footer span {
   width: 100%;
 }
 .booking-field label {
-  color: #10243a;
+  display: block;
+  color: #17344b;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.8;
   padding-right: 3px;
+  margin-bottom: 9px;
   transition: color 0.3s ease;
+}
+
+.booking-field:focus-within label {
+  color: #b18b4e;
 }
 
 .booking-field select {
   width: 100%;
   padding: 16px 18px;
-  border: 1px solid #ded6c5;
-  border-radius: 14px;
-  background: #fffdf9;
-  color: #10243a;
+  border: 1px solid #d8c9aa;
+  border-radius: 13px;
+  background: #fffefa;
+  color: #17344b;
   font-family: inherit;
   font-size: 15px;
   outline: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
+.booking-field select:focus {
+  border-color: #b9975b;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(185, 151, 91, 0.13);
+}
 .booking-field select:focus {
   border-color: #c9a45c;
   box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
@@ -1965,17 +1977,24 @@ footer span {
 }
 
 .booking-actions button {
-  background: linear-gradient(135deg, #10243a, #1b3855);
+  background: linear-gradient(135deg, #142d43, #23445d);
   color: #f0d69d;
-  border: 1px solid #d6ad60;
+  border: 1px solid #c6a466;
   border-radius: 12px;
-  padding: 12px 28px;
+  padding: 14px 30px;
   font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 800;
   cursor: pointer;
-  transition: all .3s ease;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(16, 36, 58, 0.16);
+}
+
+.booking-actions button:hover {
+  background: linear-gradient(135deg, #b9975b, #dfc58f);
+  color: #142d43;
+  transform: translateY(-3px);
+  box-shadow: 0 9px 20px rgba(185, 151, 91, 0.25);
 }
 
 .booking-actions button:hover {
