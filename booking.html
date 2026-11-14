@@ -1923,19 +1923,29 @@ footer span {
   box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
   background: #ffffff;
 }
+
 .booking-field input {
   width: 100%;
   padding: 16px 18px;
-  border: 1px solid #d8c9aa;
+  border: 1px solid rgba(240, 214, 157, 0.75);
   border-radius: 13px;
-  background: #fffefa;
-  color: #17344b;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
   font-family: inherit;
   font-size: 15px;
   outline: none;
   transition: all 0.3s ease;
   box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
+
+.booking-field input:focus {
+  border-color: #d6ad60;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
+}
+
 
 .booking-field input:focus {
   border-color: #b9975b;
