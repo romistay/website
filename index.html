@@ -4273,6 +4273,28 @@ fetch('https://script.google.com/macros/s/AKfycbx_DIBDD_2PBmmQkTbJmYg4fxvT8ok-mz
 </script>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('img[loading="lazy"]');
 
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+
+        img.loading = 'eager';
+
+        observer.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: '800px 0px'
+  });
+
+  images.forEach(function (img) {
+    observer.observe(img);
+  });
+});
+</script>
 </body>
 </html>
