@@ -1174,6 +1174,38 @@ footer span {
     0 18px 40px rgba(0, 0, 0, 0.35),
     0 0 18px rgba(240, 214, 157, 0.35) !important;
 }
+/* طراحی واکنش‌گرا برای موبایل */
+@media (max-width: 768px) {
+
+  #stays {
+    padding: 60px 5% !important;
+  }
+
+  #stays .cards {
+    grid-template-columns: 1fr !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+    gap: 22px !important;
+  }
+
+  #stays .card {
+    border-radius: 18px !important;
+  }
+
+  #stays .card img {
+    height: 210px !important;
+  }
+
+  #stays .card p {
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+  }
+
+  #stays .card button,
+  #stays .card .btn {
+    min-height: 46px;
+  }
+}
   #stays .card button:hover,
 #stays .card .btn:hover {
   background: linear-gradient(135deg, #f5d58a, #fff0c2) !important;
